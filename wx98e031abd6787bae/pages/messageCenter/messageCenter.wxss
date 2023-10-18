@@ -1,0 +1,153 @@
+page {
+    background: #f4f8fd;
+}
+
+.head {
+    align-items: center;
+    background: #ffcd21;
+    box-sizing: border-box;
+    color: #626262;
+    display: flex;
+    font-family: PingFang SC;
+    font-size: 34rpx;
+    font-weight: 500;
+    height: 120rpx;
+    justify-content: space-between;
+    left: 0;
+    padding: 0 130rpx;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.tablist {
+    line-height: 120rpx;
+    position: relative;
+}
+
+.newheadtop {
+    bottom: 20rpx;
+    height: 12rpx;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 35rpx;
+}
+
+.tablistac {
+    color: #313131;
+    font-family: PingFang SC;
+    font-size: 34rpx;
+    font-weight: 700;
+}
+
+.contetn {
+    margin-top: 120rpx;
+    padding: 1px 22rpx 0;
+}
+
+.box,.contetn {
+    box-sizing: border-box;
+}
+
+.box {
+    background: #fff;
+    border-radius: 20rpx;
+    box-shadow: 0 6rpx 18rpx 0 rgba(49,49,49,.07);
+    margin-top: 23rpx;
+    padding: 35rpx 28rpx 20rpx;
+    width: 100%;
+}
+
+.info {
+    color: #3c3f4c;
+    font-size: 30rpx;
+}
+
+.info,.time {
+    font-family: PingFang SC;
+    font-weight: 500;
+}
+
+.time {
+    color: #959595;
+    font-size: 24rpx;
+}
+
+.pingbox {
+    background: #f6faff;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+    color: #72778d;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: 500;
+    margin-top: 24rpx;
+    padding: 19rpx 11rpx;
+    width: 100%;
+}
+
+.ping {
+    color: #feb019;
+}
+
+.newrighta {
+    height: 25rpx;
+    width: 15rpx;
+}
+
+.quan {
+    color: #aaadb2;
+    font-family: PingFang SC;
+    font-size: 28rpx;
+    font-weight: 500;
+    margin-right: 12rpx;
+}
+
+.hr {
+    background: #f1f1f1;
+    height: 1px;
+    width: 100%;
+}
+
+.shaibottom {
+    height: 16rpx;
+    margin-left: 10rpx;
+    transition: all .3s linear;
+    width: 25rpx;
+}
+
+.zhankai {
+    align-items: center;
+    background: #ffc737;
+    border-radius: 32rpx;
+    color: #313131;
+    font-family: PingFang SC;
+    font-size: 28rpx;
+    height: 64rpx;
+    justify-content: center;
+    width: 106rpx;
+}
+
+.btnzhan,.zhankai {
+    display: flex;
+}
+
+.btnzhan {
+    justify-content: flex-end;
+}
+
+.newrighta2 {
+    height: 17rpx;
+    transition: all .5s linear;
+    width: 22rpx;
+}
+
+.rote180 {
+    transform: rotate(180deg);
+}
+
+.huanhang {
+    word-break: break-all;
+}

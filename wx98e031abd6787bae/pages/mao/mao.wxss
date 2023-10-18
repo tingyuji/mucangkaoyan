@@ -1,0 +1,145 @@
+.head {
+    box-sizing: border-box;
+    padding: 0 34rpx 30rpx;
+}
+
+.xuanshu {
+    height: 28rpx;
+    margin-bottom: 10rpx;
+    width: 33rpx;
+}
+
+.xuan {
+    color: #ffaf14;
+    font-family: PingFang SC;
+    font-size: 36rpx;
+    font-weight: 700;
+    margin-left: 10rpx;
+}
+
+.view2 {
+    padding: 0 20rpx;
+}
+
+.list,.view2 {
+    box-sizing: border-box;
+}
+
+.list {
+    background: #fff;
+    border: 1px solid #ededed;
+    border-radius: 6rpx;
+    margin-top: 21rpx;
+    padding: 40rpx 14rpx;
+    width: 100%;
+}
+
+.kuang {
+    background: #fff;
+    border: 2rpx solid #ffc737;
+    border-radius: 4rpx;
+    color: #ffc737;
+    font-size: 27rpx;
+    height: 29rpx;
+    line-height: 26rpx;
+    text-align: center;
+    width: 29rpx;
+}
+
+.kuang,.titlewen {
+    font-family: PingFang SC;
+    font-weight: 700;
+}
+
+.titlewen {
+    color: #303030;
+    font-size: 30rpx;
+    line-height: 30rpx;
+    margin-left: 28rpx;
+}
+
+.progr {
+    width: 109rpx;
+}
+
+.yzuo {
+    color: #626262;
+    font-size: 26rpx;
+}
+
+.smalltitle,.yzuo {
+    font-family: PingFang SC;
+    font-weight: 500;
+}
+
+.smalltitle {
+    color: #7c7c7c;
+    font-size: 30rpx;
+    margin-left: 60rpx;
+}
+
+.number {
+    color: #bebebe;
+    display: inline-block;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: 500;
+    line-height: 30rpx;
+    margin-right: 11rpx;
+}
+
+.right {
+    height: 21rpx;
+    margin-bottom: 4rpx;
+    width: 12rpx;
+}
+
+.xuanshussss {
+    margin-left: 50rpx;
+}
+
+.shuiji {
+    height: 33rpx;
+    margin-bottom: 2rpx;
+    margin-right: 10rpx;
+    width: 38rpx;
+}
+
+.shui {
+    background: #ffc737;
+    border-radius: 44rpx;
+    bottom: 85rpx;
+    box-shadow: 0 2rpx 8rpx 0 rgba(255,199,55,.68);
+    color: #1b1b1b;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 500;
+    height: 88rpx;
+    left: 85rpx;
+    line-height: 88rpx;
+    position: fixed;
+    text-align: center;
+    width: 80%;
+}
+
+.zhanwu {
+    display: block;
+    height: 228rpx;
+    margin: 372rpx auto 0;
+    width: 282rpx;
+}
+
+.zhanwutext {
+    color: #b0ada0;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: 500;
+    margin-top: 40rpx;
+    text-align: center;
+}
+
+.rightff {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+}

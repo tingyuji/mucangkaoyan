@@ -1,0 +1,14 @@
+{
+    "navigationBarTitleText": "题目解析",
+    "usingComponents": {
+        "exam": "/components/exam/exam",
+        "exam2": "/components/exam2/exam2",
+        "exam3": "/components/exam3/exam3",
+        "footer": "/components/footer/footer",
+        "answerSheet": "/components/answerSheet/answerSheet",
+        "mp-html": "/components/mp-html/index",
+        "impower": "/components/impower/impower",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

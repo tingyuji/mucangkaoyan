@@ -1,0 +1,31 @@
+<view class="quanb">
+    <view class="bjlist">
+        <view class="bjbox" wx:for="{{subject}}" wx:key="index">
+            <view class="flex-sb">
+                <view class="flex">
+                    <view class="{{ye?'quanye':''}} quan"></view>
+                    <view class="time ml15">{{item.add_time}}</view>
+                </view>
+                <view bindtap="love" data-flage="{{item.is_give}}" data-id="{{item.id}}" data-index="{{index}}">
+                    <image class="love" src="{{domain}}{{item.is_give==1?'love_ac.png':'love.png'}}"></image>
+                </view>
+            </view>
+            <view class="{{ye?'border-leye':''}} bjnei">
+                <view class="flex flex-c">
+                    <image class="tou" src="{{item.member_info.img}}"></image>
+                    <view class="{{ye?'colorye':''}} ml8 name">{{item.member_info.nickname}}</view>
+                </view>
+                <view class="neitext mt20">
+                    <text>{{item.content}}</text>
+                </view>
+                <view class="imgsfu">
+                    <image bindtap="kanimg" class="imgs" data-index="{{index}}" data-index2="{{childindex}}" src="{{xx}}" wx:for="{{item.imgs}}" wx:for-index="childindex" wx:for-item="xx" wx:key="index"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view bindtap="maskjl" class="btn" hoverClass="hover">
+    <image class="btnimg" src="{{domain}}comment.png"></image>
+    <text class="btnfa">记录笔记</text>
+</view>

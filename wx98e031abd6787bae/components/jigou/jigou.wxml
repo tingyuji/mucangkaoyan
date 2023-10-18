@@ -1,0 +1,18 @@
+<view class="{{show?'rgba':'disnone'}}"></view>
+<view class="{{show?'rgbabox':'disnone'}}">
+    <view class="rgbaboxli">
+        <view class="xian1"></view>
+        <view class="xian2"></view>
+        <view class="content">
+            <view class="title">请填写激活码</view>
+            <view>
+                <view class="iptfu">
+                    <input bindinput="bindcode" class="iptt" placeholder="输入激活码免费领取" placeholderClass="plipttd" type="text" value="{{code}}"></input>
+                </view>
+                <view catchtap="huoqu" class="ruhe">如何免费获取激活码?</view>
+                <view bindtap="btn3" class="btn2 mt120">确定</view>
+            </view>
+        </view>
+    </view>
+    <image bindtap="close" class="closexian" src="{{domain}}closexian.png"></image>
+</view>

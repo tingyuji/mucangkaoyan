@@ -1,0 +1,56 @@
+.navgiation-bar {
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.navgiation-bar,.title-bar {
+    display: flex;
+}
+
+.title-bar {
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    position: relative;
+}
+
+@font-face {
+    font-family:iconfont;src:url(iconfont.eot?t=1591965387227-do-not-use-local-path-./components/NavigationBar/NavigationBar.wxss&1&355);src:url(iconfont.eot?t=1591965387227#iefix-do-not-use-local-path-./components/NavigationBar/NavigationBar.wxss&1&395) format("embedded-opentype"),url(data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAJoAAsAAAAABiAAAAIcAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAosRwE2AiQDCAsGAAQgBYRtBy8bbAXInpo8KdL6GVAIMC1tMIBiERT7/faefXOSaqSLJ9FE0gQpkCA2phMi3Ut4+z+XOUCj8nxZnrox2mJ+gX9zpMZOz8ixkCDU5HqCZwhQXQL7PJfTm0AHMj/QuTY3jTVp0gDqxQEFuBdGkRVI6A1jF7zAxwTqJilae9uHlzCUsVcF4ikOXRgWIjIZy1eFouFgJt7kqslL8gm8Rt+Pf1YMSeQpu+n0cSuA6dfcKUovb90EhCgBHc+RYh3IiMvGzLGOYFxHPdM1C45VH3zNyzJwi6M6BPvr7NomGIfZ4GvurRQggceiDDYnzSaKZxGeBfR7U9r7v28KUN6m2LlVvwpGR8WL3fF/2MjA58hHFCpvMxjmo7qeN3h/1cC+zNDYriTTVI2jiWK/LXV1lIADfT9TraOTFULVaIKvYiJDqmqezNh15Bo2UKjaRN2aneMNA1JHZDWsegIIXc9ItL0j1fVFZuw3cmP+UOhGB3XXwYUNixGPk+QyBeitMPbLQrgeHsf15xTOMlfmNRF/TbKJ42hqRjm/QwXJJbY089BiFihkmeM2eI6yrMRKlgn5rEXM1UTXRdObNL/MYWyXRFyMBJBnBcV8pYIIxrNx5fPnSGgm45IdPXXlNSI14umRSWMMIHeMxaCeR3mlMReyMCYgQSrl0DaYRzKZEqqa5yWIj2miCanKhO4ME0ON2vbm/O9OQJ1tS8KZkcpvXT81AQAAAA==) format("woff2"),url(iconfont.woff?t=1591965387227-do-not-use-local-path-./components/NavigationBar/NavigationBar.wxss&1&395) format("woff"),url(iconfont.ttf?t=1591965387227-do-not-use-local-path-./components/NavigationBar/NavigationBar.wxss&1&395) format("truetype"),url(iconfont.svg?t=1591965387227#iconfont-do-not-use-local-path-./components/NavigationBar/NavigationBar.wxss&1&395) format("svg");
+}
+
+.iconfont {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: iconfont!important;
+    font-size: 16px;
+    font-style: normal;
+}
+
+.back-icon:before {
+    content: "\e676";
+    font-size: 34rpx;
+    font-weight: 700;
+    left: 30rpx;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title {
+    font-size: 34rpx;
+    font-weight: 500;
+}
+
+.cut {
+    background-color: #fff;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.bg-img,.cut {
+    width: 100%;
+}

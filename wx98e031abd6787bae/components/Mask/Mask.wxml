@@ -1,0 +1,7 @@
+<view class="mask" wx:if="{{value}}">
+    <view class="center">
+        <text class="title">{{title}}</text>
+        <text class="desc">{{desc}}</text>
+        <slot></slot>
+    </view>
+</view>

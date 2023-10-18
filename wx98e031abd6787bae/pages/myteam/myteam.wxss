@@ -1,0 +1,212 @@
+page {
+    background: #f6f6f6;
+}
+
+.por {
+    left: 0;
+    position: absolute;
+    top: 200rpx;
+    width: 100%;
+}
+
+.tou {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: block;
+    height: 150rpx;
+    margin: 0 auto;
+    width: 150rpx;
+}
+
+.name {
+    color: #fff;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 700;
+    margin-top: 10rpx;
+    text-align: center;
+}
+
+.porlist {
+    box-sizing: border-box;
+    margin-top: 90rpx;
+    padding: 0 33rpx;
+}
+
+.porlister {
+    background: #fff;
+    border-radius: 20rpx;
+    box-shadow: 0 3rpx 18rpx 0 rgba(17,17,16,.09);
+    height: 195rpx;
+    position: relative;
+    width: 100%;
+}
+
+.porlisterer {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    padding: 0 50rpx;
+    top: 0;
+}
+
+.myteamwen,.porlisterer {
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.myteamwen {
+    bottom: 0;
+    height: 90rpx;
+}
+
+.ddc {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.num {
+    color: #1b1b1b;
+    font-size: 34rpx;
+    font-weight: 700;
+    margin-top: 30rpx;
+}
+
+.num,.teamnum {
+    font-family: PingFang SC;
+}
+
+.teamnum {
+    color: #535353;
+    font-size: 28rpx;
+    font-weight: 500;
+}
+
+.list {
+    background: #fff;
+    border-radius: 20rpx;
+    box-shadow: 0 3rpx 18rpx 0 rgba(17,17,16,.09);
+    box-sizing: border-box;
+    margin-top: 24rpx;
+    padding: 0 34rpx;
+    width: 100%;
+}
+
+.listac {
+    background: #fffaec;
+}
+
+.listtop {
+    align-items: center;
+    height: 142rpx;
+    justify-content: space-between;
+}
+
+.flex,.listtop {
+    display: flex;
+}
+
+.flex-c {
+    align-items: center;
+}
+
+.teamtou {
+    border-radius: 50%;
+    height: 100rpx;
+    width: 100rpx;
+}
+
+.teamnaem {
+    color: #313131;
+}
+
+.teamnaem,.teamnaem2 {
+    font-family: PingFang SC;
+    font-size: 30rpx;
+    font-weight: 700;
+}
+
+.teamnaem2 {
+    color: #855b1d;
+}
+
+.leiyou {
+    color: #7d7d7d;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: 500;
+}
+
+.erbootom {
+    height: 14rpx;
+    width: 23rpx;
+}
+
+.tuand {
+    color: #7d7d7d;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: 700;
+}
+
+.tuand2 {
+    font-size: 24rpx;
+}
+
+.tuand2,.tuand3 {
+    color: #855b1d;
+    font-family: PingFang SC;
+    font-weight: 500;
+}
+
+.tuand3 {
+    font-size: 28rpx;
+}
+
+.rennum {
+    color: #f43616;
+}
+
+.ml24 {
+    margin-left: 24rpx;
+}
+
+.topright {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+
+.mt20 {
+    margin-top: 20rpx;
+}
+
+.erlist {
+    align-items: center;
+    border-bottom: 1px solid #fffaec;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 21rpx 0;
+}
+
+.zuideng {
+    color: #888074;
+    font-family: PingFang SC;
+    font-size: 24rpx;
+    font-weight: 500;
+}
+
+.erboac {
+    transform: rotate(180deg);
+}
+
+.content {
+    box-sizing: border-box;
+    margin-top: 90rpx;
+    padding: 0 18rpx;
+}

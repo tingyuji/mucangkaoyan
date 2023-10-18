@@ -1,0 +1,9 @@
+{
+    "component": true,
+    "usingComponents": {
+        "poster": "/components/posterdist/poster/index",
+        "impower": "/components/impower/impower",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

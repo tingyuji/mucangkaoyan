@@ -1,0 +1,100 @@
+<view class="conett">
+    <view class="boxtou" wx:if="{{items.state<=5&&items.goods_type==1}}">
+        <view class="boxtop">{{items.state<3?items.state==3?'已发货':'待发货，订单配送中':'已完成'}}</view>
+        <view class="flex mt24">
+            <view class="ml30">
+                <image class="orderdz" src="{{domain}}orderdz.png"></image>
+            </view>
+            <view class="ml15">
+                <view class="name">
+                    <text>{{items.realname}}</text>
+                    <text class="ml54">{{items.mobile}}</text>
+                </view>
+                <view class="yudz">{{items.address}}</view>
+                <view></view>
+            </view>
+        </view>
+        <image class="orderhr" src="{{domain}}orderhr.png"></image>
+    </view>
+    <view bindtap="godetail" class="box flex">
+        <view>
+            <image class="boximg" src="{{items.goods_img}}"></image>
+        </view>
+        <view class="flex1 ml25">
+            <view class="flex-sb flex-c">
+                <view class="title">{{items.goods_name}}</view>
+                <view class="new" wx:if="{{items.is_new==1}}">NEW</view>
+            </view>
+            <view class="inof">{{items.goods_info}}</view>
+            <view class="flex flex-c mt20">
+                <view class="price">
+                    <text class="fs24">￥</text>
+                    <text>{{items.goods_price}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="view2">
+        <view class="flex flex-c">
+            <view class="bh">订单编号：</view>
+            <view class="ordernum">{{items.id}}</view>
+            <view bindtap="copy" class="copy">复制</view>
+        </view>
+        <view class="flex flex-c mt40">
+            <view class="bh">下单时间：</view>
+            <view class="ordernum">{{items.add_time}}</view>
+        </view>
+        <view class="flex flex-c mt40">
+            <view class="bh">支付方式：</view>
+            <view class="ordernum">{{items.pay_type==1?'微信支付':'激活码兑换'}}</view>
+        </view>
+        <view class="flex flex-c mt40" wx:if="{{items.pay_time}}">
+            <view class="bh">支付时间：</view>
+            <view class="ordernum">{{items.pay_time}}</view>
+        </view>
+        <view class="flex flex-c mt40" wx:if="{{items.express_name}}">
+            <view class="bh">快递公司：</view>
+            <view class="ordernum">{{items.express_name}}</view>
+        </view>
+        <view class="flex flex-c mt40" wx:if="{{items.express_number}}">
+            <view class="bh">快递单号：</view>
+            <view class="ordernum">{{items.express_number}}</view>
+        </view>
+        <view class="flex flex-c mt40" wx:if="{{items.remarks}}">
+            <view class="bh">备注信息：</view>
+            <view class="ordernum">{{items.remarks}}</view>
+        </view>
+    </view>
+    <view class="view2">
+        <view class="flex-sb flex-c">
+            <view class="bh">商品金额</view>
+            <view class="botpr">￥{{items.goods_price}}</view>
+        </view>
+        <view class="flex-sb flex-c mt40" wx:if="{{items.is_deduction==1}}">
+            <view class="bh">积分抵扣</view>
+            <view class="botpr">-￥{{f.numm(items.deduction_price)>f.numm(items.goods_price)?items.goods_price:items.deduction_price}}</view>
+        </view>
+        <view class="bottright mt40">
+            <text class="shi">实付款：</text>
+            <text class="shipr">￥{{( f.cennum(items.goods_price)-f.cennum(items.deduction_price) )/100>0?( f.cennum(items.goods_price)-f.cennum(items.deduction_price) )/100:'0'}}</text>
+        </view>
+    </view>
+</view>
+<view style="height:120rpx"></view>
+<view class="footer">
+    <view bindtap="downxia" class="btn" wx:if="{{items.goods_type==2&&(items.state==4||items.state==5)}}">
+        <image class="download" src="{{domain}}download.png"></image>
+        <text>点击下载文件</text>
+    </view>
+    <view class="btn" wx:if="{{items.state==2&&items.goods_type==1}}">
+        <text>发货中</text>
+    </view>
+    <view bindtap="shouhuo" class="btn" wx:if="{{items.state==3&&items.goods_type!=3}}">
+        <text>确认收货</text>
+    </view>
+    <view bindtap="lian" class="btn" wx:if="{{items.goods_type==3}}">
+        <text>立即领取</text>
+    </view>
+</view>
+<ordertan goods_name="{{items.goods_name}}" idd="{{items.id}}" show="{{show}}" tips="{{items.tips}}"></ordertan>
+<wxs module="f" src="../../utils/filter.wxs" />

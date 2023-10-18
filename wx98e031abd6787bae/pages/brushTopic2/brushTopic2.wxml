@@ -1,0 +1,69 @@
+<view class="{{ye?'bigback h100':''}}">
+    <view class="head">
+        <view class="progress-box pt30">
+            <progress active activeMode="forwards" activeColor="#FFC729" borderRadius="4rpx" percent="{{(num+1)/items.length*100}}" strokeWidth="8rpx"></progress>
+            <text class="bai">{{num+1}}/{{items.length}}</text>
+        </view>
+    </view>
+    <view class="view1 {{ye?'bigback':''}}">
+        <exam detail="{{detail}}" id="exam" isOnExam="{{isOnExam}}" my_answer="{{my_answer}}" num="{{num}}" submit="{{submit}}" type="{{type}}" vague="{{vague}}" wx:if="{{detail.type==1||detail.type==2}}"></exam>
+        <exam2 detail="{{detail}}" id="exam2" items="{{items}}" num="{{num}}" submit="{{submit}}" type="{{type}}" wx:if="{{detail.type==4||detail.type==6}}"></exam2>
+        <exam3 detail="{{detail}}" id="exam3" items="{{items}}" num="{{num}}" submit="{{submit}}" tabid="{{tabid}}" vague="{{vague}}" wx:if="{{detail.type==3||detail.type==5}}"></exam3>
+        <view wx:if="{{submit}}">
+            <view class="{{ye?'hr2':''}} hr"></view>
+            <block wx:if="{{type!=4}}">
+                <view class="flex-sb mt40" wx:if="{{detail.type==1||detail.type==2}}">
+                    <view class="{{ye?'color2':''}} daan">你的答案：<text class="lv cou">{{f.answer(my_answer)}}</text>
+                    </view>
+                    <view class="{{ye?'color2':''}} daan">正确答案：<text class="lv">{{detail.correct_answer}}</text>
+                    </view>
+                </view>
+                <view class="flex-sb mt40" wx:if="{{detail.type==4||detail.type==6}}">
+                    <view class="{{ye?'color2':''}} daan">我的分数：<text class="lv">{{my_answer?my_answer:0}}分</text>
+                    </view>
+                    <view class="{{ye?'color2':''}} daan">满分：<text class="lv">{{detail.fraction_total}}分</text>
+                    </view>
+                </view>
+                <view class="flex-sb mt40" wx:if="{{detail.type==5}}">
+                    <view class="{{ye?'color2':''}} daan">我的分数：<text class="lv cou">{{my_answer[tabid]?my_answer[tabid]:0}}分</text>
+                    </view>
+                    <view class="{{ye?'color2':''}} daan">满分：<text class="lv">{{detail.little_question_json[tabid].fraction}}分</text>
+                    </view>
+                </view>
+                <view class="flex-sb mt40" wx:if="{{detail.type==3}}">
+                    <view class="{{ye?'color2':''}} daan">我的答案：<text class="lv cou">{{my_answer[tabid].answer}}</text>
+                    </view>
+                    <view class="{{ye?'color2':''}} daan">正确答案：<text class="lv">{{detail.little_question_json[tabid].correct_answer}}</text>
+                    </view>
+                </view>
+            </block>
+            <view wx:if="{{type==4}}">
+                <view class="{{ye?'color2':''}} daan" wx:if="{{detail.type==1||detail.type==2||detail.type==3||detail.type==5}}">正确答案：<text class="lv">{{detail.correct_answer}}分</text>
+                </view>
+                <view class="{{ye?'color2':''}} daan" wx:if="{{detail.type==4||detail.type==6}}">满分：<text class="lv">{{detail.fraction_total}}分</text>
+                </view>
+            </view>
+            <view class="flex-sb mt32">
+                <view>
+                    <view class="surelv">全网正确率：{{f.zheng(detail.correct_num/detail.total_num)*100}}%</view>
+                </view>
+                <view bindtap="gobaocuo" class="{{ye?'backye color3 boder1':''}} baocuo" hoverClass="hover">我要报错</view>
+            </view>
+            <view class="{{ye?'hrr2':''}} hrr"></view>
+            <view class="{{ye?'color2':''}} jiexi">答案解析</view>
+            <view class="mt24">
+                <mp-html content="{{detail.analysis_content}}"></mp-html>
+            </view>
+        </view>
+    </view>
+</view>
+<view bindtap="goye" class="goye gori" wx:if="{{ye}}">
+    <view class="yefu">
+        <image class="goyeimg" src="{{domain}}gori.png"></image>
+    </view>
+</view>
+<image catchtap="show" class="daka3" src="{{domain}}daka3.png" wx:if="{{card}}"></image>
+<view style="height:100rpx"></view>
+<answerSheet bindtiao="tiao" daitem="{{daitem}}" show="{{show}}"></answerSheet>
+<footer flage="{{false}}" itemslength="{{items.length}}" num="{{num}}"></footer>
+<wxs module="f" src="../../utils/filter.wxs" />

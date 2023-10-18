@@ -1,0 +1,10 @@
+{
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "上传图片",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "impower": "/components/impower/impower",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

@@ -1,0 +1,14 @@
+<view bind:tap="close" class="rgba {{show?'':'disnone'}}"></view>
+<view class="rgbabox {{show?'a':'b'}}" style="transition: all 0.3s ease-in;">
+    <image bind:tap="close" class="close" src="{{domain}}close.png"></image>
+    <view class="title">答题卡</view>
+    <scroll-view scrollY="true" style="height: 900rpx;">
+        <view class="flex-wp">
+            <block wx:for="{{daitem}}" wx:key="id">
+                <view bindtap="daiao" class="list listac" data-index="{{index}}" wx:if="{{item.is_do}}">{{index+1}}</view>
+                <view bindtap="daiao" class="list" data-index="{{index}}" wx:if="{{!item.is_do}}">{{index+1}}</view>
+            </block>
+        </view>
+        <view style="height:100rpx;padding-bottom: env(safe-area-inset-bottom);"></view>
+    </scroll-view>
+</view>

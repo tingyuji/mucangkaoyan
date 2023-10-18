@@ -1,0 +1,52 @@
+.headfu {
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.pofu {
+    align-items: flex-end;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+}
+
+.right {
+    bottom: 36rpx;
+    height: 16px;
+    left: 5px;
+    padding: 10rpx 20rpx 0rpx;
+    position: absolute;
+    width: 9px;
+}
+
+.title {
+    color: #313131;
+    font-family: PingFang SC;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 13px;
+}
+
+@font-face {
+    font-family:iconfont;src:url(iconfont.eot?t=1591965387227-do-not-use-local-path-./components/head/head.wxss&1&444);src:url(iconfont.eot?t=1591965387227#iefix-do-not-use-local-path-./components/head/head.wxss&1&484) format("embedded-opentype"),url(data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAJoAAsAAAAABiAAAAIcAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAosRwE2AiQDCAsGAAQgBYRtBy8bbAXInpo8KdL6GVAIMC1tMIBiERT7/faefXOSaqSLJ9FE0gQpkCA2phMi3Ut4+z+XOUCj8nxZnrox2mJ+gX9zpMZOz8ixkCDU5HqCZwhQXQL7PJfTm0AHMj/QuTY3jTVp0gDqxQEFuBdGkRVI6A1jF7zAxwTqJilae9uHlzCUsVcF4ikOXRgWIjIZy1eFouFgJt7kqslL8gm8Rt+Pf1YMSeQpu+n0cSuA6dfcKUovb90EhCgBHc+RYh3IiMvGzLGOYFxHPdM1C45VH3zNyzJwi6M6BPvr7NomGIfZ4GvurRQggceiDDYnzSaKZxGeBfR7U9r7v28KUN6m2LlVvwpGR8WL3fF/2MjA58hHFCpvMxjmo7qeN3h/1cC+zNDYriTTVI2jiWK/LXV1lIADfT9TraOTFULVaIKvYiJDqmqezNh15Bo2UKjaRN2aneMNA1JHZDWsegIIXc9ItL0j1fVFZuw3cmP+UOhGB3XXwYUNixGPk+QyBeitMPbLQrgeHsf15xTOMlfmNRF/TbKJ42hqRjm/QwXJJbY089BiFihkmeM2eI6yrMRKlgn5rEXM1UTXRdObNL/MYWyXRFyMBJBnBcV8pYIIxrNx5fPnSGgm45IdPXXlNSI14umRSWMMIHeMxaCeR3mlMReyMCYgQSrl0DaYRzKZEqqa5yWIj2miCanKhO4ME0ON2vbm/O9OQJ1tS8KZkcpvXT81AQAAAA==) format("woff2"),url(iconfont.woff?t=1591965387227-do-not-use-local-path-./components/head/head.wxss&1&484) format("woff"),url(iconfont.ttf?t=1591965387227-do-not-use-local-path-./components/head/head.wxss&1&484) format("truetype"),url(iconfont.svg?t=1591965387227#iconfont-do-not-use-local-path-./components/head/head.wxss&1&484) format("svg");
+}
+
+.iconfont {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: iconfont!important;
+    font-size: 16px;
+    font-style: normal;
+}
+
+.back-icon:before {
+    bottom: 30rpx;
+    content: "\e676";
+    font-size: 34rpx;
+    font-weight: 700;
+    left: 30rpx;
+    position: absolute;
+}

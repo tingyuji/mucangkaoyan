@@ -1,0 +1,144 @@
+<impower active="{{register}}"></impower>
+<phonePopup show="{{phone}}"></phonePopup>
+<view class="congrt">
+    <view class="section" wx:if="{{can.applets_idens=='mucang_duo'}}">
+        <picker bindchange="bindPickerChange" range="{{array}}" rangeKey="library_class_name" value="{{index}}">
+            <view class="mini-btn">
+                <button plain size="mini" type="primary">当前学科 | {{array[index].library_class_name}} </button>
+            </view>
+        </picker>
+    </view>
+    <view class="contantswiper">
+        <swiper autoplay circular bindanimationfinish="animationfinish" class="swiper1" interval="4000">
+            <swiper-item wx:for="{{swiper}}" wx:key="index">
+                <image bindtap="tiao" class="swiperimg" data-index="{{index}}" src="{{item.img}}"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="contant">
+        <view class="contantop">
+            <image class="newindex1" src="{{domain}}newindex1.png"></image>
+            <view class="connei">
+                <view class="kaoyan">考研倒计时</view>
+                <image class="newindex2 ml15" src="{{domain}}newindex2.png">
+                    <view class="num">{{f.left(days)}}</view>
+                </image>
+                <image class="newindex2" src="{{domain}}newindex2.png">
+                    <view class="num">{{f.right(days)}}</view>
+                </image>
+                <image class="newindex2" src="{{domain}}newindex2.png">
+                    <view class="num">{{f.three(days)}}</view>
+                </image>
+                <view class="tian">天</view>
+                <image class="newindex2 ml15" src="{{domain}}newindex2.png">
+                    <view class="num">{{f.left(hours)}}</view>
+                </image>
+                <image class="newindex2" src="{{domain}}newindex2.png">
+                    <view class="num">{{f.right(hours)}}</view>
+                </image>
+                <view class="tian">时</view>
+                <image class="newindex2 ml15" src="{{domain}}newindex2.png">
+                    <view class="num">{{f.left(minutes)}}</view>
+                </image>
+                <image class="newindex2" src="{{domain}}newindex2.png">
+                    <view class="num">{{f.right(minutes)}}</view>
+                </image>
+                <view class="tian">分</view>
+                <image class="newindex2 ml15" src="{{domain}}newindex2.png">
+                    <view class="num">{{f.left(seconds)}}</view>
+                </image>
+                <image class="newindex2" src="{{domain}}newindex2.png">
+                    <view class="num">{{f.right(seconds)}}</view>
+                </image>
+                <view class="tian">秒</view>
+            </view>
+        </view>
+        <view class="flex-sb mt20">
+            <view>
+                <view bindtap="go" class="imgfu" data-flag="true" data-url="/pages/homePage/homePage" hoverClass="hover">
+                    <image class="index1" mode="widthFix" src="{{domain}}index1.png"></image>
+                    <text class="word">立即刷题</text>
+                    <view class="xian1">
+                        <view class="xian2"></view>
+                        <view class="xian2"></view>
+                        <view class="xian2"></view>
+                        <view class="xian2"></view>
+                    </view>
+                    <view class="people"> {{can.real_line?can.real_line:0+can.fictitious_line?can.fictitious_line:0}}人次 </view>
+                </view>
+                <view bindtap="go" class="imgfu mt24" data-url="/pages/myMistake/myMistake" hoverClass="hover">
+                    <image class="index4" mode="widthFix" src="{{domain}}index4.png"></image>
+                    <text class="word">错题集</text>
+                </view>
+                <view bindtap="go" class="mt24 imgfu" data-type="2" data-url="/pages/entergroup/entergroup" hoverClass="hover">
+                    <image class="index5" mode="widthFix" src="{{domain}}index10.png"></image>
+                    <text class="word">进群</text>
+                </view>
+                <view bindtap="go" class="mt24 imgfu" data-url="/pages/shareMoney/shareMoney" hoverClass="hover">
+                    <image class="index5" mode="widthFix" src="https://st2.quyanedu.com/uploads/img/index3.png"></image>
+                    <text class="word wordshang">邀请好友领奖励</text>
+                </view>
+                <view bindtap="go" class="mt24 imgfu" data-url="/pages/shop/shop" hoverClass="hover">
+                    <image class="index5" mode="widthFix" src="{{domain}}index5.png"></image>
+                    <text class="word">考研资料铺</text>
+                </view>
+                <view bindtap="bindshe" class="mt24 imgfu" data-type="1" hoverClass="hover">
+                    <image class="index6" mode="widthFix" src="{{domain}}index9.png"></image>
+                    <text class="word">设置</text>
+                </view>
+            </view>
+            <view>
+                <view bindtap="jumpPage" class="imgfu" data-path="/mold-test/pages/index/index">
+                    <image class="index4" mode="widthFix" src="{{domain}}mk.png"></image>
+                    <text class="word">万人模考</text>
+                    <view class="xian1">
+                        <view class="xian2" style="background-color:#DAA409"></view>
+                        <view class="xian2" style="background-color:#DAA409"></view>
+                        <view class="xian2" style="background-color:#DAA409"></view>
+                        <view class="xian2" style="background-color:#DAA409"></view>
+                    </view>
+                    <view class="people" style="color:#DAA409"> 已有{{can.mk_line?can.mk_line:0}}人参加 </view>
+                </view>
+                <view bindtap="gojinsuo" class="imgfu mt24" wx:if="{{can.applets_idens=='mucang_zheng'}}">
+                    <image class="index4" mode="widthFix" src="{{domain}}newindex9.png"></image>
+                    <text class="word">分析题考点精缩</text>
+                    <text class="word2">送终极密押《六页半》</text>
+                </view>
+                <view bindtap="gojinsuo" class="imgfu mt24" wx:if="{{can.applets_idens=='mucang_duo'}}">
+                    <image class="index4" mode="widthFix" src="{{domain}}newindex9.png"></image>
+                    <text class="word">政治分析题精缩</text>
+                    <text class="word2">送终极密押《六页半》</text>
+                </view>
+                <view bindtap="goranking" class="imgfu mt24" hoverClass="hover">
+                    <image class="index4" mode="widthFix" src="{{domain}}index2.png"></image>
+                    <text class="word">全网排名</text>
+                </view>
+                <view bindtap="go" class="mt24 imgfu" data-url="/pages/dailyTasks/dailyTasks" hoverClass="hover">
+                    <image class="index6" mode="widthFix" src="{{domain}}index7.png"></image>
+                    <text class="word">每日任务</text>
+                </view>
+                <view bindtap="go" class="imgfu mt24" data-url="/pages/myNotes/myNotes" hoverClass="hover">
+                    <image class="index2" mode="widthFix" src="{{domain}}index6.png"></image>
+                    <text class="word">笔记本</text>
+                </view>
+                <view bindtap="go" class="mt24 imgfu" data-url="/pages/my/my" hoverClass="hover">
+                    <image class="index3" mode="widthFix" src="{{domain}}index8.png"></image>
+                    <text class="word">我的</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view bindtap="go" class="titaxiao" data-flage="true" data-url="/pages/entergroup2/entergroup2" hoverClass="hover">
+        <image class="wh100" src="{{domain}}titaxiao.png"></image>
+    </view>
+    <view style="height:240rpx;padding-bottom:env(safe-area-inset-bottom)"></view>
+    <view class="footer">
+        <image class="indextabbar" src="{{domain}}indextabbar.png">
+            <image catchtap="go" class="indexfootertips" data-url="/pages/messageCenter/messageCenter" mode="widthFix" src="{{domain}}indexfootertips.png">
+                <view class="quan1" wx:if="{{shu}}">{{shu>9?'9+':shu}}</view>
+            </image>
+        </image>
+    </view>
+</view>
+<popup gonggongqun="{{true}}" show="{{show}}" type="{{type}}"></popup>
+<wxs module="f" src="../../utils/filter.wxs" />

@@ -1,0 +1,262 @@
+.header {
+    position: relative;
+}
+
+.myimg {
+    height: 691rpx;
+    width: 100%;
+}
+
+.card {
+    background: #fff;
+    border-radius: 22rpx;
+    bottom: 90rpx;
+    box-shadow: 0 0 18rpx 0 hsla(0,0%,70%,.19);
+    left: 34rpx;
+    padding-bottom: 27rpx;
+    position: absolute;
+    width: 682rpx;
+}
+
+.tou {
+    align-items: center;
+    display: flex;
+    margin-left: 42rpx;
+    margin-top: 48rpx;
+    position: relative;
+}
+
+.touimg {
+    border-radius: 50%;
+    height: 94rpx;
+    width: 94rpx;
+}
+
+.love {
+    height: 22rpx;
+    width: 25rpx;
+}
+
+.namebot {
+    align-items: center;
+    background: #fff;
+    border: 1rpx solid rgba(255,64,64,.52);
+    border-radius: 18rpx 18rpx 18rpx 17rpx;
+    display: flex;
+    height: 35rpx;
+    justify-content: center;
+    width: 94rpx;
+}
+
+.addnum {
+    color: #ff4040;
+    font-size: 24rpx;
+}
+
+.addnum,.name {
+    font-family: PingFang SC;
+    font-weight: 700;
+}
+
+.name {
+    color: #1b1b1b;
+    font-size: 34rpx;
+}
+
+.bottom {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 36rpx;
+    padding: 0 66rpx;
+}
+
+.shuati {
+    color: #898989;
+    font-size: 26rpx;
+    font-weight: 500;
+}
+
+.number,.shuati {
+    font-family: PingFang SC;
+}
+
+.number {
+    color: #1b1b1b;
+    font-size: 36rpx;
+    font-weight: 700;
+    text-align: center;
+}
+
+.myxian {
+    height: 107rpx;
+    width: 2rpx;
+}
+
+.bott {
+    background: #fff;
+    border-radius: 22rpx;
+    box-shadow: 0 0 18rpx 0 hsla(0,0%,70%,.19);
+    box-sizing: border-box;
+    height: 517rpx;
+    margin: -55rpx auto 0;
+    padding: 42rpx 30rpx 42rpx 50rpx;
+    width: 682rpx;
+}
+
+.ttii {
+    color: #313131;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 500;
+    margin-left: 7rpx;
+    position: relative;
+}
+
+.ttii::before {
+    background: #fdd655;
+    border-radius: 4rpx;
+    content: "";
+    height: 31rpx;
+    left: -17rpx;
+    position: absolute;
+    top: 7rpx;
+    width: 7rpx;
+}
+
+.hui {
+    background: #fffff2;
+    border: 1px solid #f6ed90;
+    border-radius: 30rpx;
+    height: 60rpx;
+    position: absolute;
+    right: 42rpx;
+    top: 92rpx;
+    width: 215rpx;
+}
+
+.vipp {
+    height: 33rpx;
+    margin-bottom: 2rpx;
+    margin-left: 8rpx;
+    width: 37rpx;
+}
+
+.newmy1 {
+    height: 45rpx;
+    margin-left: 12rpx;
+    width: 47rpx;
+}
+
+.baofan {
+    color: #444;
+    font-family: PingFang SC;
+    font-size: 30rpx;
+    font-weight: 500;
+}
+
+.newbott {
+    box-sizing: border-box;
+    margin-top: 30rpx;
+    padding: 0 42rpx;
+    position: relative;
+}
+
+.newmy2 {
+    height: 100rpx;
+    width: 100%;
+}
+
+.newpoab {
+    box-sizing: border-box;
+    height: 100%;
+    left: 0;
+    padding: 0 58rpx;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.newmy3 {
+    height: 34rpx;
+    width: 35rpx;
+}
+
+.huiti {
+    color: #885008;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: 700;
+    margin-left: 7rpx;
+}
+
+.li {
+    background: #874f09;
+    border-radius: 23rpx;
+    box-shadow: 1px 5rpx 10rpx 0 rgba(136,80,8,.19);
+    font-size: 26rpx;
+    height: 45rpx;
+    line-height: 45rpx;
+    width: 136rpx;
+}
+
+.dinad,.li {
+    color: #fff;
+    font-family: PingFang SC;
+    font-weight: 500;
+    text-align: center;
+}
+
+.dinad {
+    background-color: #ff4040;
+    border-radius: 50%;
+    font-size: 20rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    position: absolute;
+    right: -4rpx;
+    top: -12rpx;
+    width: 30rpx;
+}
+
+.btn-service {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    right: 42rpx;
+}
+
+.btn-service,.service-btn {
+    height: 62rpx;
+    position: absolute;
+    width: 217rpx;
+}
+
+.service-btn {
+    top: 0;
+}
+
+.service-text {
+    color: #434343;
+    font-size: 30rpx;
+    font-weight: 500;
+    margin-left: 20rpx;
+    position: relative;
+    z-index: 3;
+}
+
+.service-img {
+    height: 56rpx;
+    position: absolute;
+    right: 0;
+    top: 5rpx;
+    width: 65rpx;
+}
+
+.call-service {
+    opacity: 0;
+    position: absolute;
+    width: 100%!important;
+    z-index: 1000;
+}

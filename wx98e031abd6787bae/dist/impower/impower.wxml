@@ -1,0 +1,47 @@
+<view class="imbox" wx:if="{{active||phoActive||redPacketshow}}"></view>
+<view class="imcontent" style="transform:scale({{active?'1':'0'}})">
+    <view class="imtitle">
+        <image src="{{domain}}register.png"></image>
+    </view>
+    <view class="immessage">请确认以下授权信息</view>
+    <view class="imintro">·获取你的公开信息(头像、昵称等)</view>
+    <button bindtap="auth" class="imbtn">授权</button>
+    <image bindtap="closethis1" class="close1" src="{{domain}}closexx.png"></image>
+</view>
+<view class="imcontent imtop" style="transform:scale({{phoActive?'1':'0'}})">
+    <view class="imtit">绑定手机号</view>
+    <view class="imfu">我们深知个人信息对用户的重要性，请在使用木仓考研刷题小程序前，务必仔细阅读并了解本隐私政策。授权手机号是为了保护错题，刷题数据不丢失，我们郑重承诺将严格保护您的个人信息。</view>
+    <view class="imsr">
+        <input bindinput="bindinput" placeholder="输入手机号" placeholderClass="plainput" type="text"></input>
+    </view>
+    <view class="imsr ms1">
+        <input bindinput="bindinputcode" placeholder="输入验证码" placeholderClass="plainput" type="text"></input>
+        <view bindtap="bindhqyzm" class="imyzm">{{yzmname}}</view>
+    </view>
+    <button bindtap="verification_code" class="notarize">确认提交</button>
+</view>
+<view class="redbage" wx:if="{{redPacketshow}}">
+    <view class="imgbox" style="transform:scale({{redPacketshow?'1':'0'}})" wx:if="{{opening!=3}}">
+        <image class="caidai" src="{{domain}}caidai.png"></image>
+        <image class="packet" mode="widthFix" src="{{domain}}hbao.png"></image>
+        <image bindtap="openPacket" class="chai {{opening==2?'zhuan':''}}" mode="widthFix" src="{{domain}}open.png"></image>
+        <view class="tishi">恭喜获得</view>
+        <view class="till">{{redType}}</view>
+    </view>
+    <view class="imgbox" wx:if="{{opening==3}}">
+        <image class="caidai" src="{{domain}}caidai.png"></image>
+        <image class="packetgai" mode="widthFix" src="{{domain}}hbhg.png"></image>
+        <image class="quan" mode="widthFix" src="{{domain}}hbyhq.png"></image>
+        <image class="packetbg" mode="widthFix" src="{{domain}}hbfm.png"></image>
+        <button class="sharebtn">{{shareTxt}}</button>
+        <view class="tishione">恭喜你获得</view>
+        <view class="money">
+            <text class="m1">{{money}}</text>
+            <text class="m2">元</text>
+        </view>
+        <view class="tishitwo">{{Rewardtitle}}</view>
+        <view class="tishithree">{{Awardsshow}}</view>
+        <view bindtap="tocoupon" class="tishifoure">立即查看</view>
+    </view>
+    <image bindtap="closethis" class="close" src="{{domain}}close.png"></image>
+</view>

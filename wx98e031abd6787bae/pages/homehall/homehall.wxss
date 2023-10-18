@@ -1,0 +1,319 @@
+page {
+    background: #f8f8f8;
+}
+
+::-webkit-scrollbar {
+    color: transparent;
+    height: 0;
+    width: 0;
+}
+
+.content {
+    position: relative;
+}
+
+.conleft {
+    left: 0;
+    width: 220rpx;
+    z-index: 3;
+}
+
+.conleft,.contright {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+
+.contright {
+    overflow: hidden;
+    right: 0;
+    width: 530rpx;
+}
+
+.scroll {
+    background: #f8f8f8;
+    height: 100vh;
+    width: 220rpx;
+}
+
+.sclist {
+    align-items: center;
+    display: flex;
+    font-size: 30rpx;
+    height: 95rpx;
+    justify-content: center;
+    width: 220rpx;
+}
+
+.sclist .inner {
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 5em;
+}
+
+.sclistac .inner {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+}
+
+.sclistac {
+    color: #000;
+    font-size: 32rpx;
+    font-weight: 700;
+    position: relative;
+}
+
+.sclistac::before {
+    background: #ffc829;
+    content: "";
+    height: 35rpx;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6rpx;
+}
+
+.rigthead {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 95rpx;
+    justify-content: space-between;
+    padding: 0 18rpx;
+    width: 100%;
+}
+
+.dtdel {
+    height: 33rpx;
+    margin-right: 8rpx;
+    width: 31rpx;
+}
+
+.deltext {
+    color: #000;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 500;
+}
+
+.contenbox {
+    height: calc(100vh - 95rpx);
+    overflow: hidden;
+    position: relative;
+    width: 530rpx;
+}
+
+.coner {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all .3s linear;
+    width: 572rpx;
+}
+
+.dtquan {
+    height: 42rpx;
+    padding-left: 17rpx;
+    padding-right: 23rpx;
+    width: 42rpx;
+}
+
+.list {
+    background: #fff;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+    height: 148rpx;
+    padding: 20rpx 12rpx;
+    position: relative;
+    width: 492rpx;
+}
+
+.list,.listimg {
+    align-items: center;
+    display: flex;
+}
+
+.listimg {
+    background: #fffbf0;
+    border-radius: 11rpx;
+    height: 108rpx;
+    justify-content: center;
+    margin-right: 10rpx;
+    width: 108rpx;
+}
+
+.imglist {
+    height: 70rpx;
+    width: 68rpx;
+}
+
+.list_tit {
+    color: #313131;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+.xian1 {
+    height: 27rpx;
+    margin-left: 14rpx;
+    position: relative;
+    width: 40rpx;
+}
+
+.xian2 {
+    height: 100%;
+    width: 4rpx;
+}
+
+.xian1 .xian2:nth-child(1) {
+    animation: dong 1s linear infinite;
+    background: #9f9f9f;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+.xian1 .xian2:nth-child(2) {
+    animation: dong .3s linear infinite;
+    background: #9f9f9f;
+    bottom: 0;
+    left: 8rpx;
+    position: absolute;
+}
+
+.xian1 .xian2:nth-child(3) {
+    animation: dong 1.2s linear infinite;
+    background: #9f9f9f;
+    bottom: 0;
+    left: 16rpx;
+    position: absolute;
+}
+
+.xian1 .xian2:nth-child(4) {
+    animation: dong 1.5s linear infinite;
+    background: #9f9f9f;
+    bottom: 0;
+    left: 24rpx;
+    position: absolute;
+}
+
+@-webkit-keyframes dong {
+    0% {
+        height: 2rpx;
+    }
+
+    50% {
+        height: 20rpx;
+    }
+
+    100% {
+        height: 10rpx;
+    }
+}
+
+@keyframes dong {
+    0% {
+        height: 2rpx;
+    }
+
+    50% {
+        height: 20rpx;
+    }
+
+    100% {
+        height: 10rpx;
+    }
+}
+
+.tinum {
+    color: #959595;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: 500;
+}
+
+.progress-box {
+    margin-top: 15rpx;
+    position: relative;
+    width: 286rpx;
+}
+
+.bai {
+    color: #9f9f9f;
+    font-family: PingFang SC;
+    font-size: 24rpx;
+    font-weight: 500;
+    position: absolute;
+    right: -110rpx;
+    text-align: left;
+    top: -15rpx;
+    width: 100rpx;
+}
+
+.flexlist {
+    margin-top: 18rpx;
+}
+
+.flexlist:first-child {
+    margin-top: 0;
+}
+
+.footer {
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    padding-bottom: env(safe-area-inset-bottom);
+    position: fixed;
+    z-index: 33;
+}
+
+.footer,.footerer {
+    height: 98rpx;
+    width: 750rpx;
+}
+
+.footerer {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fooleft {
+    align-items: center;
+    border-left: 1px solid #e5e5e5;
+    color: #1b1b1b;
+    display: flex;
+    justify-content: center;
+}
+
+.fooleft,.fooright {
+    flex: 0.5;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 500;
+}
+
+.fooright {
+    color: #fe6060;
+    line-height: 98rpx;
+    text-align: center;
+}
+
+.kongwei {
+    height: 100rpx;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.homeshuo {
+    height: 40rpx;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40rpx;
+}

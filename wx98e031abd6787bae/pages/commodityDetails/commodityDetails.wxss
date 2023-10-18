@@ -1,0 +1,268 @@
+.head {
+    position: relative;
+}
+
+.swiper1,.swiperimg {
+    height: 375rpx;
+    width: 100%;
+}
+
+.cur {
+    align-items: center;
+    background: rgba(0,0,0,.6);
+    border-radius: 23px;
+    bottom: 20rpx;
+    color: #fff;
+    display: flex;
+    font-family: PingFang SC;
+    font-size: 24rpx;
+    font-weight: 500;
+    height: 46rpx;
+    justify-content: center;
+    position: absolute;
+    right: 21rpx;
+    width: 100rpx;
+}
+
+.content {
+    box-sizing: border-box;
+    padding: 0 20rpx;
+}
+
+.price {
+    color: #f85209;
+    font-family: PingFang SC;
+    font-size: 36rpx;
+    font-weight: 700;
+}
+
+.fs24 {
+    font-size: 24rpx;
+    font-weight: 500;
+}
+
+.botr {
+    background: #ffece5;
+    border-radius: 8rpx;
+    height: 40rpx;
+    margin-left: 28rpx;
+    padding-right: 10rpx;
+}
+
+.shop3 {
+    height: 32rpx;
+    margin-bottom: -4rpx;
+    width: 27rpx;
+}
+
+.di,.shop3 {
+    margin-left: 7rpx;
+}
+
+.di {
+    color: #f0520e;
+    font-size: 24rpx;
+    font-weight: 500;
+}
+
+.di,.info {
+    font-family: PingFang SC;
+}
+
+.info {
+    color: #313131;
+    font-size: 32rpx;
+    font-weight: 700;
+    margin-top: 24rpx;
+}
+
+.new {
+    background: #ffe5e5;
+    border-radius: 5rpx;
+    color: #f44444;
+    display: inline-block;
+    font-family: Barlow ExtraBold;
+    font-size: 26rpx;
+    font-style: italic;
+    font-weight: 400;
+    height: 32rpx;
+    line-height: 32rpx;
+    margin-left: 10rpx;
+    text-align: center;
+    width: 81rpx;
+}
+
+.dzfu {
+    background: #f6f6f6;
+    border-radius: 10rpx;
+    display: flex;
+    height: 86rpx;
+    justify-content: space-between;
+    margin-top: 25rpx;
+    position: relative;
+    width: 100%;
+}
+
+.dzbig {
+    height: 67rpx;
+    left: 15rpx;
+    position: absolute;
+    top: 0;
+    width: 484rpx;
+}
+
+.pei {
+    color: #313131;
+    font-family: PingFang SC;
+    font-size: 30rpx;
+    font-weight: 500;
+    margin-left: 55rpx;
+}
+
+.newright {
+    height: 21rpx;
+    margin-right: 14rpx;
+    width: 13rpx;
+}
+
+.shouhuo {
+    color: #aaa;
+    font-family: PingFang SC;
+    font-size: 28rpx;
+    font-weight: 500;
+    margin-right: 19rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 400rpx;
+}
+
+.hr {
+    background-color: #fafafa;
+    height: 28rpx;
+    width: 100%;
+}
+
+.stit {
+    color: #313131;
+    font-family: PingFang SC;
+    font-size: 34rpx;
+    font-weight: 700;
+    margin-left: 26rpx;
+    position: relative;
+}
+
+.stit::before {
+    background: #f4dc66;
+    bottom: 11rpx;
+    height: 11rpx;
+    left: 0;
+    opacity: .5;
+    width: 128rpx;
+}
+
+.stit::after,.stit::before {
+    content: "";
+    position: absolute;
+}
+
+.stit::after {
+    background: #ffc829;
+    border-radius: 4rpx;
+    height: 34rpx;
+    left: -18rpx;
+    top: 6rpx;
+    width: 8rpx;
+}
+
+.footer {
+    align-items: center;
+    background: #fff;
+    bottom: 0;
+    box-shadow: 0 0 1rpx 0 rgba(0,0,0,.1);
+    box-sizing: border-box;
+    display: flex;
+    height: 98rpx;
+    justify-content: space-between;
+    left: 0;
+    padding: 0 19rpx env(safe-area-inset-bottom);
+    position: fixed;
+    width: 100%;
+}
+
+.jccen {
+    justify-content: center;
+}
+
+.btn1 {
+    align-items: center;
+    background: #fffffe;
+    border: 1px solid #ffc82a;
+    border-radius: 42rpx;
+    display: flex;
+    height: 84rpx;
+    width: 340rpx;
+}
+
+.newpen {
+    height: 25rpx;
+    margin-left: 35rpx;
+    width: 27rpx;
+}
+
+.btntian {
+    color: #ffc82a;
+    font-family: PingFang SC;
+    font-size: 28rpx;
+    font-weight: 500;
+}
+
+.btn2 {
+    align-items: center;
+    background: #ffc82a;
+    border: 1px solid #ffc82a;
+    border-radius: 42rpx;
+    display: flex;
+    flex-direction: column;
+    height: 84rpx;
+    justify-content: center;
+    width: 340rpx;
+}
+
+.btn2s {
+    font-size: 30rpx;
+    font-weight: 700;
+}
+
+.btn2b,.btn2s {
+    color: #1c1c1c;
+    font-family: PingFang SC;
+}
+
+.btn2b {
+    font-size: 20rpx;
+    font-weight: 500;
+}
+
+.wxParse {
+    margin-bottom: 120rpx;
+    margin-top: 30rpx;
+}
+
+.xl {
+    color: #b5b5b5;
+    font-family: PingFang SC;
+    font-size: 22rpx;
+    font-weight: 500;
+}
+
+.newfl {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fs20 {
+    font-size: 20rpx;
+}

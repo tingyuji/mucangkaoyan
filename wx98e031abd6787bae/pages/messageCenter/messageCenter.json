@@ -1,0 +1,10 @@
+{
+    "navigationBarBackgroundColor": "#FFCD21",
+    "navigationBarTitleText": "消息中心",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "impower": "/components/impower/impower",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

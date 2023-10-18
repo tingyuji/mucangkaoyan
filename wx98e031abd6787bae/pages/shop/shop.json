@@ -1,0 +1,9 @@
+{
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "head2": "/components/head/head",
+        "impower": "/components/impower/impower",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

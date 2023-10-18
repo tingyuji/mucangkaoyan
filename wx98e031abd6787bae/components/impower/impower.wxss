@@ -1,0 +1,91 @@
+.imbox {
+    background: rgba(0,0,0,.8);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000111;
+}
+
+.hover {
+    opacity: .9;
+    transform: scale(.9);
+}
+
+.close1 {
+    height: 30rpx;
+    position: absolute;
+    right: 30rpx;
+    top: 20rpx;
+    width: 30rpx;
+    z-index: 1000111;
+}
+
+.imcontent {
+    background-color: #fff;
+    border-radius: 12rpx;
+    box-sizing: border-box;
+    left: 50%;
+    margin-left: -290.5rpx;
+    margin-top: -353.5rpx;
+    padding-bottom: 20rpx;
+    position: fixed;
+    top: 50%;
+    transition: all .4s;
+    width: 581rpx;
+    z-index: 1000111;
+}
+
+.immessage {
+    color: #313131;
+    font-size: 32rpx;
+    margin-top: 4rpx;
+    text-align: center;
+}
+
+.imintro {
+    color: #707070;
+    font-size: 28rpx;
+    margin-top: 10rpx;
+    text-align: center;
+}
+
+.button-hover {
+    transform: translate(1rpx,1rpx);
+}
+
+.imbtn {
+    background: #16a2ff;
+    border: none;
+    border-radius: 45rpx;
+    box-shadow: 0 2rpx 8rpx 0 rgba(#16A2FF,.68);
+    color: #fff;
+    font-size: 34rpx;
+    font-weight: 700;
+    height: 90rpx;
+    line-height: 90rpx;
+    margin: 33rpx 0 0 35rpx;
+    padding: 0;
+    text-align: center;
+    width: 512rpx;
+}
+
+.imcontent.imtop {
+    transform: scale(0);
+    transition: all .4s;
+}
+
+.shouquan {
+    height: 201rpx;
+    margin-bottom: 26rpx;
+    margin-left: 95rpx;
+    width: 407rpx;
+}
+
+.xieyi {
+    color: #aaa;
+    font-size: 28rpx;
+    margin-top: 20rpx;
+    text-align: center;
+}

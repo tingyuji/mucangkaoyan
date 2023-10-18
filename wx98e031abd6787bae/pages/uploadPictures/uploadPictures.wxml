@@ -1,0 +1,20 @@
+<impower active="{{register}}"></impower>
+<view class="content">
+    <view class="flex-wp">
+        <view class="imglist listnone" wx:for="{{imgs}}" wx:key="index">
+            <image catchtap="close" class="quan" data-index="{{index}}" src="{{domain}}tianclose.png"></image>
+            <image class="w100" src="{{item}}"></image>
+        </view>
+        <view bindtap="chooseimg" class="imglist">
+            <image class="xiangji" src="{{domain}}xiangji.png"></image>
+            <view class="shangtext">上传图片</view>
+        </view>
+    </view>
+    <view class="wenti">
+        <text>{{can.screenshot_info}}</text>
+    </view>
+</view>
+<view style="height:100rpx;padding-bottom: env(safe-area-inset-bottom);"></view>
+<view class="footer">
+    <view bindtap="btn" class="footerbtn" hoverClass="hover">提交</view>
+</view>

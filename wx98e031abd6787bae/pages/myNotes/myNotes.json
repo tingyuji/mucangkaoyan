@@ -1,0 +1,11 @@
+{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFC637",
+    "navigationBarTitleText": "我的笔记",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "impower": "/components/impower/impower",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

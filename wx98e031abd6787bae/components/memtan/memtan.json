@@ -1,0 +1,9 @@
+{
+    "component": true,
+    "usingComponents": {
+        "gutan": "/components/gutan/gutan",
+        "impower": "/components/impower/impower",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

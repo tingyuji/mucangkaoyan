@@ -1,0 +1,10 @@
+{
+    "component": true,
+    "usingComponents": {
+        "bigcode": "/components/bigcode/bigcode",
+        "popup": "/components/popup/popup",
+        "impower": "/components/impower/impower",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

@@ -1,0 +1,114 @@
+page {
+    background: #f8f8f8;
+}
+
+.contetn {
+    background: #fff;
+    box-sizing: border-box;
+    padding: 30rpx 34rpx 29rpx;
+}
+
+.title {
+    color: #3c404d;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 500;
+}
+
+.images .detaimg:nth-child(3n-2) {
+    margin-left: 0;
+}
+
+.detaimg {
+    border-radius: 8rpx;
+    height: 217rpx;
+    margin-left: 15rpx;
+    margin-top: 18rpx;
+    width: 217rpx;
+}
+
+.shuhr {
+    background: hsla(42,10%,50%,.3);
+    border-radius: 1px;
+    height: 25rpx;
+    margin: 0 18rpx;
+    width: 2rpx;
+}
+
+.titkuang {
+    background: #eaeaea;
+    border-radius: 5rpx;
+    color: #898989;
+    font-size: 24rpx;
+    height: 43rpx;
+    line-height: 43rpx;
+    text-align: center;
+    width: 139rpx;
+}
+
+.time,.titkuang {
+    font-family: PingFang SC;
+    font-weight: 500;
+}
+
+.time {
+    color: #969696;
+    font-size: 26rpx;
+}
+
+.ifno {
+    border-radius: 0 10rpx 10rpx 10rpx;
+    box-sizing: border-box;
+    color: #8a8a8a;
+    line-height: 44rpx;
+    margin-top: 55rpx;
+    padding: 47rpx 16rpx 26rpx;
+    position: relative;
+    width: 100%;
+}
+
+.ifno,.xiang {
+    background: #eee;
+    font-family: PingFang SC;
+    font-size: 30rpx;
+    font-weight: 500;
+}
+
+.xiang {
+    border-radius: 10rpx;
+    color: #323232;
+    height: 60rpx;
+    left: 0;
+    line-height: 60rpx;
+    position: absolute;
+    text-align: center;
+    top: -30rpx;
+    width: 157rpx;
+}
+
+.fantit {
+    color: #313131;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 700;
+    position: relative;
+}
+
+.fantit::before {
+    background: #ffeaaa;
+    bottom: 0rpx;
+    content: "";
+    height: 11rpx;
+    left: 0;
+    opacity: .4;
+    position: absolute;
+    width: 127rpx;
+}
+
+.faninfo {
+    color: #3c404c;
+    font-family: PingFang SC;
+    font-size: 30rpx;
+    font-weight: 500;
+    margin-top: 26rpx;
+}

@@ -1,0 +1,12 @@
+{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFC82A",
+    "navigationBarTitleText": "订单详情",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "ordertan": "/components/ordertan/ordertan",
+        "impower": "/components/impower/impower",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

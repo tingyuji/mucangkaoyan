@@ -1,0 +1,76 @@
+<navigation-bar bgSrc="{{bgSrc}}" color="black" height="634" showBack="true" title="我的团队"></navigation-bar>
+<view class="por">
+    <image class="tou" src="{{userinfo.img}}"></image>
+    <view class="name">{{userinfo.nickname}}</view>
+    <view class="porlist">
+        <view class="porlister">
+            <image class="myteamwen" src="{{domain}}myteamwen.png"></image>
+            <view class="porlisterer">
+                <view class="ddc">
+                    <view class="teamnum">团队总人数</view>
+                    <view class="num">{{items.team_num}}</view>
+                </view>
+                <view class="ddc">
+                    <view class="teamnum">团队总销售额</view>
+                    <view class="num">{{items.consume_money}}</view>
+                </view>
+                <view class="ddc">
+                    <view class="teamnum">团队总佣金</view>
+                    <view class="num">{{items.change_num}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="content">
+    <view class="list {{item.flage?'listac':''}}" wx:for="{{list}}" wx:key="index">
+        <view bindtap="flage" class="listtop" data-index="{{index}}">
+            <view class="flex flex-c">
+                <view>
+                    <image class="teamtou" src="{{item.img}}"></image>
+                </view>
+                <view class="ml24">
+                    <view class="teamnaem">{{item.nickname}}</view>
+                    <view class="leiyou">贡献佣金：{{item.team_change_num}}元</view>
+                </view>
+            </view>
+            <view class="topright">
+                <view class="tuand">团队：<text class="rennum">{{item.team_num}}人</text>
+                </view>
+                <image class="erbootom mt20 {{item.flage?'erboac':''}}" src="{{domain}}erbottom.png" style="transition: all 0.3s linear"></image>
+            </view>
+        </view>
+        <block wx:if="{{item.flage}}">
+            <view class="erlist">
+                <view class="flex flex-c">
+                    <view class="ml24">
+                        <view class="teamnaem2">团队消费：<text class="rennum">{{item.team_consume_money}}元</text>
+                        </view>
+                        <view class="leiyou">加入时间：{{f.time1(item.add_time)}}</view>
+                    </view>
+                </view>
+                <view class="topright">
+                    <view class="tuand3">个人消费：<text class="rennum">{{item.consume_money}}元</text>
+                    </view>
+                    <view class="zuideng">最后登录：{{item.last_login_time2}}天以前</view>
+                </view>
+            </view>
+            <view class="erlist" wx:for="{{item.children}}" wx:for-item="xx">
+                <view class="flex flex-c">
+                    <view>
+                        <image class="teamtou" src="{{xx.img}}"></image>
+                    </view>
+                    <view class="ml24">
+                        <view class="teamnaem2">{{xx.nickname}}</view>
+                        <view class="leiyou">加入时间：{{f.time1(xx.add_time)}}</view>
+                    </view>
+                </view>
+                <view class="topright">
+                    <view class="tuand2">个人消费：{{xx.consume_money}}元</view>
+                    <view class="zuideng">最后登录：{{xx.last_login_time2}}天以前</view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
+<wxs module="f" src="../../utils/filter.wxs" />

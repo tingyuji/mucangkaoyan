@@ -1,0 +1,37 @@
+<view class="rgba" wx:if="{{show}}"></view>
+<view class="rgbabox" wx:if="{{show}}">
+    <view class="box" wx:if="{{type==1}}">
+        <image class="gutiantit" src="{{domain}}gutantit.png"></image>
+        <image bindtap="close" class="close" src="{{domain}}gutan1.png"></image>
+        <view class="boxli">
+            <view class="title">欢迎进群</view>
+            <view class="tips mt60" wx:if="{{qun==1}}">回复数字{{jinqun}}</view>
+            <view class="tips mt60" wx:if="{{qun==2}}">回复数字{{jinqun2}}</view>
+            <view class="tips mt60" wx:if="{{qun==3}}">回复数字{{jinqun3}}</view>
+            <view class="tips" wx:if="{{qun!=3&&qun!=4&&qun!=5}}">进会员群享受服务</view>
+            <view class="tips" wx:if="{{qun==3}}">进专业课复试群</view>
+            <view class="tips mt60" wx:if="{{qun==4}}">回复数字{{jinqun2}}进会员群享受服务</view>
+            <view class="tips" wx:if="{{qun==4}}">回复数字{{jinqun3}}进专业课复试群</view>
+            <view class="tips mt60" wx:if="{{qun==5}}">回复数字{{jinqun4}}进口语群</view>
+            <label>
+                <view class="btn" hoverClass="hover" wx:if="{{qun==1}}">立即回复数字 {{jinqun}}</view>
+                <view class="btn" hoverClass="hover" wx:if="{{qun==2}}">立即回复数字 {{jinqun2}}</view>
+                <view class="btn" hoverClass="hover" wx:if="{{qun==3}}">立即回复数字 {{jinqun3}}</view>
+                <view class="btn" hoverClass="hover" wx:if="{{qun==4}}">立即回复数字</view>
+                <view class="btn" hoverClass="hover" wx:if="{{qun==5}}">立即回复数字{{jinqun4}}</view>
+                <button hidden="true" openType="contact"></button>
+            </label>
+        </view>
+    </view>
+    <view class="box" wx:if="{{type==2}}">
+        <image bindtap="close" class="close" src="{{domain}}gutan1.png"></image>
+        <view class="boxli">
+            <view class="title">请填写激活码</view>
+            <view class="iptfu">
+                <input bindinput="bindcode" class="iptt" placeholder="输入激活码免费估分" placeholderClass="plipttd" type="text" value="{{code}}"></input>
+            </view>
+            <view catchtap="huoqu" class="ruhe">如何免费获取激活码?</view>
+            <view bindtap="{{gou==1?'suree':'suree2'}}" class="btn mt40" hoverClass="hover">确定</view>
+        </view>
+    </view>
+</view>

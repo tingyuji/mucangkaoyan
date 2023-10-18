@@ -1,0 +1,41 @@
+<view class="head">
+    <view class="tabbar">
+        <view bindtap="qie" class="list {{tabid==index?'listac':''}}" data-index="{{index}}" wx:for="{{tabbar}}" wx:key="index">{{item}}</view>
+    </view>
+</view>
+<view class="contetn">
+    <view bindtap="godetail" class="box" data-id="{{item.id}}" wx:for="{{items}}" wx:key="index">
+        <view class="listhead flex-c flex-sb">
+            <view class="flex flex-c">
+                <view class="ornum">订单编号：{{item.id}}</view>
+                <view catchtap="copy" class="copy" data-data="{{item.id}}">复制</view>
+            </view>
+            <view class="dai" wx:if="{{item.state==2}}">待发货</view>
+            <view class="dai" wx:if="{{item.state==3}}">待下载</view>
+            <view class="dai" wx:if="{{item.state==5&&goods_type!=1}}">已下载</view>
+            <view class="dai" wx:if="{{item.state==5&&goods_type==1}}">已收货</view>
+            <view class="dai" wx:if="{{item.state==4}}">已收货</view>
+        </view>
+        <view class="flex boxbott">
+            <view>
+                <image class="boximg" src="{{item.goods_img}}"></image>
+            </view>
+            <view class="flex1 ml25">
+                <view class="boxtit">{{item.goods_name}}</view>
+                <view class="boxinfo">{{item.goods_info}}</view>
+                <view class="flex-sb flex-c mt10">
+                    <view class="boxprice">
+                        <text class="prii">￥</text>
+                        <text>{{item.goods_price}}</text>
+                    </view>
+                    <view class="boxbtn" wx:if="{{item.state==2}}">待发货</view>
+                    <view class="boxbtn" wx:if="{{item.state!=2}}">去查看</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="imgkongfu mt40" wx:if="{{kong}}">
+        <image class="zhanwuimg" mode="widthFix" src="{{domain}}zhanwu.png"></image>
+        <view class="zhanwutext">暂无数据</view>
+    </view>
+</view>

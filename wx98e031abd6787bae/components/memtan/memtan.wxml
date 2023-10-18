@@ -1,0 +1,22 @@
+<import src="../../api/wxParse/wxParse.wxml"></import>
+<view class="rgba" wx:if="{{show}}"></view>
+<view class="rgbabox" wx:if="{{show}}">
+    <view class="box" wx:if="{{type==1}}">
+        <image class="newmembertan" showMenuByLongpress="true" src="{{can.public_img_1}}"></image>
+        <image bindtap="close" class="close" src="https://newfstj-1304170060.cos.ap-beijing.myqcloud.com/img//gutan1.png"></image>
+        <view class="center">
+            <view class="guancen mt70" wx:if="{{!ios}}">关注公众号【木仓考研</view>
+            <view class="guancen" wx:if="{{!ios}}">回复" <text class="tiaoji" wx:if="{{can.applets_idens=='mucang_zheng'}}">{{gou==1?'刷题':'口语'}}</text>
+                <text class="tiaoji" wx:if="{{can.applets_idens=='mucang_duo'}}">{{gou==1?'专业课':'口语'}}</text> "免费领取会员</view>
+            <input bindinput="bindchinge" class="ipt" placeholder="请输入激活码成为会员" placeholderClass="plipt" type="text" value="{{code}}"></input>
+            <view bindtap="sure" class="btn" hoverClass="hover">确定</view>
+        </view>
+    </view>
+    <view class="box2" wx:if="{{type==2}}">
+        <image bindtap="close" class="neclose" src="{{domain}}closexian.png"></image>
+        <image class="kaihuitan" src="{{domain}}kaihuitan.png"></image>
+        <view class="protext">
+            <view class="scroll2"></view>
+        </view>
+    </view>
+</view>

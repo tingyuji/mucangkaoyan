@@ -1,0 +1,6 @@
+<view class="headfu" style="height:{{customBar+8}}px;background:{{background}};position: {{!flexd?'fixed':'sticky'}};">
+    <view class="pofu">
+        <image bindtap="black" class="right" src="{{domain}}left.png" wx:if="{{leftimg2}}"></image>
+        <view class="title" style="color:{{colorr}}">{{title}}</view>
+    </view>
+</view>

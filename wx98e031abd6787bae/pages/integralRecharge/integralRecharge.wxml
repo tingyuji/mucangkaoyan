@@ -1,0 +1,37 @@
+<head2 background="{{background}}" black="true" title="积分充值"></head2>
+<view class="head">
+    <image class="jfchong" src="https://shuati.quyanedu.com/uploads/img/img/jfchong.png"></image>
+    <view class="header">
+        <view class="number">{{userinfo.integral}}</view>
+        <view class="jfyu">积分余额</view>
+    </view>
+</view>
+<view class="box" wx:if="{{!ios}}">
+    <view class="xuan">选择充值积分</view>
+    <view class="flex-wp">
+        <view bindtap="qie" class="list {{itemsid==index?'listac':''}}" data-index="{{index}}" wx:for="{{items}}" wx:key="index">
+            <view class="numjf">{{item.integral}}积分</view>
+            <view class="price">￥{{item.price}}</view>
+        </view>
+    </view>
+</view>
+<view class="box2" wx:if="{{!ios}}">
+    <view class="flex-sb">
+        <input bindinput="bindchinge" placeholder="请输入积分数量" type="number" value="{{integral_pay}}"></input>
+        <view class="pice">￥{{integral_pay&&integral_pay!=null?integral_pay/num:0}}</view>
+    </view>
+</view>
+<view class="zhu" wx:if="{{!ios}}">
+    <view class="zhutext">注:</view>
+    <view class="zhutext fs26">
+        <text>1元={{can.integral_price_proportion}}积分，请按需充值</text>
+    </view>
+</view>
+<view style="height:150rpx"></view>
+<view class="footer flex-c flex-sb">
+    <view bindtap="show" class="left" hoverClass="hover">请输入激活码{{ios?'兑换':'充值'}}</view>
+    <view bindtap="btn" class="right" hoverClass="hover" wx:if="{{!ios}}">立即支付</view>
+    <view bindtap="btn2" class="right" hoverClass="hover" wx:if="{{ios}}">获取激活码</view>
+</view>
+<pricecode bindzhi="zhi" show="{{show}}"></pricecode>
+<popup show="{{show2}}" type="5"></popup>

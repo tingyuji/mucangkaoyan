@@ -1,0 +1,46 @@
+<view class="head">
+    <view class="flex flex-c">
+        <view class="tihao">{{num+1}}</view>
+        <view class="{{ye?'duo':''}} tit" style="width: auto;padding: 0 15rpx 0 10rpx;">大题</view>
+    </view>
+    <view class="{{yejian?'info ye_color':'info'}}">
+        <text class="" userSelect="true">{{subjectInfo.mk_subject_info.content}}</text>
+    </view>
+    <view class="smalltit" style="margin-top: 30rpx;">
+        <textarea bindinput="bindmy_answer" class="{{yejian?'ye_color':''}}" style="border: 1px solid #F2F2F4;border-radius:16rpx;padding: 30rpx;width: 100%;box-sizing: border-box;" userSelect="true">{{my_answer}}</textarea>
+    </view>
+    <view bindtap="flage" class="btn flex-cc" hoverClass="hover" wx:if="{{!flage}}">
+        <view>{{flage?'收起答案':'提交'}}</view>
+    </view>
+    <view bindtap="popupTap" class="btn flex-cc" hoverClass="hover" wx:if="{{flage}}">
+        <view>{{!fen?'给自己打分':fen+'分'}}</view>
+    </view>
+    <view wx:if="{{flage}}">
+        <view class="answertit">参考答案 <text class="huang">(<text userSelect="true">满分{{subjectInfo.mk_subject_info.fraction}}分</text>)</text>
+        </view>
+        <view class="answerinfo">
+            <text userSelect="true">{{subjectInfo.mk_subject_info.analysis_content}}</text>
+        </view>
+    </view>
+</view>
+<view>
+    <view class="popup" wx:if="{{df_popShow}}">
+        <view catchtap="closePop" catchtouchmove="preventTouchMove" class="mask"></view>
+        <view class="popup_main" id="popup_main">
+            <view class="pop_list_wrapper" style="padding: 0 15rpx;min-height: 200px;">
+                <view style="font-weight: 800;width: 100%;text-align: center;margin-bottom: 30rpx;">打分</view>
+                <view style="margin-bottom: 10rpx;">
+                    <picker-view bindchange="bindChange_fen" immediateChange="true" indicatorStyle="height: 50px;" style="width: 100%; height: 150px;" value="{{value}}">
+                        <picker-view-column>
+                            <view style="line-height: 50px; text-align: center;" wx:for="{{subjectInfo.mk_subject_info.fraction+1}}" wx:key="{{index}}">{{item}}分</view>
+                        </picker-view-column>
+                    </picker-view>
+                </view>
+                <view style="display: flex;justify-content: space-between;align-items: center;height: 50px;">
+                    <view bindtap="closePop" style="width: 50%;text-align: center;border-right: 1px solid #F0F0F0;">取消</view>
+                    <view bindtap="dafen" style="width: 50%;text-align: center;color: #5B6A93;">确认</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

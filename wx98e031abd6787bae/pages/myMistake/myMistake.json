@@ -1,0 +1,13 @@
+{
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "我的错题",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "head": "/components/head/head",
+        "impower": "/components/impower/impower",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

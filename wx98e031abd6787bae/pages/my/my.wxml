@@ -1,0 +1,57 @@
+<impower active="{{register}}" wx:if="{{register}}"></impower>
+<phonePopup show="{{phone}}"></phonePopup>
+<head black="true" title="我的"></head>
+<view class="header">
+    <image class="myimg" src="{{domian}}myimg.png"></image>
+    <view class="card">
+        <view class="tou">
+            <image class="touimg" src="{{items.img}}"></image>
+            <view class="ml20">
+                <view class="name">
+                    <text>{{items.nickname}}({{items.id}})</text>
+                    <image class="vipp" src="{{domain}}vipp.png" wx:if="{{vip}}"></image>
+                </view>
+                <view class="namebot mt10">
+                    <image class="love" src="{{domain}}love_ac.png"></image>
+                    <text class="addnum">+{{items.give_num}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="bottom">
+            <view>
+                <view class="number">{{items.total_num}}</view>
+                <view class="shuati">总刷题(道)</view>
+            </view>
+            <view>
+                <image class="myxian" src="{{domain}}myxian.png"></image>
+            </view>
+            <view>
+                <view class="number">{{items.subject_day}}</view>
+                <view class="shuati">刷题天数</view>
+            </view>
+            <view>
+                <image class="myxian" src="{{domain}}myxian.png"></image>
+            </view>
+            <view>
+                <view class="number">{{f.zheng(items.correct_num/items.total_num)}}</view>
+                <view class="shuati">正确率%</view>
+            </view>
+        </view>
+        <view class="newbott" wx:if="{{!ios}}">
+            <image class="newmy2" src="{{domain}}newmy2.png"></image>
+            <view class="newpoab flex-sb flex-c">
+                <view class="flex flex-c">
+                    <image class="newmy3" src="{{domain}}newmy3.png"></image>
+                    <view class="huiti">{{vip?'已是会员 有效期至'+f.time1(items.vip_time):'开通会员 专享海量无限刷题'}}</view>
+                </view>
+                <view bindtap="gohui" class="li">{{vip?'立即入群':'立即开通'}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="bott">
+    <view class="ttii">本周刷题量</view>
+    <canvas canvasId="mycanvas" hidden="{{show}}" style="width:100%;height:100%"></canvas>
+</view>
+<popup bindclose="close" show="{{show}}" type="2"></popup>
+<wxs module="f" src="../../utils/filter.wxs" />

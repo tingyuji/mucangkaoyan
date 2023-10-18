@@ -1,0 +1,11 @@
+{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFC82A",
+    "navigationBarTitleText": "我的订单",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "impower": "/components/impower/impower",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

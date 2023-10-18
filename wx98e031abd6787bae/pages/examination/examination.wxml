@@ -1,0 +1,14 @@
+<view class="head">
+    <view class="flex flex-c">
+        <view class="progress-box">
+            <progress active activeMode="forwards" activeColor="#FFCD21" duration="10" percent="{{(num+1)/items.length*100}}" strokeWidth="8rpx"></progress>
+        </view>
+        <view class="num">
+            <text class="num2">{{num+1}}</text>/{{items.length}}</view>
+    </view>
+</view>
+<exam detail="{{detail}}" id="exam" items="{{items}}" num="{{num}}" wx:if="{{detail.type==1||detail.type==2}}"></exam>
+<exam2 detail="{{detail}}" id="exam2" items="{{items}}" num="{{num}}" wx:if="{{detail.type==4||detail.type==6}}"></exam2>
+<exam3 detail="{{detail}}" id="exam3" items="{{items}}" num="{{num}}" tabid="{{tabid}}" wx:if="{{detail.type==3||detail.type==5}}"></exam3>
+<view style="height:213rpx;padding-bottom: env(safe-area-inset-bottom);"></view>
+<footer itemslength="{{items.length}}" num="{{num+1}}"></footer>

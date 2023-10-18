@@ -1,0 +1,55 @@
+<impower active="{{register}}" wx:if="{{register}}"></impower>
+<phonePopup show="{{phone}}"></phonePopup>
+<impower active="{{register}}"></impower>
+<head black="true" title="每日任务"></head>
+<view class="headr">
+    <image class="bigmei" src="{{domian}}bigmei.png"></image>
+    <view class="my">
+        <view class="wodi">我的积分</view>
+        <view class="numjc">{{userinfo.integral}}</view>
+    </view>
+    <view bindtap="gocong" class="jifencong" hoverClass="hover" wx:if="{{!ios}}">积分{{ios?'兑换':'充值'}}</view>
+    <view class="box">
+        <view class="boxtit">已经连续签到<text class="tian">{{items.continuity_day}}</text>天</view>
+        <view class="flex-sb mt50">
+            <view class="tianlist" wx:for="{{items.week_array}}" wx:key="index">
+                <image class="weiling" src="{{item.is_sign==1?_domian+'yiling.png':_domian+'weiling.png'}}">
+                    <text class="inter">{{item.integral}}</text>
+                </image>
+                <view class="yi">{{item.is_sign==1?'已领':item.day_num+'天'}}</view>
+            </view>
+        </view>
+        <view bindtap="qian" class="qian" hoverClass="hover" wx:if="{{userinfo.is_sign==2}}">立即签到</view>
+        <view class="qian success" wx:if="{{userinfo.is_sign==1}}">已签到</view>
+    </view>
+</view>
+<view class="view1">
+    <view class="wodi">每日任务</view>
+    <view class="flex-sb borbo">
+        <view class="flex flexfu">
+            <view class="quanb">
+                <image class="mei1" src="https://shuati.quyanedu.com/uploads/20200713/a4ae761d0d2ea82ab0cea16dc5e27c63.png"></image>
+            </view>
+            <view class="ml30">
+                <view class="xin">邀请1人刷题（无上限）</view>
+                <view class="addjf">+100积分</view>
+            </view>
+        </view>
+        <label>
+            <view class="{{items.task[0].is_end==1?'quyao':'quyao'}}">{{items.task[0].is_end==1?'去邀请':'去邀请'}}</view>
+            <button hidden="true" openType="share"></button>
+        </label>
+    </view>
+    <view class="flex-sb borbo">
+        <view class="flex flexfu">
+            <view class="quanb yellow">
+                <image class="mei1" src="https://shuati.quyanedu.com/uploads/20200713/1f2a1da2ce238f643b6218858a946b01.png"></image>
+            </view>
+            <view class="ml30">
+                <view class="xin">刷题赚积分</view>
+                <view class="addjf">+20积分</view>
+            </view>
+        </view>
+        <view bindtap="gotopicAnalysis" class="{{userinfo.is_subject==1?'quyao success':'quyao'}}" data-type="{{userinfo.is_subject}}">{{userinfo.is_subject==1?'已完成':'去刷题'}}</view>
+    </view>
+</view>

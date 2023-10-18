@@ -1,0 +1,40 @@
+.mask {
+    background-color: rgba(0,0,0,.6);
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.mask,.mask .center {
+    align-items: center;
+    display: flex;
+}
+
+.mask .center {
+    background: #fff;
+    border-radius: 20rpx;
+    flex-direction: column;
+    min-height: 424rpx;
+    padding: 72rpx 50rpx 50rpx;
+    text-align: center;
+    width: 610rpx;
+}
+
+.mask .center .title {
+    color: #333;
+    font-family: PingFangSC-Medium,PingFang SC;
+    font-size: 36rpx;
+    font-weight: 500;
+}
+
+.mask .center .desc {
+    color: #999;
+    font-family: PingFangSC-Regular,PingFang SC;
+    font-size: 28rpx;
+    font-weight: 400;
+    margin-top: 16rpx;
+}

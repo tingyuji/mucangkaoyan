@@ -1,0 +1,80 @@
+{
+    "pages": [
+        "pages/index/index",
+        "components/tan3/tan3",
+        "pages/ranking/ranking",
+        "pages/uploadPictures/uploadPictures",
+        "pages/orderDetails/orderDetails",
+        "pages/feedback/feedback",
+        "pages/dailyTasks/dailyTasks",
+        "pages/historicalAccuracy/historicalAccuracy",
+        "pages/memberCenter/memberCenter",
+        "pages/shippingAddress/shippingAddress",
+        "pages/newAddress/newAddress",
+        "pages/editAddress/editAddress",
+        "pages/messageCenter/messageCenter",
+        "pages/shop/shop",
+        "pages/mistake/mistake",
+        "pages/myMistake/myMistake",
+        "pages/noteDetails/noteDetails",
+        "pages/my/my",
+        "pages/quanbj/quanbj",
+        "pages/myNotes/myNotes",
+        "pages/newnote/newnote",
+        "pages/mao/mao",
+        "pages/comment/comment",
+        "pages/brushTopic/brushTopic",
+        "pages/brushTopic2/brushTopic2",
+        "pages/homePage/homePage",
+        "pages/homehall/homehall",
+        "pages/spread/spread",
+        "pages/shareMoney/shareMoney",
+        "pages/appletPathSharing/appletPathSharing",
+        "pages/withdrawal/withdrawal",
+        "pages/withdrawalDetails/withdrawalDetails",
+        "pages/commissionDetails/commissionDetails",
+        "pages/myteam/myteam",
+        "pages/examreport/examreport",
+        "pages/bookList/bookList",
+        "pages/examination/examination",
+        "pages/confirmOrder/confirmOrder",
+        "pages/myOrder/myOrder",
+        "pages/integralRecharge/integralRecharge",
+        "pages/waparse/waparse",
+        "pages/entergroup/entergroup",
+        "pages/entergroup2/entergroup2",
+        "pages/commodityDetails/commodityDetails",
+        "mold-test/pages/index/index",
+        "mold-test/pages/unlock/unlock",
+        "mold-test/pages/screenshots-upload/screenshots-upload",
+        "mold-test/pages/test-report/test-report",
+        "mold-test/pages/ranking/ranking",
+        "mold-test/pages/answer/answer",
+        "mold-test/pages/brushTopic_mk/brushTopic",
+        "mold-test/pages/brushTopic_mk2/brushTopic",
+        "mold-test/pages/examreport_mock/examreport",
+        "mold-test/pages/ranking_mock/ranking"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "木仓考研刷题",
+        "navigationBarTextStyle": "black"
+    },
+    "subPackages": [
+        {
+            "root": "mold-test/"
+        }
+    ]
+}reenshots-upload",
+                "pages/test-report/test-report",
+                "pages/ranking/ranking",
+                "pages/answer/answer",
+                "pages/brushTopic_mk/brushTopic",
+                "pages/brushTopic_mk2/brushTopic",
+                "pages/examreport_mock/examreport",
+                "pages/ranking_mock/ranking"
+            ]
+        }
+    ]
+}

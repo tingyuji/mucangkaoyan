@@ -1,0 +1,27 @@
+<impower active="{{register}}" wx:if="{{register}}"></impower>
+<navigation-bar bgSrc="{{domian}}qmemberhui.png" color="white" height="501" showBack="true" title="会员中心"></navigation-bar>
+<view class="header">
+    <view class="memfu">
+        <image class="memberbackimg" src="{{domian}}memberbackimg.png">
+            <view class="lier">
+                <image class="tou" src="{{userinfo.img}}"></image>
+                <view class="name mt20">{{userinfo.nickname}}</view>
+                <view class="dqtime mt20" wx:if="{{userinfo.vip_time}}">{{userinfo.vip_time+'到期，解锁后有效期将延续'}}</view>
+                <view class="dqtime mt20" wx:else></view>
+            </view>
+        </image>
+    </view>
+</view>
+<view class="cneter">
+    <view class="hui">会员说明</view>
+    <view class="rech">
+        <mp-html content="{{can.vip_content}}"></mp-html>
+    </view>
+</view>
+<view style="height:174rpx"></view>
+<view class="footer {{ios?'ios':''}}">
+    <view catchtap="xu" class="foo1 " wx:if="{{!ios}}">￥{{can.vip_price}}购买</view>
+    <view catchtap="show2" class="foo2 zi">{{ios?'输入激活码':'免费领取'}}</view>
+</view>
+<popup bindinit="my" jinqun="{{jinqun}}" show="{{show2}}" type="{{type}}"></popup>
+<memtan bindinit="my2" jinqun="{{jinqun}}" show="{{show}}"></memtan>

@@ -1,0 +1,29 @@
+<view class="content">
+    <view class="list flex pt63">
+        <view class="name">联系人:</view>
+        <input bindinput="bindchinge" class="ipt" id="realname" placeholder="请填写联系人" placeholderClass="iptpl" value="{{params.realname}}"></input>
+    </view>
+    <view class="list flex">
+        <view class="name">联系电话:</view>
+        <input bindinput="bindchinge" class="ipt" id="mobile" placeholder="请填写联系电话" placeholderClass="iptpl" value="{{params.mobile}}"></input>
+    </view>
+    <view class="list flex">
+        <view class="name">收货地址:</view>
+        <picker bindchange="bindRegionChange" mode="region" value="{{region}}">
+            <view class="{{region.length==0?'iptpl':'ipt'}} flex1">{{region.length==0?'请填写收货地址':region[0]+'，'+region[1]+'，'+region[2]}}</view>
+        </picker>
+    </view>
+    <view class="list flex">
+        <view class="name">详细地址:</view>
+        <textarea autoHeight bindinput="bindchinge" class="ipt" id="address" placeholder="门牌号：如5号6单元604" placeholderClass="iptpl" value="{{params.address}}"></textarea>
+    </view>
+    <view class="list flex">
+        <view class="name">设为默认地址:</view>
+        <view bindtap="bindchine" class="chick {{flage?'chickac':''}}">
+            <view class="quan {{flage?'quanac':''}}" style="transform: translateX({{flage?'0':'56'}}rpx);"></view>
+        </view>
+    </view>
+</view>
+<view class="footer flex-cc">
+    <view bindtap="btn" class="btn">保存地址</view>
+</view>

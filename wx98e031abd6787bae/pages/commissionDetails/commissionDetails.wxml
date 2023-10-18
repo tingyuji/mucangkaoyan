@@ -1,0 +1,28 @@
+<navigation-bar bgSrc="{{bgSrc}}" color="white" height="416" showBack="true" title="佣金明细"></navigation-bar>
+<view class="head">
+    <view class="price">{{userinfo.balance}}</view>
+    <view class="dang">当前佣金(元)</view>
+    <view class="lei">累计总佣金：{{userinfo.balance_total}}元</view>
+</view>
+<view class="content">
+    <view class="list" wx:for="{{items}}" wx:key="index">
+        <view>
+            <view class="dingid">订单编号：{{item.id}}</view>
+            <view class="flex flex-c mt10">
+                <image class="tou" src="{{item.img}}"></image>
+                <view class="ml15">
+                    <view class="name">{{item.nickname}}</view>
+                    <view class="time">{{item.add_time}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="listrignt">
+            <view class="addprice">{{item.change==1?'+':'-'}}{{item.change_num}}</view>
+        </view>
+    </view>
+</view>
+<view class="dixian" wx:if="{{items.length!=0}}">我是有底线的哦~</view>
+<view wx:if="{{items.length==0}}">
+    <image class="sharekong" src="{{domain}}zhanwu.png"></image>
+    <view class="zann">暂无数据</view>
+</view>

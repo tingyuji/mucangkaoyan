@@ -1,0 +1,150 @@
+page {
+    background: #f8faff;
+}
+
+.header {
+    position: relative;
+}
+
+.member {
+    height: 501rpx;
+    width: 100%;
+}
+
+.memfu {
+    bottom: -70rpx;
+    left: 0;
+    position: absolute;
+}
+
+.memberbackimg {
+    height: 370rpx;
+    position: relative;
+    width: 732rpx;
+}
+
+.lier {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    position: absolute;
+    top: 55rpx;
+    width: 100%;
+}
+
+.tou {
+    border: 6rpx solid #fff;
+    border-radius: 50%;
+    height: 126rpx;
+    width: 126rpx;
+}
+
+.name {
+    font-size: 34rpx;
+    font-weight: 700;
+}
+
+.dqtime,.name {
+    color: #211e16;
+    font-family: PingFang SC;
+}
+
+.dqtime {
+    font-size: 28rpx;
+    font-weight: 500;
+}
+
+.cneter {
+    box-sizing: border-box;
+    margin-top: 90rpx;
+    padding: 0 34rpx;
+}
+
+.hui {
+    color: #1b1b1b;
+    font-family: PingFang SC;
+    font-size: 36rpx;
+    font-weight: 700;
+    margin-left: 25rpx;
+    position: relative;
+}
+
+.hui::before {
+    background: #ffd226;
+    border-radius: 5rpx;
+    content: "";
+    height: 37rpx;
+    left: -20rpx;
+    position: absolute;
+    top: 0rpx;
+    width: 10rpx;
+}
+
+.rech {
+    background: #fff;
+    border-radius: 17rpx;
+    margin-top: 27rpx;
+    padding: 40rpx 29rpx;
+}
+
+.footer,.rech {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.footer {
+    bottom: 0;
+    justify-content: space-between;
+    left: 0;
+    padding: 42rpx 34rpx;
+    position: fixed;
+}
+
+.footer,.ios {
+    display: flex;
+}
+
+.ios {
+    align-items: center;
+    justify-content: center;
+}
+
+.foo1 {
+    background: #fff8e5;
+    border: 2rpx solid #ffa337;
+    border-radius: 44rpx;
+    box-shadow: 0 4rpx 16rpx 0 rgba(255,163,55,.34);
+    box-sizing: border-box;
+    color: #ffa337;
+    font-size: 30rpx;
+    font-weight: 700;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    width: 323rpx;
+}
+
+.foo1,.zi {
+    font-family: PingFang SC;
+}
+
+.zi {
+    color: #1b1b1b;
+    font-size: 32rpx;
+    font-weight: 500;
+}
+
+.foo2 {
+    background: #ffc737;
+    border-radius: 44rpx;
+    box-shadow: 0 4rpx 16rpx 0 rgba(255,199,55,.71);
+    color: #313131;
+    font-family: PingFang SC;
+    font-size: 30rpx;
+    font-weight: 700;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    width: 323rpx;
+}

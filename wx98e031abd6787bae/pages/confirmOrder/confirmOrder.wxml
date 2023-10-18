@@ -1,0 +1,69 @@
+<view class="conett">
+    <view bindtap="godetail" class="boxtou" wx:if="{{items.type==1}}">
+        <image class="conright" src="{{domain}}conright.png"></image>
+        <view class="flex mt24">
+            <view class="ml30"></view>
+            <view class="ml15" wx:if="{{address}}">
+                <view class="name">
+                    <text>{{address.realname}}</text>
+                    <text class="ml54">{{address.mobile}}</text>
+                </view>
+                <view class="yudz">{{address.address}}</view>
+                <view></view>
+            </view>
+            <view wx:if="{{!address}}">请填写收货地址</view>
+        </view>
+        <image class="orderhr" src="{{domain}}orderhr.png"></image>
+    </view>
+    <view bindtap="black" class="box flex">
+        <view>
+            <image class="boximg" src="{{items.img}}"></image>
+        </view>
+        <view class="flex1 ml25">
+            <view class="flex-sb flex-c">
+                <view class="title">{{items.name}}</view>
+                <view class="new">NEW</view>
+            </view>
+            <view class="inof">{{items.info}}</view>
+            <view class="flex flex-c mt20">
+                <view class="price" wx:if="{{!ios}}">
+                    <text class="fs24">￥</text>
+                    <text>{{items.price}}</text>
+                </view>
+                <view class="botr flex flex-c">
+                    <image class="shop3" src="{{domain}}shop3.png"></image>
+                    <view class="di">可用{{items.integral_t}}积分兑换</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="view2">
+        <view class="flex-sb flex-c borbott" wx:if="{{!ios}}">
+            <view class="bh">积分抵扣</view>
+            <view class="flex flex-c">
+                <view class="botpr">-￥{{items.price}}</view>
+                <view bindtap="qie" class="quan {{flage?'':'quanac'}} flex-cc">
+                    <image class="newgou" src="{{domain}}newgou.png" wx:if="{{flage}}"></image>
+                </view>
+            </view>
+        </view>
+        <view class="flex mt40">
+            <view class="bh">
+                <view>备注</view>
+            </view>
+            <view class="ml120 flex1">
+                <textarea autoHeight bindinput="bindchinge" class="textar" placeholder="选填，可以告诉我们您的特殊需求~" value="{{content}}"></textarea>
+            </view>
+        </view>
+    </view>
+</view>
+<view style="height:78rpx"></view>
+<view class="footer">
+    <view bindtap="zhi" class="btn" hoverClass="hover" wx:if="{{!ios}}">
+        <text>{{flage?'':'￥'}}{{flage?'':items.price}} {{flage?'立即兑换':'立即支付'}}</text>
+    </view>
+    <view bindtap="zhi" class="btn" hoverClass="hover" wx:if="{{ios}}">
+        <text>立即兑换</text>
+    </view>
+</view>
+<wxs module="f" src="../../utils/filter.wxs" />

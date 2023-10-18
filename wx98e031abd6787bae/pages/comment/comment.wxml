@@ -1,0 +1,44 @@
+<view class="container">
+    <view class="flex-sb mt40" wx:for="{{items}}" wx:key="index">
+        <view>
+            <image class="tou" src="{{item.img}}"></image>
+        </view>
+        <view class="flex1 ml25 border">
+            <view class="flex-sb mt10">
+                <view class="name">{{item.nickname}}</view>
+                <view>
+                    <image bindtap="zhan" class="zanimg" data-give="{{item.is_give}}" data-id="{{item.id}}" data-index="{{index}}" src="{{domain}}{{item.is_give==1?'zan_ac.png':'zan.png'}}"></image>
+                    <text bindtap="zhan" class="zannum" data-give="{{item.is_give}}" data-id="{{item.id}}" data-index="{{index}}">{{item.give_num}}</text>
+                    <text bindtap="mask" class="huifu" data-id="{{item.id}}">回复</text>
+                </view>
+            </view>
+            <view class="contetn">
+                <text>{{item.content}}</text>
+            </view>
+            <view class="time">{{item.add_time}}</view>
+            <view class="huinei" wx:for="{{item.children_list}}" wx:for-item="xx" wx:key="index">
+                <view class="ername">{{xx.nickname}}<text class="erhu"> 回复 </text>{{item.nickname}}</view>
+                <view class="ernei">
+                    <text>{{xx.content}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view style="height:130rpx"></view>
+<view wx:if="{{kong}}">
+    <image class="zhanwu" src="{{domain}}zhanwu.png"></image>
+    <view class="zhanwutext">暂无评论~</view>
+</view>
+<view bindtap="mask" class="btn" data-id="0">
+    <image class="btnimg" src="{{domain}}comment.png"></image>
+    <text class="btnfa">发表评论</text>
+</view>
+<view catchtap="noMask" class="{{mask?'disbl':'disnone'}} rgba"></view>
+<view class="{{mask?'disbl rgbabox':'disnone'}}">
+    <textarea bindinput="bindcontent" class="textare" maxlength="300" placeholder="说点什么~" value="{{content}}"></textarea>
+    <view class="flex-sb center">
+        <view class="shuliang">{{length}}/300</view>
+        <view catchtap="btn" class="rbbtn">提交</view>
+    </view>
+</view>

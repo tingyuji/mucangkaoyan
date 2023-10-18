@@ -1,0 +1,17 @@
+<view class="{{mask?'rgba disbl':'disnone'}}"></view>
+<view class="{{mask?'disbl rgbabox':'disnone'}}">
+    <view>
+        <image class="rgimg" src="{{domain}}rgimg.png">
+            <view class="xuan">选择题库</view>
+        </image>
+    </view>
+    <view class="mt10">
+        <scroll-view scrollY="true" style="height: 500rpx;">
+            <view class="flex-wp">
+                <view bindtap="check" class="{{!item.flage?'sclist':'sclist2'}} mt40" data-flage="{{item.flage}}" data-id="{{item.id}}" data-index="{{index}}" wx:for="{{shulist}}" wx:key="index"> {{item.library_name}} <image class="gou" src="{{domain}}gou.png"></image>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view bindtap="sure" class="rgbtn">确定</view>
+</view>

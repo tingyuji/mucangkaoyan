@@ -1,0 +1,61 @@
+.rgba {
+    background: rgba(0,0,0,.7);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 334;
+}
+
+.rgbabox {
+    background: #fff;
+    border-radius: 13rpx;
+    box-sizing: border-box;
+    height: 481rpx;
+    left: 50%;
+    padding: 0 92rpx;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 581rpx;
+    z-index: 335;
+}
+
+.close1 {
+    height: 30rpx;
+    position: absolute;
+    right: 20rpx;
+    top: 20rpx;
+    width: 30rpx;
+}
+
+.imtit {
+    color: #313131;
+    font-size: 34rpx;
+    margin-top: 46rpx;
+    text-align: center;
+}
+
+.imfu {
+    color: #707070;
+    font-size: 28rpx;
+    margin-top: 28rpx;
+    text-align: justify;
+}
+
+.imbtn {
+    background: linear-gradient(0deg,#b92528,#eb393a);
+    border: none;
+    border-radius: 45rpx;
+    box-shadow: 1px 6rpx 4rpx 0 rgba(58,4,2,.35);
+    color: #fff;
+    font-size: 34rpx;
+    font-weight: 700;
+    height: 90rpx;
+    line-height: 90rpx;
+    margin: 170rpx 0 0 35rpx;
+    padding: 0;
+    text-align: center;
+    width: 512rpx;
+}

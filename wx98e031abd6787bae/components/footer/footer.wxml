@@ -1,0 +1,10 @@
+<view class="footer">
+    <view class="footerer">
+        <view bindtap="{{num==0?'':'shang'}}" class="{{num==0?'shang':'next'}}" hoverClass="{{num==0?'':'hover'}}">上一题</view>
+        <view bindtap="{{num+1==itemslength?'':'next'}}" class="{{num+1==itemslength?'shang':'next'}}" hoverClass="{{num+1==itemslength?'':'hover'}}">下一题</view>
+        <view bindtap="jiao" class="jiaofu" wx:if="{{flage}}">
+            <image class="examjiao" src="{{domain}}examjiao.png"></image>
+            <view class="jiaotext">交卷</view>
+        </view>
+    </view>
+</view>

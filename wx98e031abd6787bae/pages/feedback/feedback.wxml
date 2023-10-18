@@ -1,0 +1,17 @@
+<view class="contetn">
+    <view class="title">{{items.report_errors.content}}</view>
+    <view class="images flex-wp">
+        <image class="detaimg" src="{{item}}" wx:for="{{items.report_errors.imgs}}" wx:key="index"></image>
+    </view>
+    <view class="flex flex-c mt24">
+        <view class="time">{{items.report_errors.add_time}}</view>
+    </view>
+    <view class="ifno"> {{title.subject_str}} <view class="xiang">相关题目</view>
+    </view>
+</view>
+<view style="height:28rpx"></view>
+<view class="contetn">
+    <view class="fantit">反馈回答</view>
+    <view class="faninfo"> {{items.content}} </view>
+    <view class="time mt24">{{items.add_time}}</view>
+</view>

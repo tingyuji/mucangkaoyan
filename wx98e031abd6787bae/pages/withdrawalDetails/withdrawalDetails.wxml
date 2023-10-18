@@ -1,0 +1,16 @@
+<view class="content">
+    <view class="list" wx:for="{{items}}" wx:key="index">
+        <view>
+            <view class="tixian">提现</view>
+            <view class="time">{{item.add_time}}</view>
+        </view>
+        <view class="dded">
+            <view class="price red">{{item.change==2?'-':''}}{{item.change_num}}</view>
+            <view class="sheng" wx:if="{{item.operation_state==2}}">已到账</view>
+            <view class="sheng" wx:if="{{item.operation_state==1}}">申请中</view>
+            <view class="sheng" wx:if="{{item.operation_state==3}}">已驳回</view>
+        </view>
+    </view>
+</view>
+<view class="woshi" wx:if="{{items.length==0}}">暂无数据~</view>
+<view class="woshi" wx:if="{{items.length!=0}}">我是有底线的哦~</view>

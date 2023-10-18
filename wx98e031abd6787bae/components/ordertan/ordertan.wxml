@@ -1,0 +1,16 @@
+<view class="rgba {{show?'':'disnone'}}"></view>
+<view class="rgbabox {{show?'':'disnone'}}">
+    <view class="boxli">
+        <view class="card">
+            <view class="tips">
+                <text userSelect class="textdd">{{tips}}</text>
+            </view>
+        </view>
+        <view class="ordnum">订单编号：{{idd}}</view>
+        <image class="newtan3" src="{{domain}}newtan3.png"></image>
+        <image class="newtan2" src="{{domain}}newtan2.png"></image>
+        <image class="newtan1" src="{{domain}}newtan1.png"></image>
+        <view bindtap="copy" class="btn">复制客服微信号</view>
+        <image catchtap="close" class="newclose" src="{{domain}}newclose.png"></image>
+    </view>
+</view>

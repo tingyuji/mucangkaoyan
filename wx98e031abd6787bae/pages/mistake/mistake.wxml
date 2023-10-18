@@ -1,0 +1,23 @@
+<view class="contan">
+    <view class="timu">题目：{{title}}</view>
+    <view class="mt50">
+        <textarea bindinput="bindinput" placeholder="请输入报错内容..." value="{{textarea}}"></textarea>
+    </view>
+    <view class="view2 mt40">
+        <view class="imgfu" wx:for="{{images}}" wx:key="index">
+            <image class="imgya" src="{{item}}"></image>
+            <view catchtap="closefu" class="closefu" data-index="{{index}}">
+                <image class="close" src="{{domain}}close.png"></image>
+            </view>
+        </view>
+        <view bindtap="chooseimg" class="imgfu">
+            <view class="scfu">
+                <view class="scfu2">
+                    <image class="scimg" src="{{domain}}shangchuan.png"></image>
+                    <view class="sctext">上传图片</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view bindtap="addNote" class="btn">提交</view>

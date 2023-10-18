@@ -1,0 +1,44 @@
+<view class="head">
+    <view class="flex flex-c">
+        <view class="tihao">{{num+1}}</view>
+        <view class="{{ye?'duo':''}} tit">{{detail.type==3?'材料题':'分析题'}}</view>
+    </view>
+    <view class="{{ti?'':'shouqi'}} info">{{subjectInfo.mk_subject_info.content}} </view>
+    <view bindtap="bindtis" class="btn flex-cc" hoverClass="hover" wx:if="{{subjectInfo.mk_subject_info.content.length>52}}">
+        <view>{{ti?'收起题目':'展开题目'}}</view>
+        <image class="examtop {{ti?'rgto180':''}}" src="{{domain}}examtop.png"></image>
+    </view>
+</view>
+<view class="hrr"></view>
+<view class="tabbarfu">
+    <scroll-view class="scroll-view_H" scrollX="true" style="width: 100%;white-space:nowrap;">
+        <view bindtap="qie" class="list {{tabid==index?'listac':''}}" data-index="{{index}}" wx:for="{{subjectInfo.mk_ask}}" wx:key="index">问题({{index+1}})</view>
+    </scroll-view>
+</view>
+<view class="content">
+    <view class="smalltit">
+        <text userSelect="true">{{subjectInfo.mk_ask[tabid].ask_title}}</text>
+    </view>
+    <view bindtap="flage" class="btn flex-cc" hoverClass="hover">
+        <view>{{subjectInfo.mk_ask[tabid].flage?'收起答案':'展开答案'}}</view>
+        <image class="examtop {{subjectInfo.mk_ask[tabid].flage?'rgto180':''}}" src="{{domain}}examtop.png"></image>
+    </view>
+    <view wx:if="{{subjectInfo.mk_ask[tabid].flage}}">
+        <view class="answertit">参考答案<text class="huang">({{subjectInfo.mk_ask[tabid].fraction}}分)</text>
+        </view>
+        <view class="answerinfo">
+            <text userSelect="true">{{subjectInfo.mk_ask[tabid].answer_str}}</text>
+        </view>
+    </view>
+    <view class="smalltit" style="margin-top: 30rpx;">
+        <textarea bindinput="bindmy_answer" class="{{yejian?'ye_color':''}}" value="{{subjectInfo.mk_ask[tabid].mk_answer_ask_log.answer_content}}" style="border: 1px solid #F2F2F4;border-radius:16rpx;padding: 30rpx;width: 100%;box-sizing: border-box;" userSelect="true"></textarea>
+    </view>
+    <view class="foofiex" wx:if="{{!submit}}">
+        <view class="shufen flex flex-c">
+            <input bindinput="bindchinge" class="flex1" placeholder="给自己打分" placeholderClass="plipt" type="number" value="{{subjectInfo.mk_ask[tabid].mk_answer_ask_log.fraction}}"></input>
+            <view bindtap="sure" class="sure" hoverClass="hover">确定</view>
+        </view>
+        <view bindtap="bindti" class="btn flex-cc" hoverClass="hover" wx:if="{{type!=2}}">提交</view>
+    </view>
+</view>
+<wxs module="f" src="../../utils/filter.wxs" />

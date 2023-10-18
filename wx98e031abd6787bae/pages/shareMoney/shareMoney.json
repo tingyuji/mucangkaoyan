@@ -1,0 +1,12 @@
+{
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "head": "/components/head/head",
+        "poster": "/components/poster/poster",
+        "mp-html": "/components/mp-html/index",
+        "impower": "/components/impower/impower",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

@@ -1,0 +1,45 @@
+<impower active="{{register}}" wx:if="{{register}}"></impower>
+<head2 black="true" title="商店"></head2>
+<view class="head">
+    <image class="shop" src="{{domian}}shop.png"></image>
+    <view autoplay circular class="newswiper" indicatorActiveColor="white" indicatorColor="#F0F0F0" indicatorDots="true">
+        <swiper class="swiper">
+            <swiper-item wx:for="{{swiper}}" wx:key="index">
+                <image bindtap="tiao" class="swiper bor29" data-index="{{index}}" src="{{item.img}}"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>
+<view class="contetnt">
+    <view bindtap="godetail" class="box flex" data-id="{{item.id}}" wx:for="{{items}}" wx:key="index">
+        <view>
+            <image class="boximg" src="{{item.img}}"></image>
+        </view>
+        <view class="flex1 ml25">
+            <view class="flex-sb flex-c">
+                <view class="title">{{item.name}}</view>
+                <view class="new" wx:if="{{item.is_new==1}}">NEW</view>
+            </view>
+            <view class="inof">{{item.info}}</view>
+            <view class="flex flex-c mt20">
+                <view class="price" wx:if="{{!ios}}">
+                    <text class="fs24">￥</text>
+                    <text>{{item.price}}</text>
+                </view>
+                <view class="botr flex flex-c">
+                    <image class="shop3" src="{{domain}}shop3.png"></image>
+                    <view class="di">可用{{item.integral_t}}积分兑换</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view style="height:155rpx"></view>
+<view class="footer">
+    <view bindtap="gojfen" class="myjif newfl" hoverClass="hover">
+        <view>积分{{ios?'':'充值'}}</view>
+        <view class="fs22">当前积分({{userinfo.integral}})</view>
+    </view>
+    <view bindtap="gomyorder" class="myding" hoverClass="hover">我的订单</view>
+</view>
+<wxs module="f" src="../../utils/filter.wxs" />

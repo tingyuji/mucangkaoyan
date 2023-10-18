@@ -1,0 +1,113 @@
+.head {
+    left: 34rpx;
+    position: absolute;
+    top: 220rpx;
+}
+
+.price {
+    color: #dbc895;
+    font-family: Bahnschrift;
+    font-size: 50rpx;
+    font-weight: 700;
+}
+
+.dang {
+    color: #dbc895;
+    font-size: 24rpx;
+}
+
+.dang,.lei {
+    font-family: PingFang SC;
+    font-weight: 500;
+}
+
+.lei {
+    color: #c3a97c;
+    font-size: 26rpx;
+    margin-top: 46rpx;
+}
+
+.content {
+    box-sizing: border-box;
+    padding: 0 34rpx;
+}
+
+.list {
+    border-bottom: 1px solid #dddfe4;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40rpx;
+    padding-bottom: 15rpx;
+}
+
+.tou {
+    border-radius: 50%;
+    height: 85rpx;
+    width: 85rpx;
+}
+
+.name {
+    color: #434343;
+    font-size: 28rpx;
+}
+
+.name,.time {
+    font-family: PingFang SC;
+    font-weight: 500;
+}
+
+.time {
+    color: #909090;
+    font-size: 24rpx;
+}
+
+.dingid {
+    color: #1b1b1b;
+    font-family: PingFang SC;
+    font-size: 30rpx;
+    font-weight: 500;
+}
+
+.listrignt {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.addprice {
+    color: #d09f42;
+    font-family: Bahnschrift;
+    font-size: 38rpx;
+}
+
+.yongright {
+    height: 23rpx;
+    margin-bottom: 10rpx;
+    width: 14rpx;
+}
+
+.dixian {
+    color: #aaa;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: 500;
+    margin: 28rpx 0;
+    text-align: center;
+}
+
+.sharekong {
+    display: block;
+    height: 254rpx;
+    margin: 80rpx auto 0;
+    width: 335rpx;
+}
+
+.zann {
+    color: #aaa;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: 500;
+    margin-top: 20rpx;
+    text-align: center;
+}

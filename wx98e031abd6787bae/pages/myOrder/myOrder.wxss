@@ -1,0 +1,153 @@
+page {
+    background-color: #fafafa;
+}
+
+.head {
+    background: #fff;
+    box-shadow: 0 1rpx 0rpx 0 rgba(0,0,0,.1);
+    box-sizing: border-box;
+    height: 100rpx;
+    padding: 30rpx 40rpx 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.tabbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.list {
+    color: #323232;
+    font-family: PingFang SC;
+    font-size: 30rpx;
+    font-weight: 500;
+    height: 73rpx;
+}
+
+.listac {
+    color: #ffc82a;
+    font-size: 34rpx;
+    position: relative;
+}
+
+.listac::before {
+    background: #ffc82a;
+    border-radius: 4rpx;
+    bottom: 0;
+    content: "";
+    height: 7rpx;
+    left: -26rpx;
+    position: absolute;
+    width: 150rpx;
+}
+
+.contetn {
+    box-sizing: border-box;
+    padding: 0 20rpx;
+}
+
+.box {
+    background: #fff;
+    border-radius: 10rpx;
+    box-shadow: 0 0 35rpx 0 rgba(49,49,49,.09);
+    height: 319rpx;
+    margin-top: 28rpx;
+    width: 100%;
+}
+
+.listhead {
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    height: 84rpx;
+    padding: 0 12rpx 0 27rpx;
+}
+
+.dai {
+    color: #fa7e33;
+    font-size: 26rpx;
+    font-weight: 500;
+}
+
+.dai,.ornum {
+    font-family: PingFang SC;
+}
+
+.ornum {
+    color: #5d6878;
+    font-size: 30rpx;
+    font-weight: 700;
+}
+
+.copy {
+    background: #fff7dc;
+    border-radius: 6rpx;
+    color: #ff9202;
+    font-family: PingFang SC;
+    font-size: 28rpx;
+    font-weight: 500;
+    height: 37rpx;
+    line-height: 37rpx;
+    margin-left: 20rpx;
+    text-align: center;
+    width: 94rpx;
+}
+
+.boximg {
+    border-radius: 10rpx;
+    height: 176rpx;
+    width: 176rpx;
+}
+
+.boxbott {
+    box-sizing: border-box;
+    padding: 24rpx 26rpx 0;
+}
+
+.boxtit {
+    color: #313131;
+    font-size: 32rpx;
+    margin-top: 14rpx;
+}
+
+.boxinfo,.boxtit {
+    font-family: PingFang SC;
+    font-weight: 500;
+}
+
+.boxinfo {
+    color: #8e949e;
+    font-size: 28rpx;
+    margin-top: 10rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 445rpx;
+}
+
+.boxprice {
+    color: #323232;
+    font-family: PingFang SC;
+    font-size: 36rpx;
+    font-weight: 700;
+}
+
+.prii {
+    font-size: 24rpx;
+}
+
+.boxbtn {
+    background: #ffc82a;
+    border-radius: 34rpx 34rpx 34rpx 0;
+    box-shadow: 1px 4rpx 16rpx 0 rgba(255,200,56,.71);
+    color: #323232;
+    font-family: PingFang SC;
+    font-size: 30rpx;
+    font-weight: 700;
+    height: 68rpx;
+    line-height: 68rpx;
+    text-align: center;
+    width: 172rpx;
+}

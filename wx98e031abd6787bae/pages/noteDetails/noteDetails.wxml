@@ -1,0 +1,29 @@
+<view class="containerr">
+    <view class="flex-sb">
+        <view class="fuone">
+            <view class="time">{{items.add_time}}</view>
+            <view class="open" wx:if="{{items.is_open==1}}">公开</view>
+            <view class="numbe">
+                <image class="smalllove" src="{{domain}}smalllove.png"></image>
+                <text class="addnum">+{{num}}</text>
+            </view>
+        </view>
+        <view class="furig" wx:if="{{items.member_id==member_id}}">
+            <image catchtap="goedit" class="edit" data-id="{{items.id}}" data-type="{{items.type}}" src="{{domain}}edit.png"></image>
+            <text catchtap="goedit" class="edittext mr40" data-id="{{items.id}}" data-type="{{items.type}}">编辑</text>
+            <image bindtap="del" class="edit" data-id="{{items.id}}" src="{{domain}}del.png"></image>
+            <text bindtap="del" class="edittext" data-id="{{items.id}}">删除</text>
+        </view>
+    </view>
+    <view class="wen">
+        <text>{{items.content}}</text>
+    </view>
+    <view class="mt50">
+        <image bindtap="kanimg" class="bigimg mt20" data-index="{{index}}" mode="widthFix" src="{{item}}" wx:for="{{items.imgs}}" wx:key="index"></image>
+    </view>
+    <view bindtap="goxiang" class="btn" hoverClass="hover">查看相关题目</view>
+    <view class="flex-sb mt30">
+        <view bindtap="shang" class="listshang">上一个</view>
+        <view bindtap="next" class="listshang">下一个</view>
+    </view>
+</view>

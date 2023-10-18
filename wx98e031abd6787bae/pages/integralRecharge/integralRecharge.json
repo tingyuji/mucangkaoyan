@@ -1,0 +1,12 @@
+{
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "head2": "/components/head/head",
+        "impower": "/components/impower/impower",
+        "pricecode": "/components/pricecode/pricecode",
+        "popup": "/components/popup/popup",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

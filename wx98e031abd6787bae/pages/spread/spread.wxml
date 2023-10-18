@@ -1,0 +1,99 @@
+<view class="content">
+    <view class="title">选择你想要的传播方式，按步骤进行操作</view>
+    <view class="list">
+        <view bindtap="dian" class="listtop" data-index="0">
+            <view>公众号文章插入</view>
+            <image class="cbright {{tab[0]?'rg180':''}}" src="{{domain}}cbright.png"></image>
+        </view>
+        <block wx:if="{{tab[0]}}">
+            <view class="listcont">
+                <view class="flex">
+                    <view>
+                        <view class="one">1</view>
+                    </view>
+                    <view class="onetis">打开公众号图文编辑，选择「小程序」后，搜索 本小程序名字，进入下一步。</view>
+                </view>
+                <image class="cbtipsimg" src="{{domian}}cbtipsimg.png"></image>
+                <view class="flex">
+                    <view>
+                        <view class="one">2</view>
+                    </view>
+                    <view class="onetis">填入下方小程序路径，并上传小程序卡片。</view>
+                </view>
+                <view class="kuang">
+                    <view class="lujin">pages/index/index?pid={{member_id}}</view>
+                    <image class="cbfilter" src="{{domain}}cbfilter.png"></image>
+                    <view bindtap="copy" class="copy">复制</view>
+                </view>
+            </view>
+            <view class="kafu">
+                <view class="shishi">卡片（试试长按图片）</view>
+                <view class="imgfu">
+                    <image showMenuByLongpress class="ung" mode="widthFix" src="{{fx.img}}"></image>
+                </view>
+            </view>
+            <view bindtap="bao" class="btnbao" hoverClass="hover">保存图片</view>
+        </block>
+    </view>
+    <view class="list">
+        <view bindtap="dian" class="listtop" data-index="1">
+            <view>公众号自动回复</view>
+            <image class="cbright {{tab[1]?'rg180':''}}" src="{{domain}}cbright.png"></image>
+        </view>
+        <view class="listcont" wx:if="{{tab[1]}}">
+            <view class="flex">
+                <view>
+                    <view class="one">1</view>
+                </view>
+                <view class="onetis">进入公众号平台左侧的「小程序管理」，验证身份 后，搜索并关联「xxx」小程序。如已关联，直接 进行下一步。</view>
+            </view>
+            <view class="flex mt40">
+                <view>
+                    <view class="one">2</view>
+                </view>
+                <view class="onetis">进入公众号平台左侧的「自动回复」，确定需要的 回复类型。回复内容选择「文字」形式。</view>
+            </view>
+            <view class="flex mt40">
+                <view>
+                    <view class="one">3</view>
+                </view>
+                <view class="onetis">在下方输入回复内容后，生成代码并负责。粘贴到 公众号平台。</view>
+            </view>
+            <view class="kuang">
+                <view class="lujin">
+                    <input value="{{con}}" placeholder="请输入文案，例如“点我赚钱”" type="text"></input>
+                </view>
+            </view>
+            <view bindtap="copy2" class="btnbao" hoverClass="hover">生成代码并复制</view>
+        </view>
+    </view>
+    <view class="list">
+        <view bindtap="dian" class="listtop" data-index="2">
+            <view>嵌入公众号菜单栏</view>
+            <image class="cbright {{tab[2]?'rg180':''}}" src="{{domain}}cbright.png"></image>
+        </view>
+        <view class="listcont" wx:if="{{tab[2]}}">
+            <view class="flex">
+                <view>
+                    <view class="one">1</view>
+                </view>
+                <view class="onetis">进入公众号平台左侧的「小程序管理」，验证身份 后，搜索并关联「xxx」小程序。如已关联，直接 进行下一步。</view>
+            </view>
+            <view class="flex mt40">
+                <view>
+                    <view class="one">2</view>
+                </view>
+                <view class="onetis">进入公众号平台「自定义菜单」，粘贴下方小程序 路径，完成设置。</view>
+            </view>
+            <view class="kuang">
+                <view class="lujin">pages/index/index?pid={{member_id}}</view>
+                <image class="cbfilter" src="{{domain}}cbfilter.png"></image>
+                <view bindtap="copy" class="copy">复制</view>
+            </view>
+        </view>
+    </view>
+    <view class="botttips">
+        <view>查看详细图文教程</view>
+        <image class="cbright ro90" src="{{domain}}cbright.png"></image>
+    </view>
+</view>

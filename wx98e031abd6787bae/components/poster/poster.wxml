@@ -1,0 +1,38 @@
+<poster bind:fail="onPosterFail" bind:success="onPosterSuccess" config="{{posterConfig}}" id="poster"></poster>
+<view class="rgba" wx:if="{{show}}"></view>
+<view class="rgbabox" wx:if="{{show}}">
+    <image catchtap="noshow" class="rgblack" src="{{domain}}rgblack.png"></image>
+    <image showMenuByLongpress class="posterback1" src="{{src}}" wx:if="{{tabid!=3}}"></image>
+    <view class="fufu" wx:if="{{tabid==3}}">
+        <image showMenuByLongpress class="posterback2" src="{{src}}"></image>
+    </view>
+    <view class="footer">
+        <scroll-view scrollX="true" style="white-space:nowrap;padding-top:22rpx">
+            <image bindtap="qie" class="rgshare1" data-index="{{index}}" src="{{item.abbreviation_img}}" wx:for="{{hai}}">
+                <image class="rggou" src="{{domain}}rggou.png" wx:if="{{tabid==index}}"></image>
+            </image>
+        </scroll-view>
+        <view class="flex-sb">
+            <view bindtap="bindbtn" class="footerlist">
+                <image class="smallrgshare1" src="{{domain}}rgshare1.png"></image>
+                <view class="rgzi">保存图片</view>
+            </view>
+            <label>
+                <view class="footerlist">
+                    <image class="smallrgshare1" src="{{domain}}rgshare2.png"></image>
+                    <view class="rgzi">微信好友</view>
+                </view>
+                <button hidden="true" openType="share"></button>
+            </label>
+            <view bindtap="go" class="footerlist" data-url="/pages/appletPathSharing/appletPathSharing">
+                <image class="smallrgshare1" src="{{domain}}rgshare3.png"></image>
+                <view class="rgzi">小程序路径</view>
+            </view>
+            <view bindtap="go" class="footerlist" data-url="/pages/spread/spread">
+                <image class="smallrgshare1" src="{{domain}}rgshare4.png"></image>
+                <view class="rgzi">公众号传播</view>
+            </view>
+        </view>
+    </view>
+    <view style="padding-bottom:env(safe-area-inset-bottom);background:white"></view>
+</view>

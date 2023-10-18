@@ -1,0 +1,81 @@
+<impower active="{{register}}"></impower>
+<view class="content">
+    <view class="conleft">
+        <scroll-view class="scroll" scrollY="true">
+            <view bindtap="qie" class="sclist {{listindex==index?'sclistac':''}}" data-index="{{index}}" wx:for="{{list}}">
+                <view class="inner"> {{item.library_class_name}}</view>
+            </view>
+            <view class="kongwei" wx:if="{{!flage}}"></view>
+        </scroll-view>
+    </view>
+    <view class="contright">
+        <view class="rigthead">
+            <view>题库列表</view>
+            <view bindtap="binddian" class="flex flex-c" wx:if="{{listindex==0}}">
+                <image class="dtdel" src="{{domain}}dtdel.png"></image>
+                <view class="deltext">管理</view>
+            </view>
+            <view bindtap="binddian" class="flex flex-c" wx:if="{{listindex!=0}}">
+                <image class="dtdel" src="{{domain}}dtadd.png"></image>
+                <view class="deltext">加入题库</view>
+            </view>
+        </view>
+        <view class="contenbox">
+            <scroll-view class="coner" scrollY="true" style="left:{{flage?'-65rpx':'0'}}">
+                <view class="flexlist flex flex-c" wx:for="{{items}}" wx:key="index">
+                    <image bindtap="bindxuan" class="dtquan" data-index="{{index}}" src="{{domain}}{{item.flage?'dtquanac':'dtquan'}}.png"></image>
+                    <view bindtap="godetail" class="list" data-index="{{index}}">
+                        <image class="homeshuo" src="{{domain}}homeshuo.png" wx:if="{{item.is_vip==1&&!vip}}"></image>
+                        <view class="listimg">
+                            <image class="imglist" src="{{item.library_img}}"></image>
+                        </view>
+                        <view>
+                            <view class="list_tit">{{item.library_name}}</view>
+                            <view class="flex flex-c">
+                                <view class="tinum">共{{item.subject_num}}题</view>
+                                <view class="tinum ml8">|</view>
+                                <view class="xian1">
+                                    <view class="xian2"></view>
+                                    <view class="xian2"></view>
+                                    <view class="xian2"></view>
+                                    <view class="xian2"></view>
+                                </view>
+                                <view class="tinum">{{item.real_line}}人在线</view>
+                            </view>
+                            <view class="progress-box">
+                                <progress activeColor="#FFC729" borderRadius="3rpx" percent="{{item.speed_log.total_num/item.subject_num*100}}" strokeWidth="6rpx"></progress>
+                                <text class="bai">{{f.zheng(item.speed_log.total_num/item.subject_num*100)}}%</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="flexlist pt30" wx:if="{{kong}}">
+                    <view class="imgkongfu">
+                        <image class="zhanwuimg" mode="widthFix" src="{{domain}}zhanwu.png"></image>
+                        <view class="zhanwutext">暂无题库</view>
+                    </view>
+                </view>
+                <view class="kongwei" wx:if="{{!flage}}"></view>
+            </scroll-view>
+        </view>
+    </view>
+</view>
+<view class="footer" wx:if="{{!flage&&type==1}}">
+    <view class="footerer">
+        <view bindtap="bindquan" class="fooleft">
+            <image class="dtquan" src="{{domain}}{{check?'dtquanac':'dtquan'}}.png"></image>
+            <view>全选</view>
+        </view>
+        <view bindtap="delti" class="fooright">移除({{xuannum.length}})</view>
+    </view>
+</view>
+<view class="footer" wx:if="{{!flage&&type==2}}">
+    <view class="footerer">
+        <view bindtap="bindquan" class="fooleft">
+            <image class="dtquan" src="{{domain}}{{check?'dtquanac':'dtquan'}}.png"></image>
+            <view>全选</view>
+        </view>
+        <view bindtap="addti" class="fooright">添加({{xuannum.length}})</view>
+    </view>
+</view>
+<wxs module="f" src="../../utils/filter.wxs" />

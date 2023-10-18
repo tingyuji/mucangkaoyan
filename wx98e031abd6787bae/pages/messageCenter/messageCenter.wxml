@@ -1,0 +1,58 @@
+<view class="head">
+    <view bindtap="qie" class="tablist {{tabid==1?'tablistac':''}}" data-index="1">消息系统<image class="newheadtop" src="{{domain}}newheadtop.png" wx:if="{{tabid==1}}"></image>
+    </view>
+    <view bindtap="qie" class="tablist {{tabid==2?'tablistac':''}}" data-index="2">报错反馈<image class="newheadtop" src="{{domain}}newheadtop.png" wx:if="{{tabid==2}}"></image>
+    </view>
+</view>
+<view class="contetn" wx:if="{{tabid==2}}">
+    <view class="box" wx:if="{{item.type==1}}" wx:for="{{items}}" wx:key="index">
+        <view class="info">{{item.report_errors.content}}</view>
+        <view class="time mt20">{{add.add_time}}</view>
+        <text class="pingbox">
+            <text class="ping">【平台回复】</text>{{item.content}}</text>
+        <view class="flex-sb flex-c">
+            <view class="time">{{item.adjustment_errors.update_time}}</view>
+            <view bindtap="godetail" class="flex flex-c mt24" data-index="{{index}}">
+                <view class="quan">查看全部</view>
+                <image class="newrighta" src="{{domain}}yongright.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="imgkongfu" wx:if="{{kong1}}">
+        <image class="zhanwuimg" mode="widthFix" src="{{domain}}zhanwu.png"></image>
+        <view class="zhanwutext">没有报错反馈~</view>
+    </view>
+</view>
+<view class="contetn" wx:if="{{tabid==1}}">
+    <view class="box" wx:if="{{item.type==2}}" wx:for="{{items}}" wx:key="index">
+        <view class="info">
+            <text class="ping" wx:if="{{item.type==3&&item.state==1}}">[认证校方 资料提交] </text>
+            <text class="ping" wx:if="{{item.type==3&&item.state==3}}">[认证校方 审核失败] </text>
+            <text class="ping" wx:if="{{item.type==3&&item.state==2}}">[认证校方 审核成功] </text>
+            <text class="ping" wx:if="{{item.type==4&&item.state==1}}">[认证校方 资料提交] </text>
+            <text class="ping" wx:if="{{item.type==4&&item.state==3}}">[截图审核 审核失败] </text>
+            <text class="ping" wx:if="{{item.type==4&&item.state==2}}">[截图审核 审核成功] </text>
+            <text class="ping" wx:if="{{item.type==6}}">[成绩排行] </text>
+            <text class="ping" wx:if="{{item.type==5}}">[会员提醒] </text>
+            <text class="ping" wx:if="{{item.type==2}}">[平台消息] </text>
+            <view style="display: inline;" wx:if="{{!item.flage}}">
+                <text userSelect class="huanhang">{{f.zhang(item.content)}}</text>
+            </view>
+            <view style="display: inline;" wx:if="{{item.flage}}">
+                <text userSelect class="huanhang">{{item.content}}</text>
+            </view>
+        </view>
+        <view class="btnzhan" wx:if="{{item.content.length>52}}">
+            <view bindtap="bindzhan" class="flex flex-c" data-index="{{index}}">
+                <view class="quan">{{item.flage?'收起':'展开'}}</view>
+                <image class="newrighta2 {{item.flage?'rote180':''}}" src="{{domain}}shaibottom.png"></image>
+            </view>
+        </view>
+        <view class="time mt20">{{item.add_time}}</view>
+    </view>
+    <view class="imgkongfu" wx:if="{{kong2}}">
+        <image class="zhanwuimg" mode="widthFix" src="{{domain}}zhanwu.png"></image>
+        <view class="zhanwutext">没有系统消息~</view>
+    </view>
+</view>
+<wxs module="f" src="../../utils/filter.wxs" />

@@ -1,0 +1,28 @@
+<view class="contan">
+    <view>
+        <textarea bindinput="bindinput" maxlength="-1" placeholder="请输入笔记内容..." value="{{textarea}}"></textarea>
+    </view>
+    <view class="view1">
+        <view class="flage">是否公开</view>
+        <view bindtap="switch" class="{{flage?'switch switch2':'switch'}}" style="transition: all 0.3s linear">
+            <view class="quan" style="transform: translateX({{flage?'-64':'0'}}rpx);transition: all 0.3s linear;"></view>
+        </view>
+    </view>
+    <view class="view2 mt40">
+        <view class="imgfu" wx:for="{{images}}" wx:key="index">
+            <image class="imgya" src="{{item}}"></image>
+            <view catchtap="closefu" class="closefu" data-index="{{index}}">
+                <image class="close" src="{{domain}}close.png"></image>
+            </view>
+        </view>
+        <view bindtap="chooseimg" class="imgfu">
+            <view class="scfu">
+                <view class="scfu2">
+                    <image class="scimg" src="{{domain}}shangchuan.png"></image>
+                    <view class="sctext">上传图片</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view bindtap="addNote" class="btn" hoverClass="hover">提交</view>

@@ -1,0 +1,14 @@
+{
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "popup": "/components/popup/popup",
+        "navigation-bar": "../../components/NavigationBar/NavigationBar",
+        "mp-html": "/components/mp-html/index",
+        "phonePopup": "/components/phonePopup/phonePopup",
+        "memtan": "/components/memtan/memtan",
+        "impower": "/components/impower/impower",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

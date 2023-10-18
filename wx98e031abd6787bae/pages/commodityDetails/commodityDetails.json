@@ -1,0 +1,13 @@
+{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFC82A",
+    "navigationBarTitleText": "商品详情",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "jigou": "/components/jigou/jigou",
+        "mp-html": "/components/mp-html/index",
+        "impower": "/components/impower/impower",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

@@ -1,0 +1,245 @@
+.head {
+    margin-top: -200rpx;
+    width: 100%;
+}
+
+.headtop {
+    box-sizing: border-box;
+    padding: 0 82rpx;
+    width: 100%;
+}
+
+.price {
+    color: #efa794;
+    font-family: Bahnschrift;
+    font-size: 44rpx;
+    font-weight: 700;
+}
+
+.fs26 {
+    font-size: 26rpx;
+}
+
+.keti {
+    color: #efa794;
+    font-family: PingFang SC;
+    font-size: 28rpx;
+    font-weight: 500;
+}
+
+.tibtn {
+    align-items: center;
+    background: linear-gradient(0deg,#fff,#fdeaec,#efa794);
+    border-radius: 36rpx;
+    box-shadow: 0 6rpx 9rpx 0 rgba(36,42,55,.47);
+    display: flex;
+    height: 71rpx;
+    justify-content: center;
+    width: 195rpx;
+}
+
+.righttx {
+    height: 24rpx;
+    width: 14rpx;
+}
+
+.tizi {
+    color: #c83812;
+    font-family: PingFang SC;
+    font-size: 30rpx;
+    font-weight: 700;
+    margin-right: 8rpx;
+}
+
+.headcenter {
+    box-sizing: border-box;
+    padding: 0 33rpx;
+}
+
+.weixin {
+    height: 28rpx;
+    margin-right: 8rpx;
+    width: 28rpx;
+}
+
+.ttext {
+    color: #5a524f;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: 500;
+}
+
+.headcenter {
+    margin-top: 110rpx;
+}
+
+.weix {
+    color: #5a524f;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 700;
+}
+
+.content,.fistinp {
+    box-sizing: border-box;
+    padding: 0 33rpx;
+}
+
+.content {
+    transform: translateY(-56rpx);
+}
+
+.list {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 52rpx;
+}
+
+.newwx {
+    height: 28rpx;
+    margin-bottom: -4rpx;
+    margin-right: 8rpx;
+    width: 28rpx;
+}
+
+.title {
+    font-size: 32rpx;
+    font-weight: 700;
+}
+
+.title,.tixian {
+    color: #5a524f;
+    font-family: PingFang SC;
+}
+
+.tixian {
+    font-size: 26rpx;
+    font-weight: 500;
+}
+
+.ipt {
+    border-bottom: 1px solid #dddfe4;
+    height: 60rpx;
+    margin-top: 20rpx;
+    width: 100%;
+}
+
+.plitp {
+    font-size: 28rpx;
+}
+
+.plitp,.plitp2 {
+    color: #978c88;
+    font-family: PingFang SC;
+    font-weight: 500;
+}
+
+.ipt2,.plitp2 {
+    font-size: 36rpx;
+}
+
+.tixfu {
+    align-items: center;
+    border-bottom: 1px solid #dddfe4;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 56rpx;
+    padding: 0 0rpx 20rpx 95rpx;
+    position: relative;
+}
+
+.tixfu1 image {
+    height: 70rpx;
+    left: 14rpx;
+    position: absolute;
+    width: 70rpx;
+}
+
+.tixfu1 {
+    align-items: center;
+    border-bottom: 1px solid #dddfe4;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 56rpx;
+    padding: 0 0rpx 20rpx 95rpx;
+    position: relative;
+}
+
+.tixfu::before {
+    color: #5a524f;
+    content: "￥";
+    font-size: 90rpx;
+    font-weight: 500;
+    left: 0;
+    position: absolute;
+    top: -56rpx;
+}
+
+.quan,.tixfu::before {
+    font-family: PingFang SC;
+}
+
+.quan {
+    color: #fa9100;
+    font-size: 30rpx;
+    font-weight: 700;
+}
+
+.smalltips {
+    color: #5a524f;
+    font-family: PingFang SC;
+    font-size: 28rpx;
+    font-weight: 500;
+    margin-top: 26rpx;
+    padding-bottom: 28rpx;
+}
+
+.hr {
+    background: #f6f5f8;
+    height: 28rpx;
+    width: 100%;
+}
+
+.info {
+    color: #5a524f;
+    font-family: PingFang SC;
+    font-size: 28rpx;
+    font-weight: 500;
+    line-height: 38rpx;
+    margin-top: 24rpx;
+}
+
+.footer {
+    align-items: center;
+    background: #fff;
+    bottom: 0;
+    box-shadow: 0 -11rpx 13rpx 0 hsla(0,0%,73%,.16);
+    display: flex;
+    height: 100rpx;
+    justify-content: center;
+    left: 0;
+    padding-bottom: env(safe-area-inset-bottom);
+    position: fixed;
+    width: 100%;
+}
+
+.libtn {
+    background: #ffcb06;
+    border-radius: 45rpx;
+    box-shadow: 0 4rpx 8rpx 0 rgba(255,199,55,.68);
+    color: #1b1b1b;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 500;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    width: 702rpx;
+}
+
+.ici {
+    flex-flow: column nowrap;
+}

@@ -1,0 +1,91 @@
+<impower active="{{register}}"></impower>
+<head leftimg2="true" title="全网排名"></head>
+<view class="head">
+    <view class="tabbar" style="padding-top:{{customBar+14}}px">
+        <view bindtap="qie" class="{{index==tabid?'tablist tabac':'tablist'}}" data-index="{{index}}" wx:for="{{tabbar}}" wx:key="index">{{item}}</view>
+    </view>
+    <view class="bottfiexd">
+        <view class="headcon">
+            <view class="left">
+                <image class="rank1" src="{{domain}}img/rank1.png"></image>
+                <view class="lefttou">
+                    <image class="touimg" src="{{items[1].img}}"></image>
+                </view>
+                <image class="rank2" src="{{domain}}img/rank2.png"></image>
+                <view class="painame">{{items[1].nickname}}</view>
+                <view class="tinum" wx:if="{{tabid==0&&items[1].total_num}}">{{items[1].total_num}}题</view>
+                <view class="tinum" wx:if="{{tabid==1&&items[1].give_num}}">{{items[1].give_num}}个</view>
+                <view class="tinum" wx:if="{{tabid==2&&items[1].clock_num}}">{{items[1].clock_num}}次</view>
+            </view>
+            <view class="center">
+                <image class="rank5" src="{{domain}}img/rank5.png"></image>
+                <view class="pocentou">
+                    <view class="centou">
+                        <image class="touimg" src="{{items[0].img}}"></image>
+                    </view>
+                    <image class="rank3" src="{{domain}}img/rank3.png"></image>
+                    <view class="cenname">{{items[0].nickname}}</view>
+                    <view class="cennum" wx:if="{{tabid==0}}">{{items[0].total_num}}题</view>
+                    <view class="cennum" wx:if="{{tabid==1}}">{{items[0].give_num}}个</view>
+                    <view class="cennum" wx:if="{{tabid==2}}">{{items[0].clock_num}}次</view>
+                </view>
+            </view>
+            <view class="right">
+                <image class="rankright" src="{{domain}}img/rank1.png"></image>
+                <view class="righttou">
+                    <image class="touimg" src="{{items[2].img}}"></image>
+                </view>
+                <view class="rank2">
+                    <image class="rank2" src="{{domain}}img/rank4.png"></image>
+                </view>
+                <view class="painame">{{items[2].nickname}}</view>
+                <view class="tinum" wx:if="{{tabid==0&&items[2].total_num}}">{{items[2].total_num}}题</view>
+                <view class="tinum" wx:if="{{tabid==1&&items[2].give_num}}">{{items[2].give_num}}个</view>
+                <view class="tinum" wx:if="{{tabid==2&&items[2].clock_num}}">{{items[2].clock_num}}次</view>
+            </view>
+        </view>
+        <view class="botthr"></view>
+        <view class="anniu" wx:if="{{tabid==0}}">
+            <image class="rank6" src="{{domain}}img/{{tabid2==1?'rank6':'rank6ac'}}.png">
+                <view bindtap="qie2" class="{{tabid2==1?'shijie':'haoyou'}}" data-index="1">世界榜</view>
+            </image>
+            <image class="rank7" src="{{domain}}img/{{tabid2==2?'rank7ac':'rank7'}}.png">
+                <view bindtap="qie2" class="{{tabid2==1?'haoyou':'shijie'}}" data-index="2">好友榜</view>
+            </image>
+        </view>
+    </view>
+</view>
+<view class="content">
+    <view class="list" wx:if="{{index!=0&&index!=1&&index!=2}}" wx:for="{{items}}" wx:key="index">
+        <view class="flex flex-c">
+            <view class="gangfu">
+                <view class="numm">{{index+1}}</view>
+            </view>
+            <view class="flex flex-c">
+                <image class="mytou" src="{{item.img}}"></image>
+                <view class="ml20">
+                    <view class="myname">{{item.nickname}}</view>
+                    <view class="mypai" wx:if="{{tabid==0}}">刷题：{{item.total_num}}题</view>
+                    <view class="mypai" wx:if="{{tabid==1}}">点赞：{{item.give_num}}个</view>
+                    <view class="mypai" wx:if="{{tabid==2}}">打卡：{{item.clock_num}}次</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view style="height:130rpx"></view>
+<view class="footer flex-sb flex-c">
+    <view class="flex flex-c">
+        <view class="gangfu">
+            <view class="numm" wx:if="{{my.is_ranking==1}}">{{my.ranking_num}}</view>
+        </view>
+        <view class="flex flex-c">
+            <image class="mytou" src="{{my.img}}"></image>
+            <view class="ml20">
+                <view class="myname">{{my.nickname}}</view>
+                <view class="mypai" wx:if="{{my.is_ranking==2}}">继续努力,争取明天上榜</view>
+            </view>
+        </view>
+    </view>
+    <view bindtap="goshua" class="goshua" wx:if="{{tabid==0}}">去刷题</view>
+</view>

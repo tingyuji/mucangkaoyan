@@ -1,0 +1,9 @@
+<impower active="{{register}}"></impower>
+<view class="content">
+    <view class="flex-wp jcsb">
+        <view class="list" wx:for="{{list}}">
+            <image showMenuByLongpress class="listimg" mode="widthFix" src="{{item.img}}"></image>
+            <view class="mt20">{{item.title}}</view>
+        </view>
+    </view>
+</view>

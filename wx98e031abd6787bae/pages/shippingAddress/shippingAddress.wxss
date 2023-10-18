@@ -1,0 +1,128 @@
+page {
+    background-color: #fafafa;
+}
+
+.content {
+    box-sizing: border-box;
+    padding: 0 20rpx;
+}
+
+.box {
+    background: #fff;
+    border-radius: 20rpx;
+    margin-top: 28rpx;
+    padding: 30rpx 0 20rpx;
+    position: relative;
+    width: 100%;
+}
+
+.orderhr {
+    height: 5rpx;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.boxtop {
+    border-bottom: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    padding: 0 29rpx 20rpx;
+}
+
+.name {
+    color: #313131;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 700;
+}
+
+.ml54 {
+    margin-left: 54rpx;
+}
+
+.detaildz {
+    color: #444;
+    font-family: PingFang SC;
+    font-size: 30rpx;
+    font-weight: 500;
+    margin-top: 20rpx;
+}
+
+.boxbott {
+    box-sizing: border-box;
+    padding: 20rpx 29rpx 0;
+}
+
+.quan {
+    background: #ffc82a;
+    border-radius: 50%;
+    height: 38rpx;
+    width: 38rpx;
+}
+
+.baiduan {
+    background-color: #fff;
+    border: 2rpx solid #d3d3d3;
+    border-radius: 50%;
+    height: 36rpx;
+    width: 36rpx;
+}
+
+.newgou {
+    height: 21rpx;
+    width: 27rpx;
+}
+
+.moren {
+    color: #444;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: 500;
+    margin-left: 12rpx;
+}
+
+.newedit {
+    height: 44rpx;
+    width: 44rpx;
+}
+
+.zhi {
+    color: #959595;
+    font-family: PingFang SC;
+    font-size: 28rpx;
+    font-weight: 500;
+}
+
+.ml40 {
+    margin-left: 40rpx;
+}
+
+.footer {
+    background: #fff;
+    bottom: 0;
+    height: 98rpx;
+    left: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.btn {
+    background: #ffc82a;
+    border-radius: 39rpx;
+    color: #1c1c1c;
+    font-family: PingFang SC;
+    font-size: 30rpx;
+    font-weight: 700;
+    height: 78rpx;
+    line-height: 78rpx;
+    text-align: center;
+    width: 522rpx;
+}
+
+.dzkong {
+    height: 278rpx;
+    margin-left: 190rpx;
+    margin-top: 200rpx;
+    width: 370rpx;
+}

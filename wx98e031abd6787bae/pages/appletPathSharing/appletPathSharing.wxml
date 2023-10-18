@@ -1,0 +1,11 @@
+<head black="true" title="小程序路径分享"></head>
+<view class="content">
+    <image class="xcxshareimg" src="{{domian}}xcxshareimg.png"></image>
+    <view class="box">
+        <view class="boxhead">{{can}}</view>
+        <view class="boxinfo">
+            <text>对于有公众号的平台，可以直接植入这个路径，同学通过他们的公众号进入这个路径的小程序购买都会有收益。</text>
+        </view>
+        <view bindtap="copy" class="btnlu" hoverClass="hover">一键复制小程序路径</view>
+    </view>
+</view>

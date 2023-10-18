@@ -1,0 +1,8 @@
+page {
+    background: #fff!important;
+}
+
+.view1 {
+    border-top: 1rpx solid #dcdcdc;
+    padding: 24rpx;
+}

@@ -1,0 +1,12 @@
+<view>
+    <view class="navgiation-bar" style="height: {{navigationBarHeight}}px; {{bgSrc===''?'background-color: '+background:'background-image: url('+bgSrc+'); background-size: cover'}}">
+        <view class="status-bar" style="height: {{statusBarHeight}}px"></view>
+        <view class="title-bar">
+            <icon bindtap="back" class="iconfont back-icon" style="color: {{color}}" wx:if="{{showBack}}"></icon>
+            <text class="title" style="color: {{color}}">{{title}}</text>
+        </view>
+    </view>
+    <view class="cut" style="height: {{navigationBarHeight}}px" wx:if="{{bgSrc!==''}}"></view>
+    <image class="bg-img" mode="{{mode}}" src="{{bgSrc}}" style="height: {{height}}rpx" wx:if="{{bgSrc!==''}}"></image>
+    <view style="height: {{navigationBarHeight}}px" wx:if="{{bgSrc===''&&height!=0}}"></view>
+</view>

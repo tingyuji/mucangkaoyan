@@ -1,0 +1,29 @@
+<view class="head">
+    <view class="flex flex-c">
+        <view class="tihao">{{num+1}}</view>
+        <view class="{{ye?'duo':''}} tit">{{detail.type==6?'作文题':'翻译题'}}</view>
+    </view>
+    <view class="info" wx:if="{{detail.subject_type!=1}}">
+        <image class="subimg" mode="widthFix" src="{{detail.subject_str}}"></image>
+    </view>
+    <view class="info" wx:if="{{detail.subject_type!=2}}">
+        <text userSelect="true">{{detail.subject_str}}</text>
+    </view>
+    <view bindtap="flage" class="btn flex-cc" hoverClass="hover">
+        <view>{{flage?'收起答案':'展开答案'}}</view>
+        <image class="examtop {{flage?'rgto180':''}}" src="{{domain}}examtop.png"></image>
+    </view>
+    <view wx:if="{{flage}}">
+        <view class="answertit">参考答案<text class="huang">(<text userSelect="true">{{detail.fraction_total}}分</text>)</text>
+        </view>
+        <view class="answerinfo">
+            <text userSelect="true">{{detail.subject_str}}{{detail.correct_answer}}</text>
+        </view>
+    </view>
+</view>
+<view class="foofiex" wx:if="{{!submit}}">
+    <view class="shufen flex flex-c">
+        <input bindinput="bindchinge" class="flex1" placeholder="预估本题分数" placeholderClass="plipt" type="number" value="{{detail.my_answer}}"></input>
+        <view bindtap="sure" class="sure" hoverClass="hover">确定</view>
+    </view>
+</view>

@@ -1,0 +1,125 @@
+.contan {
+    box-sizing: border-box;
+    padding: 35rpx;
+}
+
+.switch,.view1 {
+    align-items: center;
+    display: flex;
+}
+
+.switch {
+    background: #fab80d;
+    border-radius: 26rpx;
+    box-sizing: border-box;
+    height: 52rpx;
+    justify-content: flex-end;
+    margin-left: 10rpx;
+    padding: 0 2rpx;
+    width: 112rpx;
+}
+
+.switch2 {
+    background: #b9b9b9;
+}
+
+.quan {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3rpx 7rpx 0 rgba(190,11,129,.35);
+    height: 45rpx;
+    width: 45rpx;
+}
+
+.flage {
+    color: #313131;
+    font-family: PingFang SC;
+    font-size: 30rpx;
+    font-weight: 500;
+}
+
+.view2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imgya {
+    border-radius: 9rpx;
+    height: 165rpx;
+    width: 165rpx;
+}
+
+.view2 .imgfu:first-child {
+    margin-left: 0;
+}
+
+.imgfu {
+    margin-left: 10rpx;
+    margin-top: 10rpx;
+    position: relative;
+}
+
+.closefu {
+    align-items: center;
+    background: #ffc737;
+    border: 2rpx solid #fff;
+    border-radius: 50%;
+    display: flex;
+    height: 34rpx;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    width: 34rpx;
+}
+
+.close {
+    height: 12rpx;
+    width: 12rpx;
+}
+
+.scfu {
+    align-items: center;
+    background: #ededed;
+    border: 2rpx solid #c7c7c7;
+    border-radius: 9rpx;
+    display: flex;
+    height: 164rpx;
+    width: 164rpx;
+}
+
+.scimg {
+    display: block;
+    height: 44rpx;
+    margin: 0 auto;
+    width: 50rpx;
+}
+
+.scfu2 {
+    width: 100%;
+}
+
+.sctext {
+    color: #7f838c;
+    font-size: 24rpx;
+    margin-top: 6rpx;
+}
+
+.btn,.sctext {
+    font-family: PingFang SC;
+    font-weight: 500;
+    text-align: center;
+}
+
+.btn {
+    background: #ffc737;
+    border-radius: 44rpx;
+    box-shadow: 0 2rpx 8rpx 0 rgba(255,199,55,.68);
+    color: #1b1b1b;
+    font-size: 32rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    margin: 103rpx auto 0;
+    width: 436rpx;
+}

@@ -1,0 +1,118 @@
+<impower active="{{register}}"></impower>
+<view class="{{kong?'mt24':'page'}}">
+    <view class="head flex flex-c">
+        <view class="headtit">我的题库</view>
+        <view bindtap="goDa" class="kuangse" hoverClass="hover" wx:if="{{!kong}}">
+            <view>添加题库</view>
+            <image class="homepageright" src="{{domain}}homepageright.png"></image>
+        </view>
+    </view>
+    <block wx:if="{{!kong}}">
+        <view>
+            <swiper bindchange="bindchinge" class="swiper" current="{{current}}" nextMargin="16rpx" previousMargin="16rpx">
+                <swiper-item wx:for="{{items}}">
+                    <image class="homepageswiperback" src="{{domain}}homepageswiperback.png">
+                        <view class="imger">
+                            <view class="flex flex-c">
+                                <image class="swimg" src="{{item.library_img}}"></image>
+                                <view>
+                                    <view class="swtit">{{item.library_name}}</view>
+                                    <view class="flex flex-c">
+                                        <view class="tinum">共{{item.subject_num}}题</view>
+                                        <view class="tinum ml8">|</view>
+                                        <view class="xian1">
+                                            <view class="xian2"></view>
+                                            <view class="xian2"></view>
+                                            <view class="xian2"></view>
+                                            <view class="xian2"></view>
+                                        </view>
+                                        <view class="tinum">{{item.real_line+item.fictitious_line}}人在线</view>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="swbott">
+                                <picker bindchange="bindPickerChange" class="b-select" headerText="每日刷题量" id="sgindex" mode="multiSelector" range="{{ti}}" value="{{tiindex}}">
+                                    <view class="swbottleft">
+                                        <view class="flex flex-c">
+                                            <view class="swbott_tit">{{tian?ti[0][ tiindex[0] ]:0}}题/天</view>
+                                            <image class="homepageright2" src="{{domain}}homepageright2.png"></image>
+                                        </view>
+                                        <view class="shezhi" wx:if="{{tian!=-1}}">{{tian?'还剩'+tian+'天刷完':'设置每日刷题量'}}</view>
+                                        <view class="shezhi" wx:if="{{tian==-1}}">已经刷完</view>
+                                    </view>
+                                </picker>
+                                <view class="hr"></view>
+                                <view bindtap="go" class="swbottleft" data-url="/pages/historicalAccuracy/historicalAccuracy">
+                                    <view class="flex flex-c">
+                                        <view class="swbott_tit">{{f.zheng(item.speed_log.correct_num/item.subject_num*100)}}%</view>
+                                        <image class="homepageright2" src="{{domain}}homepageright2.png"></image>
+                                    </view>
+                                    <view class="shezhi">历史正确率</view>
+                                </view>
+                            </view>
+                        </view>
+                    </image>
+                </swiper-item>
+            </swiper>
+        </view>
+        <view class="center">
+            <view bindtap="bindcong" class="centerlist" hoverClass="hover">
+                <image class="homepage1" src="{{domain}}homepage1.png"></image>
+                <view class="centit">重新刷题</view>
+            </view>
+            <view class="centerlist">
+                <image class="homepage2" src="{{domain}}homepage2.png"></image>
+                <view bindtap="goti" class="cenlister" data-kid="" data-num="{{items[current].speed_log.length==0?0:items[current].speed_log.total_num>items[current].subject_num?items[current].subject_num:items[current].speed_log.total_num}}" data-tid="{{items[current].id}}" data-zid="" hoverClass="hover">
+                    <view class="cener_tit">顺序刷题</view>
+                    <view class="cener_num">{{items[current].speed_log.length==0?0:items[current].speed_log.total_num>items[current].subject_num?items[current].subject_num:items[current].speed_log.total_num}}/{{items[current].subject_num}}</view>
+                </view>
+            </view>
+            <view bindtap="bindshui" class="centerlist" hoverClass="hover">
+                <image class="homepage1" src="{{domain}}homepage3.png"></image>
+                <view class="centit">随机测试</view>
+            </view>
+        </view>
+    </block>
+</view>
+<view class="mt60" wx:if="{{kong}}">
+    <view class="imgkongfu">
+        <image class="zhanwuimg" mode="widthFix" src="{{domain}}zhanwu.png"></image>
+        <view bindtap="goDa" class="kuangse mt30" hoverClass="hover">
+            <view>添加题库</view>
+            <image class="homepageright" src="{{domain}}homepageright.png"></image>
+        </view>
+    </view>
+</view>
+<view class="content" wx:if="{{!kong}}">
+    <view class="list" wx:for="{{list}}" wx:key="index">
+        <view bindtap="bindflage" class="flex-sb" data-index="{{index}}">
+            <view class="flex flex-c">
+                <view class="kuang">{{item.flage?'+':'-'}}</view>
+                <view class="titlewen">{{item.course_name}}</view>
+            </view>
+            <view class="rightff">
+                <view class="progr">
+                    <progress active activeColor="#FFC729" borderRadius="3rpx" percent="{{item.speed_log.total_num/item.subject_num*100}}" strokeWidth="6rpx"></progress>
+                </view>
+                <view class="yzuo">已做{{f.zheng(item.speed_log.total_num>item.subject_num?item.subject_num/item.subject_num*100:item.speed_log.total_num/item.subject_num*100)}}%</view>
+            </view>
+        </view>
+        <view wx:if="{{!item.flage}}">
+            <view bindtap="goti" class="flex-sb mt60" data-kid="{{item.id}}" data-nkid="{{item.chapter_list[index+1].course_id}}" data-ntid="{{item.chapter_list[index+1].library_id}}" data-num="{{xx.speed_log.total_num>xx.subject_num?xx.subject_num:xx.speed_log.total_num}}" data-nzid="{{item.chapter_list[index+1].id}}" data-nzids="{{item.chapter_list}}" data-tid="{{item.library_id}}" data-zid="{{xx.id}}" wx:for="{{item.chapter_list}}" wx:for-item="xx" wx:key="index">
+                <view class="smalltitle">{{xx.chapter_name}}</view>
+                <view>
+                    <text class="number">{{xx.speed_log.total_num>xx.subject_num?xx.subject_num:xx.speed_log.total_num}}/{{xx.subject_num}}</text>
+                    <image class="right" src="{{domain}}right.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view style="height:24rpx"></view>
+</view>
+<view bindtap="shoushi" class="shoushimengceng" wx:if="{{shoushishow}}">
+    <view class="shoushi">
+        <view>左右滑动 切换题库</view>
+        <image src="{{domain}}toptis.png"></image>
+    </view>
+</view>
+<wxs module="f" src="../../utils/filter.wxs" />

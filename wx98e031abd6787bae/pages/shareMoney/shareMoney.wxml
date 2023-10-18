@@ -1,0 +1,39 @@
+<head black="true" title="分享赚钱"></head>
+<view class="content">
+    <image class="sharebackmoney" src="{{domian}}sharebackmoney.png"></image>
+    <view bindtap="bindshow" class="sharebtn" hoverClass="hover">
+        <image class="wh100" src="{{domain}}sharebtn.png">
+            <view class="btnli">立即分享</view>
+        </image>
+    </view>
+</view>
+<view class="conbox">
+    <view class="box">
+        <view class="boxhead">分享新用户➡️开通会员➡️即可获取50%的佣金</view>
+        <view class="flex-sb mt32">
+            <view class="boxlist">
+                <view class="num">{{items.team_num}}</view>
+                <view class="tem">我的团队</view>
+                <view bindtap="go" class="cha" data-url="/pages/myteam/myteam" hoverClass="hover">查看成员</view>
+            </view>
+            <view class="boxlist">
+                <view class="num">{{items.balance_total}}</view>
+                <view class="tem">我的佣金</view>
+                <view bindtap="go" class="cha" data-url="/pages/commissionDetails/commissionDetails" hoverClass="hover">佣金明细</view>
+            </view>
+            <view class="boxlist">
+                <view class="num">{{items.balance}}</view>
+                <view class="tem">可提现金额</view>
+                <view bindtap="go" class="cha" data-url="/pages/withdrawal/withdrawal?money={{items.balance}}" hoverClass="hover">立即提现</view>
+            </view>
+        </view>
+    </view>
+    <view class="box mt24">
+        <image class="sharemeny" src="{{domain}}sharemeny.png"></image>
+        <view class="boxinfo">
+            <mp-html content="{{html}}"></mp-html>
+        </view>
+    </view>
+</view>
+<view style="height:150rpx"></view>
+<poster er="{{er}}" show="{{show}}"></poster>

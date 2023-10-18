@@ -1,0 +1,65 @@
+.content {
+    padding: 0 34rpx;
+}
+
+.content,.list {
+    box-sizing: border-box;
+}
+
+.list {
+    align-items: center;
+    border-bottom: 1px solid #dddfe4;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 46rpx;
+    padding-bottom: 20rpx;
+}
+
+.tixian {
+    color: #1b1b1b;
+    font-size: 30rpx;
+}
+
+.time,.tixian {
+    font-family: PingFang SC;
+    font-weight: 500;
+}
+
+.time {
+    color: #909090;
+    font-size: 24rpx;
+}
+
+.price {
+    color: #535c6a;
+    font-family: Bahnschrift;
+    font-size: 38rpx;
+}
+
+.red {
+    color: #fe3301;
+}
+
+.sheng {
+    color: #909090;
+    font-size: 24rpx;
+}
+
+.sheng,.woshi {
+    font-family: PingFang SC;
+    font-weight: 500;
+}
+
+.woshi {
+    color: #aaa;
+    font-size: 26rpx;
+    margin-bottom: 20rpx;
+    margin-top: 95rpx;
+    text-align: center;
+}
+
+.dded {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+}

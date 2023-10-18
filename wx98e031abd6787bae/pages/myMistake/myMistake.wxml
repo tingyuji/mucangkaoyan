@@ -1,0 +1,10 @@
+<head background="{{background}}" black="true" title="我的错题"></head>
+<image class="topimg" src="{{domian}}mycuo.png"></image>
+<impower active="{{register}}"></impower>
+<view class="content">
+    <view bindtap="gomao" class="list" data-id="{{item.course_ids}}" data-name="{{item.course_name}}" wx:for="{{items}}" wx:key="index">
+        <image class="listimg" src="{{item.course_img}}"></image>
+        <view class="title">{{item.course_name}}</view>
+        <view class="number {{index==1?'two':''}} {{index==2?'three':''}} {{index==3?'for':''}} {{index==4?'five':''}}">错题：{{item.wrong_num}}</view>
+    </view>
+</view>

@@ -1,0 +1,39 @@
+<view class="head">
+    <view class="flex flex-c">
+        <view class="tihao">{{num+1}}</view>
+        <view class="{{ye?'duo':''}} tit">{{detail.type==1?'单选题':'多选题'}}</view>
+    </view>
+    <view class="info {{ye?'duo':''}}" wx:if="{{detail.subject_type!=1}}">
+        <image class="subimg" mode="widthFix" src="{{detail.subject_str}}"></image>
+    </view>
+    <view class="info {{ye?'duo':''}}" wx:if="{{detail.subject_type!=2}}">
+        <text userSelect="true">{{detail.subject_str}}</text>
+    </view>
+</view>
+<view class="content {{vague?'vague':''}}">
+    <view wx:if="{{detail.option_type!=2}}">
+        <view bindtap="check" class="xuanlist {{item.flage?'heiactive':''}} {{ye?'duo bgduo':''}} {{option_str[index].dui?'baico3':''}} {{option_str[index].cuo?'baico4':''}}" data-index="{{index}}" wx:for="{{detail.option_str}}" wx:key="index">
+            <view>
+                <view class="quanA {{item.flage?'quanac':''}} {{option_str[index].dui?'quandui':''}} {{option_str[index].cuo?'quancuo':''}}">
+                    <text>{{item.option}}</text>
+                </view>
+            </view>
+            <view>
+                <text>{{item.content}}</text>
+            </view>
+            <image class="baigou" src="{{domain}}baigou.png" wx:if="{{option_str[index].dui}}"></image>
+            <image class="baigou" src="{{domain}}baix.png" wx:if="{{option_str[index].cuo}}"></image>
+        </view>
+    </view>
+    <view class="newimgfu" wx:if="{{detail.option_type!=1}}">
+        <view bindtap="check" class="liimgfu" data-index="{{index}}" wx:for="{{detail.option_str}}" wx:key="index">
+            <image class="checkimg " src="{{item.content}}"></image>
+            <view class="flex flex-c mt20">
+                <view class="quanA {{item.flage?'quanac':''}} {{option_str[index].dui?'quandui':''}} {{option_str[index].cuo?'quancuo':''}}">
+                    <text>{{item.option}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view catchtap="closeVague" class="contentli" wx:if="{{vague}}"></view>
+</view>

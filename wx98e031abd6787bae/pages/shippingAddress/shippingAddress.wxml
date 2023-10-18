@@ -1,0 +1,31 @@
+<view class="content">
+    <view bindtap="goxuan" class="box" data-index="{{index}}" wx:for="{{items}}" wx:key="index">
+        <image class="orderhr" src="{{domain}}orderhr.png" wx:if="{{index==0}}"></image>
+        <view class="boxtop">
+            <view class="name">
+                <text>{{item.realname}}</text>
+                <text class="ml54">{{item.mobile}}</text>
+            </view>
+            <view class="detaildz">{{item.address}}</view>
+        </view>
+        <view class="flex-sb boxbott flex-c">
+            <view catchtap="shemo" class="flex flex-c" data-id="{{item.id}}">
+                <view class="quan {{item.is_default==1?'':'baiduan'}} flex-cc">
+                    <image class="newgou" src="{{domain}}newgou.png" wx:if="{{item.is_default==1}}"></image>
+                </view>
+                <view class="moren">设为默认</view>
+            </view>
+            <view class="flex flex-c">
+                <image catchtap="edit" class="newedit" data-index="{{index}}" src="{{domain}}newedit.png"></image>
+                <view catchtap="edit" class="zhi" data-index="{{index}}">编辑</view>
+                <image catchtap="del" class="newedit ml40" data-id="{{item.id}}" src="{{domain}}newdel.png"></image>
+                <view catchtap="del" class="zhi" data-id="{{item.id}}">删除</view>
+            </view>
+        </view>
+    </view>
+    <image class="dzkong" src="{{domain}}zhanwu.png" wx:if="{{kong}}"></image>
+</view>
+<view style="height:120rpx"></view>
+<view class="footer flex-cc">
+    <view bindtap="goadd" class="btn">+ 新增地址</view>
+</view>

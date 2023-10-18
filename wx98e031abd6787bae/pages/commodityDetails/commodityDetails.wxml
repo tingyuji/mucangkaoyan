@@ -1,0 +1,63 @@
+<import src="../../api/wxParse/wxParse.wxml"></import>
+<view class="head">
+    <swiper circular bindchange="bindqei" class="swiper1">
+        <swiper-item wx:for="{{items.loop_imgs}}" wx:key="{{index}}">
+            <image class="swiperimg" src="{{item}}"></image>
+        </swiper-item>
+    </swiper>
+    <view class="cur">{{current+1}}/{{items.loop_imgs.length}}</view>
+</view>
+<view class="content">
+    <view class="flex-sb flex-c mt30">
+        <view class="flex flex-c">
+            <view class="price" wx:if="{{!ios}}">
+                <text class="fs24">￥</text>
+                <text>{{items.price}}</text>
+            </view>
+            <view class="botr flex flex-c">
+                <image class="shop3" src="{{domain}}shop3.png"></image>
+                <view class="di">可用{{items.integral_t}}积分兑换</view>
+            </view>
+        </view>
+        <view class="xl">销量{{items.sales_num_t}} 库存{{items.stock}}</view>
+    </view>
+    <view class="info">
+        <text>{{items.name}}</text>
+        <text class="new">NEW</text>
+    </view>
+    <view bindtap="goaddress" class="dzfu flex-c" wx:if="{{items.type==1}}">
+        <image class="dzbig" src="{{domain}}dzbing.png"></image>
+        <view class="pei">配送地址</view>
+        <view class="flex flex-c">
+            <view class="shouhuo">{{address.address?address.address:'请填写收货地址'}}</view>
+            <image class="newright" src="{{domain}}newright.png"></image>
+        </view>
+    </view>
+</view>
+<view class="hr mt20"></view>
+<view class="content mt30">
+    <view class="stit">商品说明</view>
+    <view class="wxParse">
+        <mp-html content="{{content}}"></mp-html>
+    </view>
+</view>
+<view style="height:130rpx"></view>
+<view class="footer {{items.is_money==2?'jccen':''}}">
+    <view bindtap="goshuo" class="btn1 flex-cc" wx:if="{{items.is_money==1}}">
+        <view class="btntian">免费领取说明</view>
+    </view>
+    <view bindtap="gopay" class="btn2" hoverClass="hover" wx:if="{{!ios}}">
+        <view class="btn2s newfl">
+            <view>购买</view>
+            <view class="fs20">(当前积分可抵消{{jf/jz>items.price?items.price:jf/jz}}元)</view>
+        </view>
+    </view>
+    <view bindtap="gopay" class="btn2" hoverClass="hover" wx:if="{{ios}}">
+        <view class="btn2s newfl">
+            <view>积分兑换</view>
+            <view class="fs20">(当前积分{{jf}})</view>
+        </view>
+    </view>
+</view>
+<jigou bindzhi="zhi" show="{{show}}"></jigou>
+<wxs module="f" src="../../utils/filter.wxs" />

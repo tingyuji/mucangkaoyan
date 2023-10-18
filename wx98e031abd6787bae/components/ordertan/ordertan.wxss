@@ -1,0 +1,121 @@
+.rgba {
+    background-color: rgba(0,0,0,.7);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.rgbabox {
+    height: 586rpx;
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%,-60%);
+    width: 505rpx;
+    z-index: 3;
+}
+
+.boxli {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.newtan1 {
+    height: 264rpx;
+    z-index: 6;
+}
+
+.newtan1,.newtan2 {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.newtan2 {
+    height: 348rpx;
+    z-index: 4;
+}
+
+.card {
+    background: #fffcf0;
+    border-radius: 12rpx;
+    box-sizing: border-box;
+    height: 506rpx;
+    left: 12rpx;
+    padding: 0 45rpx;
+    top: 0;
+    width: 478rpx;
+}
+
+.card,.newtan3 {
+    position: absolute;
+    z-index: 5;
+}
+
+.newtan3 {
+    height: 59rpx;
+    left: 104rpx;
+    top: 36rpx;
+    width: 295rpx;
+}
+
+.tips {
+    word-wrap: break-word;
+    color: #313131;
+    font-family: PingFang SC;
+    font-size: 30rpx;
+    font-weight: 500;
+    margin-top: 130rpx;
+    text-align: justify;
+}
+
+.textdd {
+    word-break: break-all;
+}
+
+.ordnum {
+    bottom: 129rpx;
+    font-size: 28rpx;
+    font-weight: 500;
+    left: 0;
+    width: 100%;
+}
+
+.btn,.ordnum {
+    color: #313131;
+    font-family: PingFang SC;
+    position: absolute;
+    text-align: center;
+    z-index: 7;
+}
+
+.btn {
+    background: linear-gradient(0deg,#facc46,#fefbfb);
+    border-radius: 44rpx;
+    bottom: 27rpx;
+    box-shadow: 1px 7rpx 16rpx 0 rgba(166,127,15,.44);
+    font-size: 32rpx;
+    font-weight: 700;
+    height: 88rpx;
+    left: 60rpx;
+    line-height: 88rpx;
+    width: 385rpx;
+}
+
+.newclose {
+    bottom: -127rpx;
+    height: 70rpx;
+    left: 218rpx;
+    position: absolute;
+    width: 70rpx;
+    z-index: 7;
+}
+
+.disnone {
+    display: none;
+}

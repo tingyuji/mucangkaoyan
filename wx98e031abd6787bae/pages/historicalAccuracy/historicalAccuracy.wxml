@@ -1,0 +1,11 @@
+<view class="content">
+    <view class="list" wx:for="{{items}}" wx:key="index">
+        <view class="title">{{item.library_name}}</view>
+        <view class="flex flex-c mt10">
+            <view class="lv">率</view>
+            <view class="zheng" wx:if="{{item.speed_log.length==0}}">正确率：0%</view>
+            <view class="zheng aaa" wx:else>正确率：{{f.zheng(item.speed_log.correct_num/item.subject_num*100)}}%</view>
+        </view>
+    </view>
+</view>
+<wxs module="f" src="../../utils/filter.wxs" />

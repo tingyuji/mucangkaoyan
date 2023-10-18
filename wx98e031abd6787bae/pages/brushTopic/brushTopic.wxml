@@ -1,0 +1,220 @@
+<impower active="{{register}}" wx:if="{{register}}"></impower>
+<view class="{{ye?'bigback h100':''}}">
+    <view class="head">
+        <view class="progress-box pt30">
+            <progress active activeMode="forwards" activeColor="#FFC729" borderRadius="4rpx" percent="{{(num+1)/items.length*100}}" strokeWidth="8rpx"></progress>
+            <text class="{{ye?'colorye':''}} bai">{{num+1}}/{{items.length}}</text>
+        </view>
+    </view>
+    <view class="view1 {{ye?'bigback':''}}">
+        <view class="page-section shuaticss" wx:if="{{type==1}}">
+            <view class="page-section-title shuaticsss">刷题模式</view>
+            <radio-group bindchange="radioChange">
+                <label class="radio" wx:for="{{itemss}}" wx:key="{{item.value}}">
+                    <radio checked="{{item.checked}}" value="{{item.value}}"></radio>{{item.name}} </label>
+            </radio-group>
+        </view>
+        <exam detail="{{detail}}" id="exam" my_answer="{{my_answer}}" num="{{num}}" submit="{{submit}}" type="{{type}}" vague="{{vague}}" ye="{{ye}}" wx:if="{{detail.type==1||detail.type==2}}"></exam>
+        <exam2 detail="{{detail}}" id="exam2" items="{{items}}" num="{{num}}" submit="{{submit}}" type="{{type}}" ye="{{ye}}" wx:if="{{detail.type==4||detail.type==6}}"></exam2>
+        <exam3 detail="{{detail}}" id="exam3" items="{{items}}" my_answer="{{my_answer}}" num="{{num}}" submit="{{submit}}" tabid="{{tabid}}" type="{{type}}" vague="{{vague}}" ye="{{ye}}" wx:if="{{detail.type==3||detail.type==5}}"></exam3>
+        <block wx:if="{{type!=2}}">
+            <view class="btnfu" wx:if="{{detail.type==1||detail.type==2||detail.type==3}}">
+                <view bindtap="{{reque?'':'submit'}}" class="btn" wx:if="{{!submit}}">{{reque?'提交答案中...':'立即提交'}}</view>
+            </view>
+        </block>
+        <view class="flex-sb" wx:if="{{submit}}">
+            <view bindtap="{{num==0?'':'shang'}}" class="shangxia {{num==0?'ddbai2':''}}">上一题</view>
+            <view bindtap="{{num+1==items.length?'':'next'}}" class="shangxia {{num+1==items.length?'ddbai2':''}}">下一题</view>
+            <view bindtap="nextzhang" class="shangxia" wx:if="{{num+1==items.length&&nzidtype&&type==1}}">下一章节</view>
+        </view>
+        <view wx:if="{{submit&&typeitemsss==1}}">
+            <view class="{{ye?'hr2':''}} hr"></view>
+            <block wx:if="{{type!=4}}">
+                <view class="flex-sb mt40" wx:if="{{detail.type==1||detail.type==2}}">
+                    <view class="{{ye?'color2':''}} daan">我的答案：<text class="lv {{f.answer(my_answer)==detail.correct_answer?'':'cou'}}">{{f.answer(my_answer)}}</text>
+                    </view>
+                    <view class="{{ye?'color2':''}} daan">正确答案：<text class="lv">{{detail.correct_answer}}</text>
+                    </view>
+                </view>
+                <view class="flex-sb mt40" wx:if="{{detail.type==5}}">
+                    <view class="{{ye?'color2':''}} daan">我的分数：<text class="lv">{{my_answer[tabid]}}分</text>
+                    </view>
+                    <view class="{{ye?'color2':''}} daan">满分：<text class="lv">{{detail.little_question_json[tabid].fraction}}分</text>
+                    </view>
+                </view>
+                <view class="flex-sb mt40" wx:if="{{detail.type==3}}">
+                    <view class="{{ye?'color2':''}} daan">我的答案：<text class="lv cou">{{my_answer[tabid].answer}}</text>
+                    </view>
+                    <view class="{{ye?'color2':''}} daan">正确答案：<text class="lv">{{detail.little_question_json[tabid].correct_answer}}</text>
+                    </view>
+                </view>
+                <view class="flex-sb mt40" wx:if="{{detail.type==4||detail.type==6}}">
+                    <view class="{{ye?'color2':''}} daan">我的分数：<text class="lv">{{my_answer}}分</text>
+                    </view>
+                    <view class="{{ye?'color2':''}} daan">满分：<text class="lv">{{detail.fraction_total}}分</text>
+                    </view>
+                </view>
+            </block>
+            <view wx:if="{{type==4}}">
+                <view class="{{ye?'color2':''}} daan" wx:if="{{detail.type==1||detail.type==2||detail.type==3||detail.type==5}}">正确答案：<text class="lv">{{detail.correct_answer}}分</text>
+                </view>
+                <view class="{{ye?'color2':''}} daan" wx:if="{{detail.type==4||detail.type==6}}">满分：<text class="lv">{{detail.fraction_total}}分</text>
+                </view>
+            </view>
+            <view class="flex-sb mt32">
+                <view>
+                    <view class="surelv">全网正确率：{{detail.right_percentage}}%</view>
+                </view>
+                <view bindtap="gobaocuo" class="{{ye?'backye color3 boder1':''}} baocuo" hoverClass="hover">我要报错</view>
+            </view>
+            <view class="{{ye?'backye':''}} meng" wx:if="{{detail.is_wrong==2&&type!==3}}">
+                <view class="mengword {{ye?'color4':''}}">我是蒙对的(＞.＜)</view>
+                <view bindtap="addjia" class="jia {{detail.is_wrong==2?'':'ddbai'}}" data-flage="{{detail.is_wrong}}" hoverClass="hover"> {{detail.is_wrong==2?'加入错题集':'移出错题集'}}</view>
+            </view>
+            <view class="{{ye?'backye':''}} meng" wx:if="{{detail.is_wrong==1&&type!==3}}">
+                <view class="mengword {{ye?'color4':''}}">我是手抖了(＞.＜)</view>
+                <view bindtap="addjia" class="jia {{detail.is_wrong==1?'':'ddbai'}}" data-flage="{{detail.is_wrong}}" hoverClass="hover"> 移出错题集</view>
+            </view>
+            <view class="{{ye?'backye':''}} meng" wx:if="{{detail.is_wrong==2&&type==3}}">
+                <view class="mengword {{ye?'color4':''}}">我已经会了(＞.＜)</view>
+                <view bindtap="addjia" class="jia {{detail.is_wrong==2?'':'ddbai'}}" data-flage="1" hoverClass="hover"> 移出错题集</view>
+            </view>
+            <view class="{{ye?'hrr2':''}} hrr"></view>
+            <view class="{{ye?'color2':''}} jiexi">答案解析</view>
+            <view class="mt24">
+                <view class="{{ye?'colorye':''}} jieword">
+                    <mp-html content="{{detail.analysis_content}}" selectable="{{true}}"></mp-html>
+                </view>
+            </view>
+            <view class="{{ye?'hr2':''}} hr"></view>
+            <block wx:if="{{detail.subject_knowledge.length>0}}">
+                <view class="{{ye?'color2':''}} jiexi">相关知识</view>
+                <view class="flex-wp wpfu">
+                    <view bindtap="goxiaa" class="{{ye?'duo':''}} wplist" data-index="{{index}}" wx:for="{{detail.subject_knowledge}}" wx:key="index">{{item.title}}</view>
+                </view>
+            </block>
+            <view class="flex-sb mt32" wx:if="{{detail.note_num!=0}}">
+                <view class="{{ye?'colorye':''}} ping">笔记({{detail.note_num}})</view>
+                <view bindtap="cha">
+                    <text class="chak">查看全部</text>
+                    <image class="right" src="{{domain}}right.png"></image>
+                </view>
+            </view>
+            <view class="bjlist">
+                <view class="bjbox" wx:for="{{subject}}" wx:key="index">
+                    <view class="flex-sb">
+                        <view class="flex">
+                            <view class="{{ye?'quanye':''}} quan"></view>
+                            <view class="time ml15">{{item.add_time}}</view>
+                        </view>
+                        <view bindtap="zhan" data-id="{{item.id}}" data-type="1">
+                            <image class="love" src="{{domain}}{{item.is_give==1?'love_ac.png':'love.png'}}"></image>
+                        </view>
+                    </view>
+                    <view class="{{ye?'border-leye':''}} bjnei">
+                        <view class="{{item.imgs?'contntext2 neitext mt20':'neitext mt20'}}">
+                            <view class="mt2000s">{{item.content}}</view>
+                            <view wx:if="{{item.imgs.length>=1}}">
+                                <image class="imgg" src="{{item.imgs[0]}}"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{submit&&typeitemsss==2}}">
+            <view class="{{ye?'hr2':''}} hr"></view>
+            <view>
+                <view class="{{ye?'color2':''}} daan" wx:if="{{detail.type==1||detail.type==2||detail.type==3||detail.type==5}}">正确答案：<text class="lv">{{detail.correct_answer}}</text>
+                </view>
+                <view class="{{ye?'color2':''}} daan" wx:if="{{detail.type==4||detail.type==6}}">满分：<text class="lv">{{detail.fraction_total}}分</text>
+                </view>
+            </view>
+            <view class="flex-sb mt32">
+                <view>
+                    <view class="surelv">全网正确率：{{detail.right_percentage}}%</view>
+                </view>
+                <view bindtap="gobaocuo" class="{{ye?'backye color3 boder1':''}} baocuo" hoverClass="hover">我要报错</view>
+            </view>
+            <view class="{{ye?'backye':''}} meng">
+                <view class="mengword {{ye?'color4':''}}">我是蒙对的(＞.＜)</view>
+                <view bindtap="addjia" class="jia {{detail.is_wrong==2?'':'ddbai'}}" data-flage="{{detail.is_wrong}}" hoverClass="hover"> {{detail.is_wrong==2?'加入错题集':'移出错题集'}}</view>
+            </view>
+            <view class="{{ye?'hrr2':''}} hrr"></view>
+            <view class="{{ye?'color2':''}} jiexi">答案解析</view>
+            <view class="mt24">
+                <view class="{{ye?'colorye':''}} jieword">
+                    <mp-html content="{{detail.analysis_content}}" selectable="{{true}}"></mp-html>
+                </view>
+            </view>
+            <view class="{{ye?'hr2':''}} hr"></view>
+            <block wx:if="{{detail.subject_knowledge.length>0}}">
+                <view class="{{ye?'color2':''}} jiexi">相关知识</view>
+                <view class="flex-wp wpfu">
+                    <view bindtap="goxiaa" class="{{ye?'duo':''}} wplist" data-index="{{index}}" wx:for="{{detail.subject_knowledge}}" wx:key="index">{{item.title}}</view>
+                </view>
+            </block>
+            <view class="flex-sb mt32" wx:if="{{detail.note_num!=0}}">
+                <view class="{{ye?'colorye':''}} ping">笔记({{detail.note_num}})</view>
+                <view bindtap="cha">
+                    <text class="chak">查看全部</text>
+                    <image class="right" src="{{domain}}right.png"></image>
+                </view>
+            </view>
+            <view class="bjlist">
+                <view class="bjbox" wx:for="{{subject}}" wx:key="index">
+                    <view class="flex-sb flex-sbb">
+                        <view class="flex">
+                            <view class="{{ye?'quanye':''}} quan"></view>
+                            <view class="time ml15">{{item.add_time}}</view>
+                        </view>
+                        <view bindtap="zhan" data-id="{{item.id}}" data-type="1">
+                            <image class="love" src="{{domain}}{{item.is_give==1?'love_ac.png':'love.png'}}"></image>
+                        </view>
+                    </view>
+                    <view class="{{ye?'border-leye':''}} bjnei">
+                        <view class="flex flex-c">
+                            <image class="tou" src="{{item.member_info.img}}"></image>
+                            <view class="{{ye?'colorye':''}} ml8 name">{{item.member_info.nickname}}</view>
+                        </view>
+                        <view class="neitext mt20">
+                            <text>{{item.content}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="{{ye?'footerye':''}} footer" wx:if="{{submit}}">
+        <view bindtap="gonewnote" class="{{ye?'back1':''}} footleft">
+            <image class="pen" src="{{domain}}pen.png"></image>
+            <text class="lefttext">点击记录笔记~</text>
+        </view>
+        <label>
+            <view class="fontercen">
+                <image class="mybj {{newkao?'mybj2':'mybj3'}}" src="{{domain}}newkao.png"></image>
+                <view class="{{ye?'color4':''}}">考同学得收益</view>
+            </view>
+            <button hidden="true" openType="share"></button>
+        </label>
+        <view catchtap="gomynote" class="fontercen" hoverClass="hover">
+            <image class="mybj" src="{{domain}}{{ye?'mybiye':'mybj'}}.png"></image>
+            <view class="{{ye?'color4':''}}">我的笔记</view>
+        </view>
+    </view>
+</view>
+<view bindtap="goye" class="goye" wx:if="{{!ye}}">
+    <view class="yefu">
+        <image class="goyeimg" src="{{domain}}goye.png"></image>
+    </view>
+</view>
+<view bindtap="goye" class="goye gori" wx:if="{{ye}}">
+    <view class="yefu">
+        <image class="goyeimg" src="{{domain}}gori.png"></image>
+    </view>
+</view>
+<image catchtap="show" class="daka3" src="{{domain}}daka3.png" wx:if="{{card}}"></image>
+<view style="height:100rpx"></view>
+<answerSheet bindtiao="tiao" daitem="{{daitem}}" questionNumber="{{questionNumber}}" show="{{show}}"></answerSheet>
+<footer itemslength="{{items.length}}" num="{{num}}" wx:if="{{type==2}}"></footer>
+<wxs module="f" src="../../utils/filter.wxs" />

@@ -1,0 +1,25 @@
+<view class="head" wx:if="{{shulist.length!=0}}">
+    <image bindtap="mask" class="xuanshu" src="{{domain}}xuanshu.png"></image>
+    <text bindtap="mask" class="xuan">选择题库</text>
+    <image bindtap="maskkss" class="xuanshu xuanshussss" src="{{domain}}del.png"></image>
+    <text bindtap="maskkss" class="xuan">清空错题库</text>
+</view>
+<view class="view2">
+    <view bindtap="golistde" class="list" data-kid="{{id}}" data-num="0" data-tid="{{item.library_id}}" data-zid="{{item.id}}" wx:for="{{items}}" wx:key="index">
+        <view class="flex-sb" data-index="{{index}}">
+            <view class="flex">
+                <view catchtap="sed_kuang" class="kuang" data-index="{{index}}" style="z-index: 999;">{{item.flage?'√':''}}</view>
+                <view class="titlewen">{{item.chapter_name}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view bindtap="print_pdf" class="shui" hoverClass="hover" wx:if="{{selectd}}">
+    <image class="shuiji" src="/static/xiaz.png"></image>
+    <text>下载错题</text>
+</view>
+<checkshu mask="{{mask}}" shuid="{{shuid}}" shulist="{{shulist}}"></checkshu>
+<view wx:if="{{kong}}">
+    <image class="zhanwu" src="{{domain}}zhanwu.png"></image>
+    <view class="zhanwutext">暂无错题~</view>
+</view>

@@ -1,0 +1,398 @@
+page {
+    background: #f8f8f8;
+}
+
+.page {
+    background: #fff;
+}
+
+.head {
+    margin-left: 35rpx;
+}
+
+.headtit {
+    color: #313131;
+    font-size: 34rpx;
+    font-weight: 700;
+    margin-right: 18rpx;
+}
+
+.headtit,.kuangse {
+    font-family: PingFang SC;
+}
+
+.kuangse {
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ffc837;
+    border-radius: 26rpx;
+    color: #ffc837;
+    display: flex;
+    font-size: 30rpx;
+    font-weight: 500;
+    height: 52rpx;
+    justify-content: center;
+    width: 175rpx;
+}
+
+.homepageright {
+    height: 24rpx;
+    margin-left: 6rpx;
+    width: 16rpx;
+}
+
+.homepageswiperback {
+    height: 292rpx;
+    position: relative;
+    width: 719rpx;
+}
+
+.swiper {
+    height: 292rpx;
+    margin-top: 30rpx;
+    width: 750rpx;
+}
+
+.imger {
+    box-sizing: border-box;
+    height: 100%;
+    left: 0;
+    padding: 30rpx 66rpx;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.swimg {
+    height: 70rpx;
+    margin-right: 20rpx;
+    width: 63rpx;
+}
+
+.swtit {
+    color: #313131;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 500;
+}
+
+.xian1 {
+    height: 27rpx;
+    margin-left: 14rpx;
+    position: relative;
+    width: 40rpx;
+}
+
+.xian2 {
+    height: 100%;
+    width: 4rpx;
+}
+
+.xian1 .xian2:nth-child(1) {
+    animation: dong 1s linear infinite;
+    background: #9f9f9f;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+.xian1 .xian2:nth-child(2) {
+    animation: dong .3s linear infinite;
+    background: #9f9f9f;
+    bottom: 0;
+    left: 8rpx;
+    position: absolute;
+}
+
+.xian1 .xian2:nth-child(3) {
+    animation: dong 1.2s linear infinite;
+    background: #9f9f9f;
+    bottom: 0;
+    left: 16rpx;
+    position: absolute;
+}
+
+.xian1 .xian2:nth-child(4) {
+    animation: dong 1.5s linear infinite;
+    background: #9f9f9f;
+    bottom: 0;
+    left: 24rpx;
+    position: absolute;
+}
+
+@-webkit-keyframes dong {
+    0% {
+        height: 2rpx;
+    }
+
+    50% {
+        height: 20rpx;
+    }
+
+    100% {
+        height: 10rpx;
+    }
+}
+
+@keyframes dong {
+    0% {
+        height: 2rpx;
+    }
+
+    50% {
+        height: 20rpx;
+    }
+
+    100% {
+        height: 10rpx;
+    }
+}
+
+.tinum {
+    color: #959595;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: 500;
+}
+
+.swbott {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50rpx;
+}
+
+.homepageright2 {
+    height: 29rpx;
+    margin-left: 30rpx;
+    width: 17rpx;
+}
+
+.swbott_tit {
+    color: #313131;
+    font-size: 32rpx;
+    font-weight: 700;
+}
+
+.shezhi,.swbott_tit {
+    font-family: PingFang SC;
+}
+
+.shezhi {
+    color: #ffb129;
+    font-size: 28rpx;
+    font-weight: 500;
+    margin-top: 8rpx;
+}
+
+.hr {
+    background: #e6e4e4;
+    height: 70rpx;
+    width: 1px;
+}
+
+.center {
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding: 0 60rpx 22rpx;
+}
+
+.center,.centerlist {
+    align-items: center;
+    display: flex;
+}
+
+.centerlist {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.homepage1 {
+    height: 98rpx;
+    width: 98rpx;
+}
+
+.centit {
+    color: #313131;
+    font-family: PingFang SC;
+    font-size: 28rpx;
+    font-weight: 500;
+}
+
+.homepage2 {
+    height: 221rpx;
+    width: 221rpx;
+}
+
+.cenlister {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.cener_tit {
+    font-size: 30rpx;
+}
+
+.cener_num,.cener_tit {
+    color: #3a341c;
+    font-family: PingFang SC;
+    font-weight: 500;
+}
+
+.cener_num {
+    font-size: 22rpx;
+    margin-top: 8rpx;
+}
+
+.list1 {
+    height: 251rpx;
+    position: relative;
+    width: 236rpx;
+}
+
+.word {
+    bottom: 50rpx;
+    color: #434343;
+    font-family: PingFang SC;
+    font-size: 28rpx;
+    font-weight: 500;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.view2 {
+    padding: 0 20rpx;
+}
+
+.list,.view2 {
+    box-sizing: border-box;
+}
+
+.list {
+    background: #fff;
+    border: 1px solid #ededed;
+    border-radius: 6rpx;
+    margin-top: 21rpx;
+    padding: 40rpx 14rpx;
+    width: 100%;
+}
+
+.kuang {
+    background: #fff;
+    border: 2rpx solid #ffc737;
+    border-radius: 4rpx;
+    color: #ffc737;
+    font-size: 27rpx;
+    height: 29rpx;
+    line-height: 26rpx;
+    text-align: center;
+    width: 29rpx;
+}
+
+.kuang,.titlewen {
+    font-family: PingFang SC;
+    font-weight: 700;
+}
+
+.titlewen {
+    color: #303030;
+    font-size: 30rpx;
+    line-height: 30rpx;
+    margin-left: 28rpx;
+}
+
+.progr {
+    width: 109rpx;
+}
+
+.yzuo {
+    color: #626262;
+    font-size: 26rpx;
+}
+
+.smalltitle,.yzuo {
+    font-family: PingFang SC;
+    font-weight: 500;
+}
+
+.smalltitle {
+    color: #7c7c7c;
+    font-size: 30rpx;
+    margin-left: 60rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 500rpx;
+}
+
+.number {
+    color: #bebebe;
+    display: inline-block;
+    font-family: PingFang SC;
+    font-size: 26rpx;
+    font-weight: 500;
+    line-height: 30rpx;
+    margin-right: 11rpx;
+}
+
+.right {
+    height: 21rpx;
+    width: 12rpx;
+}
+
+.rightff {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    box-sizing: border-box;
+    padding: 0 22rpx;
+}
+
+.shoushimengceng {
+    background-color: rgba(0,0,0,.4);
+    height: 100%;
+    left: 0rpx;
+    position: fixed;
+    top: 0rpx;
+    width: 100%;
+}
+
+.shoushi {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    left: 163rpx;
+    position: fixed;
+    top: 400rpx;
+    width: 425rpx;
+}
+
+.shoushi view {
+    background: #ffb600;
+    border-radius: 47rpx;
+    color: #fff;
+    font-size: 32rpx;
+    height: 94rpx;
+    line-height: 94rpx;
+    text-align: center;
+    width: 425rpx;
+}
+
+.shoushi image {
+    height: 54rpx;
+    margin-top: -20rpx;
+    width: 174rpx;
+}

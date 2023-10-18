@@ -1,0 +1,90 @@
+<view class="{{show?'rgba':'disnone'}}"></view>
+<view class="{{show?'rgbabox':'disnone'}}">
+    <view class="rgbaboxli">
+        <view class="xian1"></view>
+        <view class="xian2"></view>
+        <view class="content">
+            <view class="title" wx:if="{{type==1}}">设置</view>
+            <view class="title" wx:if="{{type==2}}">恭喜你成为刷题会员</view>
+            <view class="title" wx:if="{{type==3}}">请填写激活码</view>
+            <view class="title" wx:if="{{type==5}}">如何领取积分？</view>
+            <view class="title" wx:if="{{type==6&&!gonggongqun}}">恭喜你成为精缩会员</view>
+            <view wx:if="{{type==1}}">
+                <view class="flex-sb">
+                    <view class="yin">音效</view>
+                    <view bindtap="qie" class="{{yin?'switch2':'switch'}}" style="transition: transform 0.3s linear">
+                        <view class="quan" style="transform: translateX({{yin?'62':'0'}}rpx);transition: transform 0.3s linear;"></view>
+                        <view class="ON" wx:if="{{yin}}">ON</view>
+                        <view class="off" wx:if="{{!yin}}">OFF</view>
+                    </view>
+                </view>
+                <view class="flex-sb">
+                    <view class="yin">答案模糊</view>
+                    <view bindtap="qie3" class="{{answer?'switch2':'switch'}}" style="transition: transform 0.3s linear">
+                        <view class="quan" style="transform: translateX({{answer?'62':'0'}}rpx);transition: transform 0.3s linear;"></view>
+                        <view class="ON" wx:if="{{answer}}">ON</view>
+                        <view class="off" wx:if="{{!answer}}">OFF</view>
+                    </view>
+                </view>
+                <view class="flex-sb">
+                    <view class="yin">答对直接下一题</view>
+                    <view bindtap="qie2" class="{{she?'switch2':'switch'}}" style="transition: transform 0.3s linear;">
+                        <view class="quan" style="transform: translateX({{she?'62':'0'}}rpx);transition: transform 0.3s linear;"></view>
+                        <view class="ON" wx:if="{{she}}">ON</view>
+                        <view class="off" wx:if="{{!she}}">OFF</view>
+                    </view>
+                </view>
+                <view bindtap="btn" class="btn2">确定</view>
+            </view>
+            <view wx:if="{{type==2||type==6}}">
+                <view class="title">欢迎进群</view>
+                <view class="cont2">
+                    <view>
+                        <text wx:if="{{type==6&&!gonggongqun}}">记得进考点精缩群，后期更新会第一时间提醒。</text>
+                        <text wx:if="{{type==2&&!gonggongqun}}">记得进刷题会员群享受更多服务！</text>
+                        <text wx:if="{{gonggongqun}}">
+                回复数字{{can.public_reply}}进{{can.public_reply_name}}；
+                回复数字{{can.major_reply}}进{{can.major_reply_name}}；
+                回复数字{{can.vip_reply}}进{{can.vip_reply_name}}；
+                回复数字{{can.big_reply}}进{{can.big_reply_name}}；
+            </text>
+                    </view>
+                </view>
+                <label>
+                    <view class="btn1" style="margin-top:80rpx" wx:if="{{type==2&&!gonggongqun}}">回复数字3立即进群</view>
+                    <view class="btn1" style="margin-top:80rpx" wx:if="{{type==6&&!gonggongqun}}">回复数字8立即进群</view>
+                    <view class="btn1" wx:if="{{gonggongqun}}">立即回复进群</view>
+                    <button hidden="true" openType="contact"></button>
+                </label>
+            </view>
+            <view wx:if="{{type==3}}">
+                <view class="iptfu">
+                    <input bindinput="bindcode" class="iptt" placeholder="输入激活码免费领取会员" placeholderClass="plipttd" type="text" value="{{code}}"></input>
+                </view>
+                <view catchtap="huoqu" class="ruhe">如何免费获取激活码?</view>
+                <view bindtap="btn3" class="btn2 mt120">确定</view>
+            </view>
+            <view wx:if="{{type==5}}">
+                <view class="cont">
+                    <view>回复数字2领取</view>
+                </view>
+                <label>
+                    <view class="btn1">立即回复</view>
+                    <button hidden="true" openType="contact"></button>
+                </label>
+            </view>
+            <view wx:if="{{type==666}}">
+                <view class="cont">
+                    <view>购买后，下载不了</view>
+                    <view>《回复数字{{can.big_reply}}进{{can.big_reply_name}}》</view>
+                </view>
+                <label>
+                    <view class="btn1">立即回复进群</view>
+                    <button hidden="true" openType="contact"></button>
+                </label>
+                <view bindtap="clog" class="btn1">直接下载</view>
+            </view>
+        </view>
+    </view>
+    <image bindtap="close" class="closexian" src="{{domain}}closexian.png"></image>
+</view>

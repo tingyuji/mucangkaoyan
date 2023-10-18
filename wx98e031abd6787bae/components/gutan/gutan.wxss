@@ -1,0 +1,147 @@
+.rgba {
+    background: rgba(0,0,0,.7);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.rgbabox {
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+}
+
+.box {
+    background: #fffdf5;
+    border-radius: 20rpx;
+    box-sizing: border-box;
+    height: 415rpx;
+    padding: 24rpx 31rpx;
+    position: relative;
+    width: 539rpx;
+}
+
+.gutiantit {
+    height: 169rpx;
+    left: 76rpx;
+    position: absolute;
+    top: -108rpx;
+    width: 368rpx;
+}
+
+.close {
+    height: 192rpx;
+    position: absolute;
+    right: 0;
+    top: -194rpx;
+    width: 70rpx;
+}
+
+.boxli {
+    align-items: center;
+    border: 1px solid #ffcc74;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.title {
+    color: #e66720;
+    font-size: 38rpx;
+    font-weight: 700;
+    margin-top: 41rpx;
+}
+
+.tips,.title {
+    font-family: PingFang SC;
+}
+
+.tips {
+    color: #434343;
+    font-size: 30rpx;
+    font-weight: 500;
+}
+
+.mt60 {
+    margin-top: 60rpx;
+}
+
+.btn {
+    background: #ffc737;
+    border-radius: 41rpx;
+    box-shadow: 0 4rpx 16rpx 0 rgba(255,199,55,.71);
+    color: #313131;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 700;
+    height: 82rpx;
+    line-height: 82rpx;
+    margin-top: 26rpx;
+    text-align: center;
+    width: 423rpx;
+}
+
+.hover {
+    opacity: .9;
+    transform: scale(.98) translateY(1rpx) translateX(2rpx);
+}
+
+.iptfu {
+    margin-top: 40rpx;
+    padding: 0 10rpx;
+}
+
+.iptfu,.iptt {
+    box-sizing: border-box;
+}
+
+.iptt {
+    border-bottom: 1px solid #f4f4f4;
+    text-align: center;
+}
+
+.plipttd {
+    font-size: 32rpx;
+}
+
+.mt120 {
+    margin-top: 120rpx;
+}
+
+.ruhe {
+    box-sizing: border-box;
+    color: #ffc737;
+    font-size: 28rpx;
+    margin-top: 8rpx;
+    text-shadow: 0 1px #d9d9d9,0 2rpx #ccc,0 3rpx #bfbfbf;
+}
+
+.btn4,.ruhe {
+    text-align: center;
+}
+
+.btn4 {
+    background: #ffcb06;
+    border-radius: 41rpx;
+    bottom: 271rpx;
+    box-shadow: 0 4rpx 8rpx 0 rgba(255,199,55,.68);
+    color: #1b1b1b;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 700;
+    height: 82rpx;
+    left: 50rpx;
+    line-height: 82rpx;
+    position: absolute;
+    width: 407rpx;
+}
+
+.mt40 {
+    margin-top: 40rpx;
+}

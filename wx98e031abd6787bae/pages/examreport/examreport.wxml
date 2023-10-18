@@ -1,0 +1,92 @@
+<navigation-bar bgSrc="{{bgSrc}}" color="black" height="535" showBack="true" title="考试报告"></navigation-bar>
+<view class="head">
+    <image class="examquan" src="{{domain}}examquan.png">
+        <view class="quanli">
+            <view class="fen">{{zongfen}}<text class="fs24">分</text>
+            </view>
+            <view class="defen">考试得分</view>
+        </view>
+    </image>
+    <view class="kaotime">考试用时:{{hours}}:{{minutes}}:{{seconds}}</view>
+    <view class="jiaotime">交卷时间：{{time2}}</view>
+</view>
+<view class="content">
+    <view class="box">
+        <view class="boxtop flex-sb flex-c">
+            <view class="dtk">答题卡</view>
+            <view class="flex flex-c">
+                <view class="quan quandui"></view>
+                <view class="datext">答对({{dui}})</view>
+                <view class="quan quancuo"></view>
+                <view class="datext">答错({{dui2}})</view>
+                <view class="quan"></view>
+                <view class="datext">未作({{dui3}})</view>
+            </view>
+        </view>
+        <view class="chooseti mt20" wx:if="{{list.length!=0}}">选择题({{xuanfen}}分)</view>
+        <view class="flex borbott" wx:if="{{list.length!=0}}">
+            <view class="tinum"></view>
+            <view class="tifu flex1 flex-wp">
+                <view bindtap="gojie" class="tilist {{item.dui?'dui':''}} {{item.cuo?'cuo':''}}" data-num="{{item.index-1}}" wx:for="{{list}}"> {{item.index}}</view>
+            </view>
+        </view>
+        <view class="chooseti mt20" wx:if="{{list2.length!=0}}">阅读题({{yuefen}}分)</view>
+        <view wx:if="{{list2.length!=0}}">
+            <view bindtap="gojie" class="flex borbott" data-num="{{item.index-1}}" wx:for="{{list2}}" wx:key="index">
+                <view class="tinum">{{item.index}}：</view>
+                <view class="tifu flex1 flex-wp">
+                    <view class="tilist {{list2[index].subject_log.my_answer[index2].dui?'dui':''}} {{list2[index].subject_log.my_answer[index2].cuo?'cuo':''}}" wx:for="{{item.my_answerlength}}" wx:for-index="index2" wx:key="index">{{index2+1}}</view>
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{zan}}">
+            <view class="chooseti mt20" wx:if="{{list4.length!=0}}">分析题({{fenfen}}分)</view>
+            <view wx:if="{{list4.length!=0}}">
+                <view bindtap="gojie" class="flex borbott" data-num="{{item.index-1}}" wx:for="{{list4}}" wx:key="index">
+                    <view class="tinum">{{item.index}}：</view>
+                    <view class="tifu flex1 flex-wp">
+                        <view class="tinum2 ml10" wx:for="{{item.my_answerlength}}" wx:for-index="index2" wx:key="index">{{index2+1}}: ({{list4[index].fen2[index2]?list4[index].fen2[index2]:'0'}}分)</view>
+                    </view>
+                </view>
+            </view>
+            <view class="chooseti mt20" wx:if="{{list3.length!=0}}">翻译题({{fanfen}}分)</view>
+            <view wx:if="{{list3.length!=0}}">
+                <view bindtap="gojie" class="flex" data-num="{{item.index-1}}" wx:for="{{list3}}" wx:key="index">
+                    <view class="tinum">{{item.index}}:</view>
+                    <view class="tifu">
+                        <view class="tinum2">({{item.fen?item.fen:0}}分)</view>
+                    </view>
+                </view>
+            </view>
+            <view class="chooseti mt20" wx:if="{{list5.length!=0}}">作文题({{zuofen}}分)</view>
+            <view wx:if="{{list5.length!=0}}">
+                <view bindtap="gojie" class="flex" data-num="{{item.index-1}}" wx:for="{{list5}}" wx:key="index">
+                    <view class="tinum">{{item.index}}:</view>
+                    <view class="tifu">
+                        <view class="tinum2">({{item.fen?item.fen:0}}分)</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="zan" wx:if="{{list3.length!=0||list4.length!=0||list5.length!=0}}">
+            <view bindtap="zhan" class="zantext">{{zan?'收起答题卡':'展开答题卡'}}</view>
+            <image bindtap="zhan" class="exambott {{zan?'rgo180':''}}" src="{{domain}}exambott.png"></image>
+        </view>
+        <view style="height:100rpx;padding-bottom:env(safe-area-inset-bottom);"></view>
+    </view>
+</view>
+<view class="footer">
+    <view class="footerer">
+        <view bindtap="gojie" class="footerleft" data-num="0">
+            <image class="bganswer" src="{{domain}}bganswer.png"></image>
+            <view class="bgtext">答案解析</view>
+        </view>
+        <label class="footerright">
+            <view class="footerright">
+                <image class="bganswer" src="{{domain}}bgshare.png"></image>
+                <view class="bgtext">分享好友</view>
+            </view>
+            <button hidden="true" openType="share"></button>
+        </label>
+    </view>
+</view>

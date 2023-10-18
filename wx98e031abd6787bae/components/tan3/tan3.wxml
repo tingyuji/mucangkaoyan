@@ -1,0 +1,30 @@
+<view bind:tap="close" class="rgba {{show?'':'disnone'}}"></view>
+<import src="../../api/wxParse/wxParse.wxml"></import>
+<view class="rgbabox {{show?'':'disnone'}}">
+    <image bind:tap="close" class="close" src="{{domain}}close.png"></image>
+    <view class="box">
+        <image class="tan3tit" src="{{domain}}tan3tit.png">
+            <view class="imgtit">详情介绍</view>
+        </image>
+        <view class="boxtop">
+            <view class="gou">解锁说明：</view>
+            <view class="tips flex-c flex" wx:if="{{false}}">
+                <image class="tan3zuan" src="{{domain}}img/tan3zuan.png"></image>
+                <view class="yic">一次解锁可免费下载所有押题精缩资料</view>
+            </view>
+            <view class="hrr"></view>
+            <view class="zhi">
+                <scroll-view scrollY="true" style="height: 400rpx;">
+                    <template is="wxParse" data="{{wxParseData:article.nodes}}"></template>
+                </scroll-view>
+            </view>
+        </view>
+        <view class="footer">
+            <view bindtap="gomian" class="left">输入激活码领取</view>
+            <view bindtap="bay" class="right" wx:if="{{!ios}}">全套购买{{price}}元</view>
+        </view>
+    </view>
+    <image bindtap="close" class="tan3close" src="{{domain}}img/tan3close.png"></image>
+</view>
+<bigcode bindzhi="zhi" show="{{show2}}"></bigcode>
+<popup bindclose="close" jinqun="{{jinqun}}" show="{{show3}}" type="6"></popup>

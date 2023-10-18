@@ -1,0 +1,89 @@
+<impower active="{{register}}" wx:if="{{register}}"></impower>
+<view class="head">
+    <view class="serkuang">
+        <image catchtap="serch" class="serchimg" src="{{domain}}serch.png"></image>
+        <input bindconfirm="serch" bindinput="wordStr" class="ipt" confirmType="search" placeholder="输入您要搜索的内容~" placeholderClass="iptpla" type="text" value="{{wordStr}}"></input>
+    </view>
+</view>
+<view bindtap="print_pdf" class="shui" hoverClass="hover" wx:if="{{selectd}}">
+    <image class="shuiji" src="/static/xiaz.png"></image>
+    <text>下载笔记</text>
+</view>
+<view class="vieww">
+    <view class="flex-sb" style="width: 685rpx; height: 48rpx; display: flex; box-sizing: border-box">
+        <view>
+            <view class="picker">
+                <text bindtap="tapChangpen" class="mypen {{typenote==1?'jiexi':''}}" data-type="1" wx:if="{{subject_id!=0}}">{{array[rangindex].name?array[rangindex].name:'本题笔记'}}</text>
+                <text bindtap="tapChangpen" class="mypen {{typenote==2?'jiexi':''}}" data-type="2">{{array[rangindex].name?array[rangindex].name:'我的笔记'}}</text>
+            </view>
+        </view>
+        <view style="display: flex;">
+            <view bindtap="mask">
+                <image class="saixuan mysai" src="{{domain}}saixuan.png"></image>
+            </view>
+            <view bindtap="maskorder" class="saixuan mypen"> ⇅≡ </view>
+        </view>
+    </view>
+    <view bindtap="godetail" class="list" data-id="{{item.id}}" wx:for="{{items}}" wx:key="index">
+        <view class="listhead">
+            <view catchtap="sed_kuang" class="kuang" data-index="{{index}}" style="z-index: 999;">{{item.flage?'√':''}}</view>
+            <view>
+                <text class="time">{{item.add_time}}</text>
+                <text class="gk" wx:if="{{item.is_public==1}}">公开</text>
+            </view>
+            <view wx:if="{{item.member_id==member_id}}">
+                <image catchtap="goedit" class="edit" data-id="{{item.id}}" data-type="{{item.type}}" src="{{domain}}edit.png"></image>
+                <text catchtap="goedit" class="edittext mr40" data-id="{{item.id}}" data-type="{{item.type}}">编辑</text>
+                <image catchtap="del" class="edit" data-id="{{item.id}}" src="{{domain}}del.png"></image>
+                <text catchtap="del" class="edittext" data-id="{{item.id}}">删除</text>
+            </view>
+        </view>
+        <view class="flex-sb mt40">
+            <view>
+                <view class="contntext22">{{item.cccc_name}}-{{item.ccp_name}}</view>
+                <view class="{{item.imgs?'contntext2':'contntext'}}">{{item.content}}</view>
+            </view>
+            <view>
+                <image class="imgg" src="{{item.imgs[0]}}"></image>
+            </view>
+        </view>
+    </view>
+    <view wx:if="{{kong}}">
+        <image class="zhanwu" src="{{domain}}zhanwu.png"></image>
+        <view class="zhanwutext">暂无笔记~</view>
+    </view>
+</view>
+<view class="{{mask?'rgba disbl':'disnone'}}"></view>
+<view class="{{mask?'disbl rgbabox':'disnone'}}">
+    <view>
+        <image class="rgimg" src="{{domain}}rgimg.png">
+            <view class="xuan">选择书目</view>
+        </image>
+    </view>
+    <view class="mt10">
+        <scroll-view scrollY="true" style="height: 500rpx;">
+            <view class="flex-wp">
+                <view bindtap="check" class="{{!item.flage?'sclist':'sclist2'}} mt40" data-flage="{{item.flage}}" data-id="{{item.id}}" data-index="{{index}}" wx:for="{{shulist}}" wx:key="index"> {{item.library_name}} <image class="gou" src="{{domain}}gou.png"></image>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view bindtap="sure" class="rgbtn" hoverClass="hover">确定</view>
+</view>
+<view class="{{maskorder?'rgba disbl':'disnone'}}"></view>
+<view class="{{maskorder?'disbl rgbabox':'disnone'}}">
+    <view>
+        <image class="rgimg" src="{{domain}}rgimg.png">
+            <view class="xuan">选择排序</view>
+        </image>
+    </view>
+    <view class="mt10">
+        <scroll-view scrollY="true" style="height: 500rpx;">
+            <view class="flex-wp">
+                <view bindtap="checkorder" class="{{!item.flage?'sclist':'sclist2'}} mt40" data-flage="{{item.flage}}" data-id="{{item.id}}" data-index="{{index}}" wx:for="{{shulists}}" wx:key="index"> {{item.library_name}} <image class="gou" src="{{domain}}gou.png"></image>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view bindtap="sureorder" class="rgbtn" hoverClass="hover">确定</view>
+</view>

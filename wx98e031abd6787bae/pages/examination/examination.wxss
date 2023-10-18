@@ -1,0 +1,20 @@
+.head {
+    box-sizing: border-box;
+    padding: 0 30rpx;
+}
+
+.progress-box {
+    flex: 1;
+}
+
+.num {
+    color: #a0a0a0;
+    font-family: PingFang SC;
+    font-size: 24rpx;
+    font-weight: 500;
+    margin-left: 30rpx;
+}
+
+.num2 {
+    color: #535353;
+}

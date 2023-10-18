@@ -1,0 +1,32 @@
+<impower active="{{register}}" wx:if="{{register}}"></impower>
+<phonePopup show="{{phone}}"></phonePopup>
+<view class="content">
+    <view bindtap="godetail" class="box flex" data-id="{{item.id}}" wx:for="{{items}}" wx:key="index">
+        <view>
+            <image class="boximg" src="{{item.img}}"></image>
+        </view>
+        <view class="flex1 boxright">
+            <view class="flex-sb">
+                <view class="title">{{item.name}}</view>
+                <view>
+                    <image class="right3" src="{{domain}}img/right3.png"></image>
+                </view>
+            </view>
+            <view class="flex-sb flexd">
+                <view class="flex">
+                    <view class="xian1">
+                        <view class="xian2"></view>
+                        <view class="xian2"></view>
+                        <view class="xian2"></view>
+                        <view class="xian2"></view>
+                    </view>
+                    <view class="renxian">{{item.people_num}}人次在线</view>
+                </view>
+                <view catchtap="xia666" class="xiaz" data-id="{{item.id}}" data-name="{{item.name}}" data-url="{{item.pdf_file}}">下载精缩版</view>
+            </view>
+        </view>
+    </view>
+</view>
+<tan3 bind:init="init2" bindbay="bay" jinqun="{{jinqun}}" show="{{show}}"></tan3>
+<popup bindclose="close" jinqun="{{jinqun}}" show="{{show3}}" type="6"></popup>
+<popup bind:clog="clog" bindclose="close" clicidata666="{{clicidata666}}" jinqun="{{jinqun}}" show="{{show666}}" type="666"></popup>

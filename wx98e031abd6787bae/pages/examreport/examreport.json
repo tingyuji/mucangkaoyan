@@ -1,0 +1,10 @@
+{
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "navigation-bar": "/components/NavigationBar/NavigationBar",
+        "impower": "/components/impower/impower",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "popup": "/components/popup/popup",
+        "impower": "/components/impower/impower",
+        "phonePopup": "/components/phonePopup/phonePopup",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

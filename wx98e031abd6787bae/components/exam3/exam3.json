@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "footer": "/components/footer/footer",
+        "impower": "/components/impower/impower",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

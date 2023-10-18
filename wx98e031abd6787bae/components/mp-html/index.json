@@ -1,0 +1,9 @@
+{
+    "component": true,
+    "usingComponents": {
+        "node": "./node/node",
+        "impower": "/components/impower/impower",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

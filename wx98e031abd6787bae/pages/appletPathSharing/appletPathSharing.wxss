@@ -1,0 +1,62 @@
+page {
+    background: #fdd20c;
+}
+
+.content {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.xcxshareimg {
+    height: 1556rpx;
+    width: 100%;
+}
+
+.box {
+    background: #fff;
+    border-radius: 20rpx;
+    box-sizing: border-box;
+    left: 33rpx;
+    padding: 78rpx 25rpx 36rpx;
+    position: absolute;
+    top: 457rpx;
+    width: 682rpx;
+}
+
+.boxhead {
+    word-wrap: break-word;
+    background: #f0f0f0;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+    color: #313131;
+    font-size: 34rpx;
+    padding: 20rpx 24rpx;
+    width: 100%;
+}
+
+.boxhead,.boxinfo {
+    font-family: PingFang SC;
+    font-weight: 500;
+}
+
+.boxinfo {
+    color: #626262;
+    font-size: 28rpx;
+    margin-top: 25rpx;
+}
+
+.btnlu {
+    background: #ffcb06;
+    border-radius: 45rpx;
+    box-shadow: 0 4rpx 8rpx 0 rgba(255,199,55,.68);
+    color: #1b1b1b;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 700;
+    height: 90rpx;
+    line-height: 90rpx;
+    margin-top: 72rpx;
+    text-align: center;
+    width: 610rpx;
+}

@@ -1,0 +1,17 @@
+<impower active="{{register}}"></impower>
+<view class="content">
+    <view class="flex-wp jcsb">
+        <view class="list" wx:if="{{request}}">
+            <image showMenuByLongpress class="listimg" mode="widthFix" src="{{can.public_qrcode}}"></image>
+            <view class="mt10">进公共课交流群</view>
+        </view>
+        <view class="list" wx:if="{{request}}">
+            <image showMenuByLongpress class="listimg" mode="widthFix" src="{{can.major_qrcode}}"></image>
+            <view class="mt10">进专业课交流群</view>
+        </view>
+        <view class="list" wx:if="{{vip&&request}}">
+            <image showMenuByLongpress class="listimg" mode="widthFix" src="{{can.vip_qrcode}}"></image>
+            <view class="mt10">进刷题会员交流群</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,5 @@
+<import src="../../api/wxParse/wxParse.wxml"></import>
+<view class="view1" wx:if="{{is_url==1}}">
+    <mp-html content="{{content}}" selectable="{{true}}"></mp-html>
+</view>
+<web-view src="{{content}}" wx:if="{{is_url==2}}"></web-view>

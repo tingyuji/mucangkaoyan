@@ -1,0 +1,88 @@
+function left(str) {
+    var str2 = str.toString();
+    return (str2.split('')[(0)])
+};
+
+function right(str) {
+    var str2 = str.toString();
+    return (str2.split('')[(1)])
+};
+
+function three(str) {
+    var str2 = str.toString();
+    return (str2.split('')[(2)])
+};
+
+function cennum(str) {
+    var str2 = str;
+    return (Math.floor(str2 * 100))
+};
+
+function xia(str) {
+    return (Math.floor(str))
+};
+
+function numm(str) {
+    var str2 = str;
+    return (Number)(str2)
+};
+
+function zhang(str) {
+    var str2 = str;
+    if (!str2) {
+        return ('')
+    };
+    if (str2.length > 52) {
+        return (str2.substring(0, 52) + '...')
+    } else {
+        return (str2)
+    }
+};
+
+function zheng(str) {
+    var str2 = str;
+    if (str2) {
+        return (parseInt(str))
+    } else {
+        return (0)
+    }
+};
+
+function answer(str) {
+    if (str) {
+        var newstr = str;
+        return (newstr.toString())
+    } else {
+        return ('')
+    }
+};
+
+function answer2(str) {
+    if (str) {
+        var newstr = str;
+        var str2 = '';
+        for (var i = 0; i < newstr.length; i++) {
+            str2 = str2 + newstr[((nt_3 = (i), null == nt_3 ? undefined : 'number' === typeof nt_3 ? nt_3 : "" + nt_3))]
+        };
+        return (str2)
+    } else {
+        return ('')
+    }
+};
+
+function time1(str) {
+    var str2 = str;
+    return (str2.split(' ')[(0)])
+};
+module.exports = ({
+    left: left,
+    right: right,
+    three: three,
+    cennum: cennum,
+    numm: numm,
+    xia: xia,
+    zhang: zhang,
+    zheng: zheng,
+    answer: answer,
+    time1: time1,
+});

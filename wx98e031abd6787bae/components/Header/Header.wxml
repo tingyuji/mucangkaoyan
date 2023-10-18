@@ -1,0 +1,15 @@
+<view class="header">
+    <view class="null" style="height:{{systemInfo.statusBarHeight+headerHeight}}px" wx:if="{{showNull}}">
+        <image src="{{bgi}}" wx:if="{{bgi}}"></image>
+    </view>
+    <view class="show" style="background:{{bgc}};height:{{systemInfo.statusBarHeight+headerHeight}}px">
+        <view class="status-bar" style="height:{{systemInfo.statusBarHeight}}px;"></view>
+        <view class="header-container flex" style="height:{{headerHeight}}px;padding:0 {{boxPadding}}rpx">
+            <view bindtap="backPage" class="back-btn" wx:if="{{showBack}}">
+                <icon class="iconfont back-icon" style="color: {{backColor}}"></icon>
+            </view>
+            <text class="title" style="color:{{titleColor}}" wx:if="{{title}}">{{title}}</text>
+            <slot></slot>
+        </view>
+    </view>
+</view>

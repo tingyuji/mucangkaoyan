@@ -1,0 +1,344 @@
+./app.wxssrpx./components/exam2/exam2.wxssrpx.head {
+    box-sizing: border-box;
+}
+
+.progress-box {
+    flex: 1;
+}
+
+.num {
+    color: #a0a0a0;
+    font-family: PingFang SC;
+    font-size: 24rpx;
+    font-weight: 500;
+    margin-left: 30rpx;
+}
+
+.num2 {
+    color: #535353;
+}
+
+.fan {
+    background: #69707a;
+    border-radius: 5rpx;
+    color: #fff;
+    font-size: 24rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    margin-top: 30rpx;
+    text-align: center;
+    width: 84rpx;
+}
+
+.fan,.info {
+    font-family: PingFang SC;
+    font-weight: 500;
+}
+
+.info {
+    color: #313131;
+    font-size: 30rpx;
+    margin-top: 24rpx;
+    text-align: justify;
+}
+
+.hrr {
+    background: #f8faff;
+    height: 18rpx;
+    margin-top: 29rpx;
+    width: 100%;
+}
+
+.tabbarfu {
+    border-bottom: 1px solid #e4e4e4;
+    height: 97rpx;
+}
+
+.list {
+    color: #959595;
+    display: inline-block;
+    font-size: 30rpx;
+    font-weight: 500;
+    line-height: 97rpx;
+    margin-left: 34rpx;
+    margin-right: 30rpx;
+}
+
+.list,.listac {
+    font-family: PingFang SC;
+}
+
+.listac {
+    color: #303030;
+    font-size: 34rpx;
+    font-weight: 700;
+    position: relative;
+}
+
+.listac::before {
+    background: #ffc729;
+    border-radius: 4rpx;
+    bottom: 0;
+    content: "";
+    height: 8rpx;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 86rpx;
+}
+
+.content {
+    box-sizing: border-box;
+    position: relative;
+}
+
+.smalltit {
+    color: #707070;
+    font-size: 30rpx;
+    margin-top: 10rpx;
+    text-align: justify;
+}
+
+.smalltit,.xuanlist {
+    font-family: PingFang SC;
+    font-weight: 500;
+}
+
+.xuanlist {
+    align-items: center;
+    background: #fff;
+    border: 1px solid hsla(0,0%,58%,.22);
+    border-radius: 10rpx;
+    box-sizing: border-box;
+    color: #313131;
+    display: flex;
+    font-size: 32rpx;
+    margin-top: 38rpx;
+    padding: 46rpx 42rpx;
+    position: relative;
+    width: 100%;
+}
+
+.xuanlistac {
+    background: #fff9eb;
+    border: 1px solid #fff9eb;
+    color: #fe9e21;
+}
+
+.subimg {
+    width: 100%;
+}
+
+.newimgfu {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.liimgfu,.newimgfu {
+    display: flex;
+}
+
+.liimgfu {
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20rpx;
+}
+
+.checkimg {
+    border-radius: 10rpx;
+    height: 300rpx;
+    width: 300rpx;
+}
+
+.quan {
+    border: 1px solid #ffc737;
+    border-radius: 50%;
+    height: 50rpx;
+    width: 50rpx;
+}
+
+.quanac {
+    background: #ffc737;
+}
+
+.vague {
+    filter: blur(6rpx);
+}
+
+.contentli {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.tihao {
+    background: #fff;
+    border: 1px solid #69707a;
+    border-radius: 5rpx 0 0 5rpx;
+    box-sizing: border-box;
+    color: #69707a;
+    font-size: 28rpx;
+    padding: 0 7rpx;
+}
+
+.tihao,.tit {
+    font-family: PingFang SC;
+    font-weight: 500;
+    height: 40rpx;
+    line-height: 40rpx;
+}
+
+.tit {
+    background: #717788;
+    border-radius: 0 5rpx 5rpx 0;
+    color: #fff;
+    font-size: 24rpx;
+    width: 84rpx;
+}
+
+.quanA,.tit {
+    text-align: center;
+}
+
+.quanA {
+    background: #fff;
+    border: 2rpx solid #e5e5e5;
+    border-radius: 50%;
+    color: #313131;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 700;
+    height: 48rpx;
+    line-height: 48rpx;
+    margin-right: 26rpx;
+    width: 48rpx;
+}
+
+.quanac {
+    background: #ffc829;
+    border: 2rpx solid #ffc829;
+    color: #fff;
+}
+
+.quandui {
+    background: #0bd977;
+    border: 2rpx solid #0bd977;
+    color: #fff;
+}
+
+.quancuo {
+    background: #fb6666;
+    border: 2rpx solid #fb6666;
+    color: #fff;
+}
+
+.heiactive {
+    border: 1px solid #ffc829;
+    color: #ffc829;
+}
+
+.baico3 {
+    border: 1px solid #3ddb90;
+    color: #313131;
+}
+
+.baico4 {
+    border: 1px solid #fb7d7d;
+    color: #313131;
+}
+
+.baigou {
+    height: 38rpx;
+    position: absolute;
+    right: 12rpx;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38rpx;
+}
+
+.tihao {
+    background: #fff;
+    border: 1px solid #69707a;
+    border-radius: 5rpx 0 0 5rpx;
+    box-sizing: border-box;
+    color: #69707a;
+    font-size: 28rpx;
+    padding: 0 7rpx;
+}
+
+.tihao,.tit {
+    font-family: PingFang SC;
+    font-weight: 500;
+    height: 40rpx;
+    line-height: 40rpx;
+}
+
+.tit {
+    background: #717788;
+    border-radius: 0 5rpx 5rpx 0;
+    color: #fff;
+    font-size: 24rpx;
+    width: 84rpx;
+}
+
+.quanA,.tit {
+    text-align: center;
+}
+
+.quanA {
+    background: #fff;
+    border: 2rpx solid #e5e5e5;
+    border-radius: 50%;
+    color: #313131;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 700;
+    height: 48rpx;
+    line-height: 48rpx;
+    margin-right: 26rpx;
+    width: 48rpx;
+}
+
+.quanac {
+    background: #ffc829;
+    border: 2rpx solid #ffc829;
+    color: #fff;
+}
+
+.quandui {
+    background: #0bd977;
+    border: 2rpx solid #0bd977;
+    color: #fff;
+}
+
+.quancuo {
+    background: #fb6666;
+    border: 2rpx solid #fb6666;
+    color: #fff;
+}
+
+.heiactive {
+    border: 1px solid #ffc829;
+    color: #ffc829;
+}
+
+.baico3 {
+    border: 1px solid #3ddb90;
+    color: #313131;
+}
+
+.baico4 {
+    border: 1px solid #fb7d7d;
+    color: #313131;
+}
+
+.baigou {
+    height: 38rpx;
+    position: absolute;
+    right: 12rpx;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38rpx;
+}

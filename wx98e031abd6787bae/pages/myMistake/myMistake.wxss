@@ -1,0 +1,64 @@
+.topimg {
+    height: 520rpx;
+    width: 730rpx;
+}
+
+.content {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -200rpx;
+    padding: 0 17rpx;
+}
+
+.listimg {
+    height: 434rpx;
+    width: 356rpx;
+}
+
+.list {
+    position: relative;
+}
+
+.title {
+    color: #886fc4;
+    font-size: 36rpx;
+    font-weight: 700;
+    left: 47rpx;
+    top: 90rpx;
+}
+
+.number,.title {
+    font-family: PingFang SC;
+    position: absolute;
+}
+
+.number {
+    background: #b8a1e5;
+    border-radius: 24rpx;
+    color: #fff;
+    font-size: 26rpx;
+    font-weight: 500;
+    height: 47rpx;
+    left: 45rpx;
+    line-height: 47rpx;
+    padding: 0 30rpx;
+    text-align: center;
+    top: 150rpx;
+}
+
+.two {
+    background: #95adde;
+}
+
+.three {
+    background: #69dec7;
+}
+
+.for {
+    background: #e5a3a1;
+}
+
+.five {
+    background: #f0c06e;
+}

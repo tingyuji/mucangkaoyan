@@ -1,0 +1,14 @@
+{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "书籍列表",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "tan3": "/components/tan3/tan3",
+        "popup": "/components/popup/popup",
+        "impower": "/dist/impower/impower",
+        "phonePopup": "/components/phonePopup/phonePopup",
+        "Mask": "/components/Mask/Mask",
+        "Header": "/components/Header/Header"
+    }
+}

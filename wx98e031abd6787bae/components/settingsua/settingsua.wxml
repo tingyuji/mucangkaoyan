@@ -1,0 +1,11 @@
+<view class="rgba"></view>
+<view class="rgbabox">
+    <view class="head"> 每日刷题量 <image class="homesuaclose" src="{{domain}}homesuaclose.png"></image>
+    </view>
+    <view class="srcoll">
+        <scroll-view bindscroll="scrollFun" class="scro" data-name="niancheck" scrollY="true" scrollIntoView="num{{index+2}}">
+            <view bindtap="clickIcon" class="lst {{niancheck==index?'lstac':''}}" data-index="{{index}}" id="num{{index+2}}" wx:for="{{30}}">10</view>
+        </scroll-view>
+    </view>
+    <view class="sure" hoverClass="hover">确定</view>
+</view>

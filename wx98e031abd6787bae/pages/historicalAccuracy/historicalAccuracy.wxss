@@ -1,0 +1,55 @@
+.content {
+    box-sizing: border-box;
+    padding: 0 32rpx;
+}
+
+.list {
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: 35rpx;
+    padding-bottom: 22rpx;
+}
+
+.title {
+    color: #313131;
+    font-size: 34rpx;
+}
+
+.time,.title {
+    font-family: PingFang SC;
+    font-weight: 500;
+}
+
+.time {
+    color: #959595;
+    font-size: 26rpx;
+}
+
+.shuhr {
+    background: hsla(42,10%,50%,.3);
+    border-radius: 1px;
+    height: 25rpx;
+    margin: 0 16rpx;
+    width: 2rpx;
+}
+
+.lv {
+    background: #23df86;
+    border-radius: 5rpx;
+    color: #fff;
+    font-size: 24rpx;
+    height: 33rpx;
+    line-height: 33rpx;
+    text-align: center;
+    width: 33rpx;
+}
+
+.lv,.zheng {
+    font-family: PingFang SC;
+    font-weight: 500;
+}
+
+.zheng {
+    color: #444;
+    font-size: 30rpx;
+    margin-left: 10rpx;
+}

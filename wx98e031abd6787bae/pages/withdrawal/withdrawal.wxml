@@ -1,0 +1,38 @@
+<navigation-bar bgSrc="{{bgSrc}}" color="black" height="445" showBack="true" title="提现"></navigation-bar>
+<view class="head">
+    <view class="flex-sb headtop flex-c">
+        <view>
+            <view class="keti">可提现佣金</view>
+            <view class="price">{{money}}<text class="fs26">元</text>
+            </view>
+        </view>
+        <view bindtap="godetail" class="tibtn" hoverClass="hover">
+            <view class="tizi">提现明细</view>
+            <image class="righttx" src="{{domain}}righttx.png"></image>
+        </view>
+    </view>
+</view>
+<view class="content"></view>
+<view class="flex-sb ici headcenter">
+    <view class="list">
+        <view class="title">提现金额：</view>
+    </view>
+    <view class="tixfu">
+        <input class="ipt2" value="{{con}}" placeholder="请输入提现金额" placeholderClass="plitp2"></input>
+        <view bindtap="quan" class="quan">全部提现</view>
+    </view>
+    <view class="smalltips">最低提现金额：{{moneydi}}元</view>
+</view>
+<view class="hr"></view>
+<view class="content">
+    <view class="list">
+        <view class="title">提现须知：</view>
+    </view>
+    <view class="info">
+        <text>{{tips}}</text>
+    </view>
+</view>
+<view style="height:120rpx;padding-bottom:env(safe-area-inset-bottom)"></view>
+<view class="footer">
+    <view bindtap="btn" class="libtn" hoverClass="hover">立即提现</view>
+</view>
